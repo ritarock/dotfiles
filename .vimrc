@@ -27,3 +27,5 @@ set cursorline
 set cursorcolumn
 syntax on
 highlight LineNr ctermfg=darkyellow
+"検索文字列が小文字の場合は大文字小文字を区別なく検索する
+set ignorecase
