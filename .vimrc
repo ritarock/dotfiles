@@ -8,7 +8,7 @@ set autoindent
 set showmatch
 "不可視文字を表示
 set list
-set listchars=tab:>-,extends:<,trail:-,eol:<
+set set listchars=tab:>\ ,extends:<
 "ステータスの表示
 set laststatus=2
 "タブの動く幅
@@ -29,3 +29,11 @@ syntax on
 highlight LineNr ctermfg=darkyellow
 "検索文字列が小文字の場合は大文字小文字を区別なく検索する
 set ignorecase
+" 検索結果をハイライト表示する
+set hlsearch
+" 検索ワードの最初の文字を入力した時点で検索を開始する
+set incsearch
+" コマンドラインモードで<Tab>キーによるファイル名補完を有効にする
+set wildmenu
+" 入力中のコマンドを表示する
+set showcmd
