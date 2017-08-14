@@ -29,11 +29,11 @@ syntax on
 highlight LineNr ctermfg=darkyellow
 "検索文字列が小文字の場合は大文字小文字を区別なく検索する
 set ignorecase
-" 検索結果をハイライト表示する
+"検索結果をハイライト表示する
 set hlsearch
-" 検索ワードの最初の文字を入力した時点で検索を開始する
+"検索ワードの最初の文字を入力した時点で検索を開始する
 set incsearch
-" コマンドラインモードで<Tab>キーによるファイル名補完を有効にする
+"コマンドラインモードで<Tab>キーによるファイル名補完を有効にする
 set wildmenu
-" 入力中のコマンドを表示する
+"入力中のコマンドを表示する
 set showcmd
