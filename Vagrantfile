@@ -11,15 +11,5 @@ Vagrant.configure("2") do |config|
  end
  end
 
- config.vm.define "vagrant1" do |vagrant1|
- vagrant1.vm.box = "centos"
- vagrant1.vm.network :private_network, ip: "192.168.11.31"
- vagrant1.vm.network "forwarded_port",guest:80,host:8081
- vagrant1.vm.network "forwarded_port",guest:443,host:8444
- vagrant1.vm.provider "virtualbox" do |v| 
- v.customize ["modifyvm", :id, "--memory", 1024] 
- end
- end
-
 end
 
