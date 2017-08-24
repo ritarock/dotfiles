@@ -1,0 +1,23 @@
+---
+ - host: all
+   become: yes
+   tasks:
+    - name: Install packages to allow apt to use a repository over HTTPS
+      apt: pkg={item} update_cache=yes
+      with_item:
+       - apt-transport-https
+       - ca-certificates
+       - curl
+       - software-properties-common
+
+    - name: Add Docker’s official GPG key
+      shell: curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+
+    - name: sudo apt-key fingerprint 0EBFCD88
+      shell: sudo apt-key fingerprint 0EBFCD88
+
+    - name: set repository
+      shell: add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu {{ lsb_release.stdout }} stable"
+
+    - name: install docker-ce
+      apt: pkg=docker-ce update_cache=yes state=present
