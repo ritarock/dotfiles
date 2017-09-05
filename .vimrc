@@ -8,7 +8,6 @@ set autoindent
 set showmatch
 "不可視文字を表示
 set list
-set set listchars=tab:>\ ,extends:<
 "ステータスの表示
 set laststatus=2
 "タブの動く幅
