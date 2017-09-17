@@ -11,9 +11,9 @@ set expandtab
 set tabstop=4
 " 連続空白に対してタブやバックスペースでカーソルがが動く幅
 set softtabstop=4
-" 開業前のインデントを維持する
+" 改行前のインデントを維持する
 set autoindent
-" 開業前の構文をチェックし次の行のインデントを増減する
+" 改行前の構文をチェックし次の行のインデントを増減する
 set smartindent
 " smartindentで増減する幅
 set shiftwidth=4
