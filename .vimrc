@@ -39,6 +39,8 @@ set ignorecase
 set smartcase
 " 検索文字のハイライト
 set hlsearch
+" 行末まで検索したら行頭に戻る
+set wrapscan
 " ESCキー2通しでハイライトの切り替え
 nnoremap <silent><Esc><Esc> : <C-u>set nohlsearch!<CR>
 
@@ -60,7 +62,7 @@ set showmatch
 " コマンドモードの補完
 set wildmenu
 " 保存するコマンド履歴の数
-set history=3000
+set history=50
 " スワップファイルを作らない
 set noswapfile
 " ウインドウのタイトルバーにファイルのパス情報等を表示する
