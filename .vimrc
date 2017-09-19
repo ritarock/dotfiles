@@ -67,5 +67,3 @@ set history=50
 set noswapfile
 " ウインドウのタイトルバーにファイルのパス情報等を表示する
 set title
-" 不可視文字を表示する
-set list
