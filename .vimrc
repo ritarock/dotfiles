@@ -39,8 +39,6 @@ set ignorecase
 set smartcase
 " 検索文字のハイライト
 set hlsearch
-" 行末まで検索したら行頭に戻る
-set wrapscan
 " ESCキー2通しでハイライトの切り替え
 nnoremap <silent><Esc><Esc> : <C-u>set nohlsearch!<CR>
 
@@ -55,20 +53,28 @@ set number
 set cursorline
 
 " -----------------------------------
-" その他の設定
+" 括弧・タグジャンプの設定
 " -----------------------------------
 " 括弧の対応関係の表示
 set showmatch
+" ノーマルモード時に「%」で対応する括弧にジャンプ
+
+" -----------------------------------
+" コマンド補完
+" -----------------------------------
 " コマンドモードの補完
 set wildmenu
 " 保存するコマンド履歴の数
-set history=50
-" スワップファイルを作らない
-set noswapfile
-" ウインドウのタイトルバーにファイルのパス情報等を表示する
-set title
+set history=3000
 
-"dein Scripts-----------------------------
+"dein Scripts----------------------et incsearch
+" 36 " 検索パターンに大文字小文字を区別しない
+"  37 set ignorecase
+"   38 " 検索パターンに大文字を含んでいたら大文字小文字の区別をする
+"    39 set smartcase
+"     40 " 検索文字のハイライト
+"      41 set hlsearch
+"       42 " ESCキー2通しでハイラ------
 if &compatible
   set nocompatible               " Be iMproved
 endif
@@ -87,7 +93,7 @@ if dein#load_state('/home/ubuntu/.vim/dein')
   " Add or remove your plugins here:
   call dein#add('Shougo/neosnippet.vim')
   call dein#add('Shougo/neosnippet-snippets')
-
+  call dein#add('tomasr/molokai')
   " You can specify revision/branch/tag.
   call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
 
@@ -100,9 +106,12 @@ endif
 filetype plugin indent on
 syntax enable
 
-" If you want to install not installed plugins on startup.
+" If you want to install not installed plugins onstartup.
 "if dein#check_install()
 "  call dein#install()
 "endif
 
 "End dein Scripts-------------------------
+colorscheme molokai
+set t_Co=256
+syntax on
