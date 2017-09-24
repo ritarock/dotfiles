@@ -67,14 +67,7 @@ set wildmenu
 " 保存するコマンド履歴の数
 set history=3000
 
-"dein Scripts----------------------et incsearch
-" 36 " 検索パターンに大文字小文字を区別しない
-"  37 set ignorecase
-"   38 " 検索パターンに大文字を含んでいたら大文字小文字の区別をする
-"    39 set smartcase
-"     40 " 検索文字のハイライト
-"      41 set hlsearch
-"       42 " ESCキー2通しでハイラ------
+"dein Scripts-----------------------------
 if &compatible
   set nocompatible               " Be iMproved
 endif
