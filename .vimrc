@@ -108,6 +108,7 @@ syntax enable
 "endif
 
 "End dein Scripts-------------------------
+
 colorscheme molokai
 set t_Co=256
 syntax on
