@@ -66,6 +66,9 @@ set wildmenu
 " 保存するコマンド履歴の数
 set history=3000
 
+" -----------------------------------
+" マウス操作を有効にする
+" -----------------------------------
 if has("mouse") " Enable the use of the mouse in all modes
   set mouse=a
 endif
