@@ -49,6 +49,10 @@ nnoremap <silent><Esc><Esc> : <C-u>set nohlsearch!<CR>
 set whichwrap =b,s,h,l,<,>,[,],~
 " 行番号の表示
 set number
+" 行の強調
+set cursorline
+" 列の強調
+set cursorcolumn
 " カーソルラインをハイライト
 set cursorline
 
