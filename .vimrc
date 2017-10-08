@@ -52,7 +52,7 @@ set number
 " 行の強調
 set cursorline
 " 列の強調
-set cursorcolumn
+" set cursorcolumn
 " カーソルラインをハイライト
 set cursorline
 
