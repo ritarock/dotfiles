@@ -68,7 +68,7 @@ set showmatch
 " コマンドモードの補完
 set wildmenu
 " 保存するコマンド履歴の数
-set history=3000
+set history=500
 
 " -----------------------------------
 " マウス操作を有効にする
