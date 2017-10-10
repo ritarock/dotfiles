@@ -97,6 +97,7 @@ if dein#load_state('/home/ubuntu/.vim/dein')
   call dein#add('Shougo/neosnippet.vim')
   call dein#add('Shougo/neosnippet-snippets')
   call dein#add('tomasr/molokai')
+  call dein#add('tomtom/tcomment_vim')
   " You can specify revision/branch/tag.
   call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
 
