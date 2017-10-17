@@ -1,0 +1,9 @@
+---
+ - host: all
+   become: yes
+   tasks:
+    - name: install epel-release
+      yum: epel-release
+
+    - name: install redis
+      yum: redis
