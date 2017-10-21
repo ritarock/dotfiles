@@ -77,6 +77,11 @@ if has("mouse") " Enable the use of the mouse in all modes
   set mouse=a
 endif
 
+" -----------------------------------
+" jjでインサートモードを抜ける
+" -----------------------------------
+inoremap <silent> jj <ESC>
+
 "dein Scripts-----------------------------
 if &compatible
   set nocompatible               " Be iMproved
