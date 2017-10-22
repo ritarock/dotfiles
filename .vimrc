@@ -55,6 +55,8 @@ set cursorline
 " set cursorcolumn
 " カーソルラインをハイライト
 set cursorline
+" jjでインサートモードを抜ける
+inoremap <silent> jj <ESC>
 
 " -----------------------------------
 " 括弧・タグジャンプの設定
@@ -76,11 +78,6 @@ set history=500
 if has("mouse") " Enable the use of the mouse in all modes
   set mouse=a
 endif
-
-" -----------------------------------
-" jjでインサートモードを抜ける
-" -----------------------------------
-inoremap <silent> jj <ESC>
 
 "dein Scripts-----------------------------
 if &compatible
