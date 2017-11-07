@@ -100,7 +100,7 @@ if dein#load_state('/home/ubuntu/.vim/dein')
   call dein#add('Shougo/neosnippet-snippets')
   " テーマ
   call dein#add('tomasr/molokai')
-  " gccで現在の行をコメントアウト
+  " control + -で選択中の行をコメントアウト
   call dein#add('tomtom/tcomment_vim')
   " 閉じ括弧を自動で入力
   call dein#add('Townk/vim-autoclose')
