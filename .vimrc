@@ -108,6 +108,8 @@ if dein#load_state('/home/ubuntu/.vim/dein')
   call dein#add('nathanaelkane/vim-indent-guides')
   " 自動的にvim-indent-guidesをオン
   let g:indent_guides_enable_on_vim_startup = 1
+  " ステータスラインの内容の表示強化
+  call dein#add('itchyny/lightline.vim')
   
   " You can specify revision/branch/tag.
   call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
