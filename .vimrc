@@ -57,6 +57,8 @@ set cursorline
 set cursorline
 " jjでインサートモードを抜ける
 inoremap <silent> jj <ESC>
+" 行末までヤンク
+nnoremap Y y$
 
 " -----------------------------------
 " 括弧・タグジャンプの設定
