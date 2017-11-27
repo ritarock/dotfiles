@@ -2,6 +2,24 @@ set encoding=utf-8
 scriptencoding utf-8
 set fileencoding=utf-8
 
+" ==========================
+" BASE SETTING
+" ==========================
+" 起動時のメッセージを消す
+set shortmess+=I
+" カーソルの左右移動で行末から次の行頭へ移動が可能になる
+set whichwrap =b,s,h,l,<,>,[,],~
+" 行番号の表示
+set number
+" 行の強調
+set cursorline
+" カーソルラインをハイライト
+set cursorline
+" jjでインサートモードを抜ける
+inoremap <silent> jj <ESC>
+" ESCキー2通しでハイライトの切り替え
+nnoremap <silent><Esc><Esc> : <C-u>set nohlsearch!<CR>
+
 " -----------------------------------
 " タブ・インデントの設定
 " -----------------------------------
@@ -17,8 +35,12 @@ set autoindent
 set smartindent
 " smartindentで増減する幅
 set shiftwidth=4
-" 起動時のメッセージを消す
-set shortmess+=I
+" 括弧の対応関係の表示
+set showmatch
+" コマンドモードの補完
+set wildmenu
+" 保存するコマンド履歴の数
+set history=500
 
 " -----------------------------------
 " ステータスラインの設定
@@ -41,47 +63,6 @@ set ignorecase
 set smartcase
 " 検索文字のハイライト
 set hlsearch
-" ESCキー2通しでハイライトの切り替え
-nnoremap <silent><Esc><Esc> : <C-u>set nohlsearch!<CR>
-
-" -----------------------------------
-" カーソルの設定
-" -----------------------------------
-" カーソルの左右移動で行末から次の行頭へ移動が可能になる
-set whichwrap =b,s,h,l,<,>,[,],~
-" 行番号の表示
-set number
-" 行の強調
-set cursorline
-" 列の強調
-" set cursorcolumn
-" カーソルラインをハイライト
-set cursorline
-" jjでインサートモードを抜ける
-inoremap <silent> jj <ESC>
-" 行末までヤンク
-nnoremap Y y$
-
-" -----------------------------------
-" 括弧・タグジャンプの設定
-" -----------------------------------
-" 括弧の対応関係の表示
-set showmatch
-
-" -----------------------------------
-" コマンド補完
-" -----------------------------------
-" コマンドモードの補完
-set wildmenu
-" 保存するコマンド履歴の数
-set history=500
-
-" -----------------------------------
-" マウス操作を有効にする
-" -----------------------------------
-if has("mouse") " Enable the use of the mouse in all modes
-  set mouse=a
-endif
 
 "dein Scripts-----------------------------
 if &compatible
