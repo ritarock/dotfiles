@@ -17,6 +17,8 @@ set autoindent
 set smartindent
 " smartindentで増減する幅
 set shiftwidth=4
+" 起動時のメッセージを消す
+set shortmess+=I
 
 " -----------------------------------
 " ステータスラインの設定
