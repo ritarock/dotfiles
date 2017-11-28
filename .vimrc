@@ -15,10 +15,6 @@ set number
 set cursorline
 " カーソルラインをハイライト
 set cursorline
-" jjでインサートモードを抜ける
-inoremap <silent> jj <ESC>
-" ESCキー2通しでハイライトの切り替え
-nnoremap <silent><Esc><Esc> : <C-u>set nohlsearch!<CR>
 
 " -----------------------------------
 " タブ・インデントの設定
@@ -63,6 +59,27 @@ set ignorecase
 set smartcase
 " 検索文字のハイライト
 set hlsearch
+
+" -----------------------------------
+" キーバインド
+" -----------------------------------
+" jjでインサートモードを抜ける
+inoremap <silent> jj <ESC>
+" ESCキー2通しでハイライトの切り替え
+nnoremap <silent><Esc><Esc> : <C-u>set nohlsearch!<CR>
+" 日本語入力がONのとき
+nnoremap あ a
+nnoremap い i
+nnoremap う u
+nnoremap お o
+nnoremap っd dd
+nnoremap っy yy
+inoremap <silent> っj <ESC>
+" インサートモードでのカーソル移動
+inoremap <C-j> <Down>
+inoremap <C-k> <Up>
+inoremap <C-h> <Left>
+inoremap <C-l> <Right>
 
 "dein Scripts-----------------------------
 if &compatible
