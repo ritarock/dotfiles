@@ -107,7 +107,7 @@ if dein#load_state('/home/ubuntu/.vim/dein')
   " 閉じ括弧を自動で入力
   call dein#add('Townk/vim-autoclose')
   " インデントを可視化
-  call dein#add('nathanaelkane/vim-indent-guides')
+  "call dein#add('nathanaelkane/vim-indent-guides')
   " 自動的にvim-indent-guidesをオン
   let g:indent_guides_enable_on_vim_startup = 1
   " ステータスラインの内容の表示強化
