@@ -92,6 +92,7 @@ set runtimepath+=/home/ubuntu/.vim/dein/repos/github.com/Shougo/dein.vim
 " Required:
 if dein#load_state('/home/ubuntu/.vim/dein')
   call dein#begin('/home/ubuntu/.vim/dein')
+  " call dein#local(expand('自作プラグインのディレクトリ指定'))
 
   " Let dein manage dein
   " Required:
