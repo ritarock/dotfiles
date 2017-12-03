@@ -11,10 +11,12 @@ let g:loaded_hellobeautifulworld = 1
 let s:save_cpo = &cpo
 set cpo&vim
 
-" 関数の定義
 function! hellobeautifulworld#helloworld()
-  echo "Hello World!"
-endfunction
+python << endpython
+python import vim
+print('hello world!')
+endpython
+endfuncion
 
 " 退避していたユーザ設定を戻す
 let &cpo = s:save_cpo
