@@ -12,7 +12,7 @@ let s:save_cpo = &cpo
 set cpo&vim
 
 function! hellobeautifulworld#helloworld()
-python << endpython
+python3 << endpython
 python import vim
 print('hello world!')
 endpython
