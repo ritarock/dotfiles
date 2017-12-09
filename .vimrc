@@ -36,7 +36,7 @@ set showmatch
 " コマンドモードの補完
 set wildmenu
 " 保存するコマンド履歴の数
-set history=500
+set history=300
 
 " -----------------------------------
 " ステータスラインの設定
