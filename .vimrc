@@ -15,6 +15,8 @@ set number
 set cursorline
 " カーソルラインをハイライト
 set cursorline
+" ヤンクした時にクリップボードにコピーする
+set clipboard=unnamed,autoselect
 
 " -----------------------------------
 " タブ・インデントの設定
