@@ -83,6 +83,13 @@ inoremap <C-k> <Up>
 inoremap <C-h> <Left>
 inoremap <C-l> <Right>
 
+augroup vimrc
+    autocmd!
+   " set filetype=xxx した場合に任意の filetype を設定する
+    autocmd FileType js set filetype=javascript
+    autocmd FileType py set filetype=python
+augroup END
+
 "dein Scripts-----------------------------
 if &compatible
   set nocompatible               " Be iMproved
