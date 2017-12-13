@@ -17,6 +17,8 @@ set cursorline
 set cursorline
 " ヤンクした時にクリップボードにコピーする
 set clipboard=unnamed,autoselect
+" Rename {新しいファイル名}
+command! -nargs=1 -complete=file Rename file <args> | call delete(expand('#'))
 
 " -----------------------------------
 " タブ・インデントの設定
