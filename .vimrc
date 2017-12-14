@@ -17,6 +17,7 @@ set cursorline
 set cursorline
 " ヤンクした時にクリップボードにコピーする
 set clipboard=unnamed,autoselect
+" 元ネタ：http://vim-jp.org/vim-users-jp/2009/05/27/Hack-17.html
 " :Rename {新しいファイル名}
 command! -nargs=1 -complete=file Rename file <args> | call delete(expand('#'))
 
