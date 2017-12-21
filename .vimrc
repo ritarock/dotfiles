@@ -73,12 +73,12 @@ inoremap <silent> jj <ESC>
 " ESCキー2通しでハイライトの切り替え
 nnoremap <silent><Esc><Esc> : <C-u>set nohlsearch!<CR>
 " 日本語入力がONのとき
-nnoremap あ a
-nnoremap い i
-nnoremap う u
-nnoremap お o
-nnoremap っd dd
-nnoremap っy yy
+" nnoremap あ a
+" nnoremap い i
+" nnoremap う u
+" nnoremap お o
+" nnoremap っd dd
+" nnoremap っy yy
 inoremap <silent> っj <ESC>
 " インサートモードでのカーソル移動
 inoremap <C-j> <Down>
