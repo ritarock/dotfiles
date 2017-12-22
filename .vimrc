@@ -42,6 +42,13 @@ set showmatch
 set wildmenu
 " 保存するコマンド履歴の数
 set history=300
+" set listchars の設定が反映されるように ON にする
+set list
+
+" tab でタブ文字に対する設定を行う
+" 1文字目がタブ文字の先頭になり
+" 2文字目がタブ文字の1文字目以降に置き換わる
+set listchars=tab:^-
 
 " -----------------------------------
 " ステータスラインの設定
