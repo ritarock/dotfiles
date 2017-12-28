@@ -86,7 +86,7 @@ nnoremap <silent><Esc><Esc> : <C-u>set nohlsearch!<CR>
 " nnoremap お o
 " nnoremap っd dd
 " nnoremap っy yy
-inoremap <silent> っj <ESC>
+" inoremap <silent> っj <ESC>
 " インサートモードでのカーソル移動
 inoremap <C-j> <Down>
 inoremap <C-k> <Up>
