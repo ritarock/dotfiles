@@ -21,6 +21,14 @@ set clipboard=unnamed,autoselect
 " :Rename {新しいファイル名}
 command! -nargs=1 -complete=file Rename file <args> | call delete(expand('#'))
 
+augroup vimrc
+    autocmd!
+   " set filetype=xxx した場合に任意の filetype を設定する
+    autocmd FileType js set filetype=javascript
+    autocmd FileType py set filetype=python
+augroup END
+
+
 " -----------------------------------
 " タブ・インデントの設定
 " -----------------------------------
@@ -44,11 +52,6 @@ set wildmenu
 set history=300
 " set listchars の設定が反映されるように ON にする
 set list
-
-" tab でタブ文字に対する設定を行う
-" 1文字目がタブ文字の先頭になり
-" 2文字目がタブ文字の1文字目以降に置き換わる
-set listchars=tab:^-
 
 " -----------------------------------
 " ステータスラインの設定
@@ -79,14 +82,6 @@ set hlsearch
 inoremap <silent> jj <ESC>
 " ESCキー2通しでハイライトの切り替え
 nnoremap <silent><Esc><Esc> : <C-u>set nohlsearch!<CR>
-" 日本語入力がONのとき
-" nnoremap あ a
-" nnoremap い i
-" nnoremap う u
-" nnoremap お o
-" nnoremap っd dd
-" nnoremap っy yy
-" inoremap <silent> っj <ESC>
 " インサートモードでのカーソル移動
 inoremap <C-j> <Down>
 inoremap <C-k> <Up>
@@ -95,12 +90,6 @@ inoremap <C-l> <Right>
 " ノーマルモードでスペースを挿入
 nnoremap <C-Space> i<Space><Esc><Right>
 
-augroup vimrc
-    autocmd!
-   " set filetype=xxx した場合に任意の filetype を設定する
-    autocmd FileType js set filetype=javascript
-    autocmd FileType py set filetype=python
-augroup END
 
 "dein Scripts-----------------------------
 if &compatible
