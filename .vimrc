@@ -28,7 +28,6 @@ augroup vimrc
     autocmd FileType py set filetype=python
 augroup END
 
-
 " -----------------------------------
 " タブ・インデントの設定
 " -----------------------------------
@@ -89,7 +88,6 @@ inoremap <C-h> <Left>
 inoremap <C-l> <Right>
 " ノーマルモードでスペースを挿入
 nnoremap <C-Space> i<Space><Esc><Right>
-
 
 "dein Scripts-----------------------------
 if &compatible
