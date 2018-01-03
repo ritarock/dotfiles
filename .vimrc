@@ -51,8 +51,6 @@ set showmatch
 set wildmenu
 " 保存するコマンド履歴の数
 set history=300
-" set listchars の設定が反映されるように ON にする
-set list
 
 " -----------------------------------
 " ステータスラインの設定
