@@ -147,3 +147,22 @@ syntax enable
 colorscheme molokai
 set t_Co=256
 syntax on
+
+" -----------------------------------
+" Plugin 
+" -----------------------------------
+"curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+"    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+"call plug#begin('~/.vim/plugged')
+
+"" テーマ
+"Plug 'tomasr/molokai'
+"" control + -で選択中の行をコメントアウト
+"Plug 'tomtom/tcomment_vim'
+"" 閉じ括弧を自動で入力
+"Plug 'Townk/vim-autoclose'
+"" ステータスラインの内容の表示強化
+"Plug 'itchyny/lightline.vim'
+
+"call plug#end()
