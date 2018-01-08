@@ -97,6 +97,12 @@ endif
 " Required:
 set runtimepath+=/home/ubuntu/.vim/dein/repos/github.com/Shougo/dein.vim
 
+" curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh -o /tmp/installer.sh
+" sh /tmp/installer.sh ~/.vim/dein
+
+" -----------------------------------
+" プラグイン
+" -----------------------------------
 " Required:
 if dein#load_state('/home/ubuntu/.vim/dein')
   call dein#begin('/home/ubuntu/.vim/dein')
