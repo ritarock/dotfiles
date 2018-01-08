@@ -1,10 +1,8 @@
-set encoding=utf-8
-scriptencoding utf-8
-set fileencoding=utf-8
-
 " ==========================
 " BASE SETTING
 " ==========================
+" 文字コードを指定
+set encoding=utf-8
 " 起動時のメッセージを消す
 set shortmess+=I
 " カーソルの左右移動で行末から次の行頭へ移動が可能になる
@@ -15,10 +13,16 @@ set number
 set cursorline
 " カーソルラインをハイライト
 set cursorline
+" swapファイルを作らない
+set noswapfile
 " ヤンクした時にクリップボードにコピーする
 set clipboard=unnamed,autoselect
 " バックスペースを有効にする
 set backspace=indent,eol,start
+" バックアップの設定
+set backup
+set backupdir=$HOME/vimbackup
+" renameの設定
 " 元ネタ：http://vim-jp.org/vim-users-jp/2009/05/27/Hack-17.html
 " :Rename {新しいファイル名}
 command! -nargs=1 -complete=file Rename file <args> | call delete(expand('#'))
@@ -89,16 +93,16 @@ inoremap <C-l> <Right>
 " ノーマルモードでスペースを挿入
 nnoremap <C-Space> i<Space><Esc><Right>
 
-"dein Scripts-----------------------------
+" curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh -o /tmp/installer.sh
+" sh /tmp/installer.sh ~/.vim/dein
+
+" dein Scripts-----------------------------
 if &compatible
   set nocompatible               " Be iMproved
 endif
 
 " Required:
 set runtimepath+=/home/ubuntu/.vim/dein/repos/github.com/Shougo/dein.vim
-
-" curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh -o /tmp/installer.sh
-" sh /tmp/installer.sh ~/.vim/dein
 
 " -----------------------------------
 " プラグイン
@@ -107,14 +111,11 @@ set runtimepath+=/home/ubuntu/.vim/dein/repos/github.com/Shougo/dein.vim
 if dein#load_state('/home/ubuntu/.vim/dein')
   call dein#begin('/home/ubuntu/.vim/dein')
   " call dein#local(expand('自作プラグインのディレクトリ指定'))
-
   " Let dein manage dein
   " Required:
   call dein#add('/home/ubuntu/.vim/dein/repos/github.com/Shougo/dein.vim')
-
+  
   " Add or remove your plugins here:
-  call dein#add('Shougo/neosnippet.vim')
-  call dein#add('Shougo/neosnippet-snippets')
   " テーマ
   call dein#add('tomasr/molokai')
   " control + -で選択中の行をコメントアウト
@@ -122,17 +123,19 @@ if dein#load_state('/home/ubuntu/.vim/dein')
   " 閉じ括弧を自動で入力
   call dein#add('Townk/vim-autoclose')
   " インデントを可視化
-  "call dein#add('nathanaelkane/vim-indent-guides')
+  call dein#add('nathanaelkane/vim-indent-guides')
   " 自動的にvim-indent-guidesをオン
   let g:indent_guides_enable_on_vim_startup = 1
   " ステータスラインの内容の表示強化
   call dein#add('itchyny/lightline.vim')
+  " pythonの自動補完
+  call dein#add('davidhalter/jedi-vim')
+  " 閉じ括弧を自動追加
+  call dein#add('cohama/lexima.vim')
   " =で両端にスペース追加
   call dein#add('kana/vim-smartchr')
   inoremap <buffer> <expr> = smartchr#loop(' = ', ' == ', '=')
   
-  " You can specify revision/branch/tag.
-  " call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
 
   " Required:
   call dein#end()
