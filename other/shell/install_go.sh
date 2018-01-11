@@ -1,3 +1,4 @@
+#!/bin/sh
 sudo apt-get update
 sudo apt-get -y upgrade
 wget https://storage.googleapis.com/golang/go1.9.2.linux-amd64.tar.gz
