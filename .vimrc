@@ -20,8 +20,8 @@ set clipboard=unnamed,autoselect
 " バックスペースを有効にする
 set backspace=indent,eol,start
 " バックアップの設定
-set backup
-set backupdir=$HOME/vimbackup
+"set backup
+"set backupdir=$HOME/vimbackup
 " renameの設定
 " 元ネタ：http://vim-jp.org/vim-users-jp/2009/05/27/Hack-17.html
 " :Rename {新しいファイル名}
