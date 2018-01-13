@@ -15,8 +15,6 @@ set cursorline
 set cursorline
 " swapファイルを作らない
 set noswapfile
-" ヤンクした時にクリップボードにコピーする
-set clipboard=unnamed,autoselect
 " バックスペースを有効にする
 set backspace=indent,eol,start
 " バックアップの設定
@@ -116,8 +114,11 @@ if dein#load_state('/home/ubuntu/.vim/dein')
   call dein#add('/home/ubuntu/.vim/dein/repos/github.com/Shougo/dein.vim')
   
   " Add or remove your plugins here:
-  " テーマ
+    " テーマ
   call dein#add('tomasr/molokai')
+  colorscheme molokai
+  set t_Co=256
+  syntax on
   " control + -で選択中の行をコメントアウト
   call dein#add('tomtom/tcomment_vim')
   " 閉じ括弧を自動で入力
@@ -128,15 +129,15 @@ if dein#load_state('/home/ubuntu/.vim/dein')
   let g:indent_guides_enable_on_vim_startup = 1
   " ステータスラインの内容の表示強化
   call dein#add('itchyny/lightline.vim')
-  " pythonの自動補完
-  call dein#add('davidhalter/jedi-vim')
-  " 閉じ括弧を自動追加
+    " 閉じ括弧を自動追加
   call dein#add('cohama/lexima.vim')
-  " =で両端にスペース追加
-  call dein#add('kana/vim-smartchr')
-  inoremap <buffer> <expr> = smartchr#loop(' = ', ' == ', '=')
+  " NeoVimに以降してから追加
+  call dein#add('Shougo/deoplete.nvim')
+  " vimでツリー表示
+  call dein#add('scrooloose/nerdtree')
+  " ctl + e でツリーを開く
+  nnoremap <silent><C-e> :NERDTreeToggle<CR>
   
-
   " Required:
   call dein#end()
   call dein#save_state()
@@ -152,7 +153,3 @@ syntax enable
 "endif
 
 "End dein Scripts-------------------------
-
-colorscheme molokai
-set t_Co=256
-syntax on
