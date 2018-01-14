@@ -32,6 +32,11 @@ augroup vimrc
     autocmd FileType py set filetype=python
 augroup END
 
+" NeoVimは ~/.config/nvim/init.vim
+" Neovim導入後に
+" python3をデフォルトにする(文字コードを指定ON)
+" let g:python3_host_prog = expand('~/.pyenv/shims/python3')
+
 " -----------------------------------
 " タブ・インデントの設定
 " -----------------------------------
@@ -116,9 +121,6 @@ if dein#load_state('/home/ubuntu/.vim/dein')
   " Add or remove your plugins here:
   " テーマ
   call dein#add('tomasr/molokai')
-  colorscheme molokai
-  set t_Co=256
-  syntax on
   " control + -で選択中の行をコメントアウト
   call dein#add('tomtom/tcomment_vim')
   " 閉じ括弧を自動で入力
@@ -153,3 +155,7 @@ syntax enable
 "endif
 
 "End dein Scripts-------------------------
+
+colorscheme molokai
+set t_Co=256
+syntax on
