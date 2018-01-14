@@ -114,7 +114,7 @@ if dein#load_state('/home/ubuntu/.vim/dein')
   call dein#add('/home/ubuntu/.vim/dein/repos/github.com/Shougo/dein.vim')
   
   " Add or remove your plugins here:
-    " テーマ
+  " テーマ
   call dein#add('tomasr/molokai')
   colorscheme molokai
   set t_Co=256
