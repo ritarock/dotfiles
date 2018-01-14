@@ -7,4 +7,3 @@ echo 'export PATH="$HOME/.goenv/bin:$PATH"' >> ~/.bashrc
 source ~/.bashrc
 goenv install 1.9.2
 goenv global 1.9.2
-
