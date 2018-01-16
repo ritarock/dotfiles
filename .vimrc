@@ -139,6 +139,8 @@ if dein#load_state('/home/ubuntu/.vim/dein')
   call dein#add('scrooloose/nerdtree')
   " ctl + e でツリーを開く
   nnoremap <silent><C-e> :NERDTreeToggle<CR>
+  " vim-go
+  call dein#add('fatih/vim-go')
   
   " Required:
   call dein#end()
