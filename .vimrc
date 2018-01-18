@@ -141,6 +141,9 @@ if dein#load_state('/home/ubuntu/.vim/dein')
   nnoremap <silent><C-e> :NERDTreeToggle<CR>
   " vim-go
   call dein#add('fatih/vim-go')
+  " SQLformat                                                                                                                           
+  " :SQLUFormatter                                                                                                                      
+  call dein#add('vim-scripts/SQLUtilities') 
   
   " Required:
   call dein#end()
