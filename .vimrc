@@ -131,7 +131,7 @@ if dein#load_state('/home/ubuntu/.vim/dein')
   let g:indent_guides_enable_on_vim_startup = 1
   " ステータスラインの内容の表示強化
   call dein#add('itchyny/lightline.vim')
-    " 閉じ括弧を自動追加
+  " 閉じ括弧を自動追加
   call dein#add('cohama/lexima.vim')
   " NeoVimに以降してから追加
   call dein#add('Shougo/deoplete.nvim')
