@@ -1,17 +1,23 @@
+import os
 import subprocess
 
 def start():
-    check_git = ['git', '--version']
+    print("check git")
+    checkGit = ['git', '--version']
     try:
-        pass
+        print("installed git")
     except:
-        print ("install git")
+        print("install git!")
+    homePath = os.path.expanduser('~')
+    path = homePath + "/.vim/pack/mypackage/start/"
+    if os.path.isdir(path):
+        print("FINISH!")
+    else:
+        os.makedirs(path)
+        print("FINISH!")
 
-    check_dir = ['ls','~/.vim/pack/mypackage/start/']
-    try:
-        pass
-    except:
-        subprocess.run(['mkdir', '-p', '~/.vim/pack/mypackage/start/'])
 
 if __name__ == '__main__':
     start()
+
+    print(os.path.expanduser('~'))
