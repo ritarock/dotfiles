@@ -3,13 +3,13 @@ import subprocess
 
 def start():
     print("check git")
-    checkGit = ['git', '--version']
+    check_git = ['git', '--version']
     try:
         print("installed git")
     except:
         print("install git!")
-    homePath = os.path.expanduser('~')
-    path = homePath + "/.vim/pack/mypackage/start/"
+    home_path = os.path.expanduser('~')
+    path = home_path + "/.vim/pack/mypackage/start/"
     if os.path.isdir(path):
         print("FINISH!")
     else:
