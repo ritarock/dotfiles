@@ -2,18 +2,39 @@ import os
 import subprocess
 import json
 
-def plug():
+def main():
     f = open('plugin_list.json','r')
-    jsonData = json.load(f)
-    addPlugin(jsonData)
+    plugin_list = json.load(f)
+    home_path = os.path.expanduser('~')
+    path = home_path + '/.vim/pack/mypackage/start/'
+    check_plugin = []
+    now_plugin = os.listdir(path)
+    add_list = []
+    remove_list = []
+    # print(now_plugin)
+    for plugin in plugin_list:
+        check_plugin.append(plugin.split('/'))
+        # print(check_plugin)
 
-def addPlugin(pluginList):
-    for plugin in pluginList:
-        gitUrl = "https://github.com/"
-        repo = gitUrl + plugin +'.git'
-        homePath = os.path.expanduser('~')
-        path = homePath + "/.vim/pack/mypackage/start/" + plugin.split("/")[1]
+    for now in now_plugin:
+        for add in check_plugin:
+            if add[1] == now:
+                pass
+            else:
+                add_list.append(add)
+    # print(add)
+
+    addfunc(add_list,home_path)
+
+def addfunc(add_list,home_path):
+    for plugin in add_list:
+        git_url = 'https://github.com/'
+        print ('/'.join(plugin))
+        repo = git_url + '/'.join(plugin) + '.git'
+        path = home_path + '/.vim/pack/mypackage/start/' + '/'.join(plugin) 
+        #print ('git clone' + repo + path)
         subprocess.run(['git','clone',repo,path])
 
+
 if __name__ == '__main__':
-    plug()
+    main()
