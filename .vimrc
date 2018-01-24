@@ -134,7 +134,7 @@ if dein#load_state('/home/ubuntu/.vim/dein')
   " 閉じ括弧を自動追加
   call dein#add('cohama/lexima.vim')
   " NeoVimに以降してから追加
-  call dein#add('Shougo/deoplete.nvim')
+  "call dein#add('Shougo/deoplete.nvim')
   " vimでツリー表示
   call dein#add('scrooloose/nerdtree')
   " ctl + e でツリーを開く
