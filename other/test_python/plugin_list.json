@@ -1,0 +1,9 @@
+[
+  "scrooloose/nerdtree",
+  "tomtom/tcomment_vim",
+  "Townk/vim-autoclose",
+  "nathanaelkane/vim-indent-guides",
+  "itchyny/lightline.vim",
+  "cohama/lexima.vim",
+  "fatih/vim-go"
+]
