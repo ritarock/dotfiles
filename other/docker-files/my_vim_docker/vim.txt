@@ -95,6 +95,8 @@ inoremap <C-h> <Left>
 inoremap <C-l> <Right>
 " ノーマルモードでスペースを挿入
 nnoremap <C-Space> i<Space><Esc><Right>
+" cntrol + e で NERDTreeToggle
+nnoremap <silent><C-e> :NERDTreeToggle<CR>
 colorscheme molokai
 set t_Co=256
 syntax on
