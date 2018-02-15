@@ -1,0 +1,12 @@
+{
+  "start":[
+    "Townk/vim-autoclose",
+    "tomasr/molokai",
+    "scrooloose/nerdtree",
+    "nathanaelkane/vim-indent-guides",
+    "itchyny/lightline.vim"
+  ],
+  "opt":[
+    "fatih/vim-go"
+  ]
+}
