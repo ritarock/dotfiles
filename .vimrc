@@ -58,6 +58,8 @@ set showmatch
 set wildmenu
 " 保存するコマンド履歴の数
 set history=300
+" tabの可視化
+set list listchars=tab:\▸\-
 
 " -----------------------------------
 " ステータスラインの設定
