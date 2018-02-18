@@ -24,18 +24,12 @@ set backspace=indent,eol,start
 " 元ネタ：http://vim-jp.org/vim-users-jp/2009/05/27/Hack-17.html
 " :Rename {新しいファイル名}
 command! -nargs=1 -complete=file Rename file <args> | call delete(expand('#'    ))
-
 augroup vimrc
     autocmd!
    " set filetype=xxx した場合に任意の filetype を設定する
     autocmd FileType js set filetype=javascript
     autocmd FileType py set filetype=python
 augroup END
-
-" NeoVimは ~/.config/nvim/init.vim
-" Neovim導入後に
-" python3をデフォルトにする(文字コードを指定ON)
-" let g:python3_host_prog = expand('~/.pyenv/shims/python3')
 
 " -----------------------------------
 " タブ・インデントの設定
@@ -58,6 +52,8 @@ set showmatch
 set wildmenu
 " 保存するコマンド履歴の数
 set history=300
+" tabの可視化
+set list listchars=tab:\▸\-
 
 " -----------------------------------
 " ステータスラインの設定
