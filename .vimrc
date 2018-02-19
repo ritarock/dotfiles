@@ -90,13 +90,6 @@ set hlsearch
 inoremap <silent> jj <ESC>
 " ESCキー2通しでハイライトの切り替え
 nnoremap <silent><Esc><Esc> : <C-u>set nohlsearch!<CR>
-" インサートモードでのカーソル移動
-inoremap <C-j> <Down>
-inoremap <C-k> <Up>
-inoremap <C-h> <Left>
-inoremap <C-l> <Right>
-" ノーマルモードでスペースを挿入
-nnoremap <C-Space> i<Space><Esc><Right>
 
 " curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh -o /tmp/installer.sh
 " sh /tmp/installer.sh ~/.vim/dein
