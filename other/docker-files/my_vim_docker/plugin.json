@@ -4,9 +4,10 @@
     "tomasr/molokai",
     "scrooloose/nerdtree",
     "nathanaelkane/vim-indent-guides",
-    "itchyny/lightline.vim"
+    "itchyny/lightline.vim",
+    "Shougo/unite.vim",
+    "fatih/vim-go"
   ],
   "opt":[
-    "fatih/vim-go"
   ]
 }
