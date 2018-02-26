@@ -25,13 +25,6 @@ set backspace=indent,eol,start
 " :Rename {新しいファイル名}
 command! -nargs=1 -complete=file Rename file <args> | call delete(expand('#'))
 
-augroup vimrc
-    autocmd!
-   " set filetype=xxx した場合に任意の filetype を設定する
-    autocmd FileType js set filetype=javascript
-    autocmd FileType py set filetype=python
-augroup END
-
 " NeoVimは ~/.config/nvim/init.vim
 " Neovim導入後に
 " python3をデフォルトにする(文字コードを指定ON)
