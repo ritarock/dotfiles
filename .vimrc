@@ -25,8 +25,6 @@ set backspace=indent,eol,start
 " :Rename {新しいファイル名}
 command! -nargs=1 -complete=file Rename file <args> | call delete(expand('#'))
 
-" NeoVimは ~/.config/nvim/init.vim
-" Neovim導入後に
 " python3をデフォルトにする(文字コードを指定ON)
 " let g:python3_host_prog = expand('~/.pyenv/shims/python3')
 
@@ -52,7 +50,7 @@ set wildmenu
 " 保存するコマンド履歴の数
 set history=300
 " tabの可視化
-set list listchars=tab:\▸\-
+" set list listchars=tab:\▸\-
 
 " -----------------------------------
 " ステータスラインの設定
@@ -84,68 +82,14 @@ inoremap <silent> jj <ESC>
 " ESCキー2通しでハイライトの切り替え
 nnoremap <silent><Esc><Esc> : <C-u>set nohlsearch!<CR>
 
-" curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh -o /tmp/installer.sh
-" sh /tmp/installer.sh ~/.vim/dein
-
-" dein Scripts-----------------------------
-if &compatible
-  set nocompatible               " Be iMproved
-endif
-
-" Required:
-set runtimepath+=/home/ubuntu/.vim/dein/repos/github.com/Shougo/dein.vim
-
 " -----------------------------------
-" プラグイン
+" プラグインの設定
 " -----------------------------------
-" Required:
-if dein#load_state('/home/ubuntu/.vim/dein')
-  call dein#begin('/home/ubuntu/.vim/dein')
-  " call dein#local(expand('自作プラグインのディレクトリ指定'))
-  " Let dein manage dein
-  " Required:
-  call dein#add('/home/ubuntu/.vim/dein/repos/github.com/Shougo/dein.vim')
-  
-  " Add or remove your plugins here:
-  " テーマ
-  call dein#add('tomasr/molokai')
-  " control + -で選択中の行をコメントアウト
-  call dein#add('tomtom/tcomment_vim')
-  " 閉じ括弧を自動で入力
-  call dein#add('Townk/vim-autoclose')
-  " インデントを可視化
-  call dein#add('nathanaelkane/vim-indent-guides')
-  " 自動的にvim-indent-guidesをオン
-  let g:indent_guides_enable_on_vim_startup = 1
-  " ステータスラインの内容の表示強化
-  call dein#add('itchyny/lightline.vim')
-  " 閉じ括弧を自動追加
-  call dein#add('cohama/lexima.vim')
-  " NeoVimに以降してから追加
-  "call dein#add('Shougo/deoplete.nvim')
-  " vimでツリー表示
-  call dein#add('scrooloose/nerdtree')
-  " ctl + e でツリーを開く
-  nnoremap <silent><C-e> :NERDTreeToggle<CR>
-  " vim-go
-  call dein#add('fatih/vim-go')
-  
-  " Required:
-  call dein#end()
-  call dein#save_state()
-endif
-
-" Required:
-filetype plugin indent on
-syntax enable
-
-" If you want to install not installed plugins onstartup.
-"if dein#check_install()
-"  call dein#install()
-"endif
-
-"End dein Scripts-------------------------
-
+" テーマの設定
 colorscheme molokai
 set t_Co=256
 syntax on
+" 自動的にvim-indent-guidesをオン
+let g:indent_guides_enable_on_vim_startup = 1
+" ctl + e でツリーを開く
+nnoremap <silent><C-e> :NERDTreeToggle<CR>
