@@ -49,8 +49,6 @@ set showmatch
 set wildmenu
 " 保存するコマンド履歴の数
 set history=300
-" tabの可視化
-" set list listchars=tab:\▸\-
 
 " -----------------------------------
 " ステータスラインの設定
@@ -86,7 +84,8 @@ nnoremap <silent><Esc><Esc> : <C-u>set nohlsearch!<CR>
 " プラグインの設定
 " -----------------------------------
 " テーマの設定
-colorscheme molokai
+"colorscheme molokai
+colorscheme desert
 set t_Co=256
 syntax on
 " 自動的にvim-indent-guidesをオン
