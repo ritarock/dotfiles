@@ -83,14 +83,38 @@ nnoremap <silent><Esc><Esc> : <C-u>set nohlsearch!<CR>
 " ==========================
 " プラグインの設定
 " ==========================
-" テーマの設定
+" ===テーマの設定===
 colorscheme molokai
 "colorscheme desert
 set t_Co=256
 syntax on
+" ===vim-indent-guides===
 " 自動的にvim-indent-guidesをオン
 let g:indent_guides_enable_on_vim_startup = 1
+" ===nerdtree===
 " ctl + e でツリーを開く
 nnoremap <silent><C-e> :NERDTreeToggle<CR>
 
-"let g:python3_host_prog = system('which python3')
+" ===unite===
+" 入力モードで開始する
+let g:unite_enable_start_insert=1
+" バッファ一覧
+"noremap <C-P> :Unite buffer<CR>
+" ファイル一覧
+noremap <C-N> :Unite -buffer-name=file file<CR>
+" 最近使ったファイルの一覧
+"noremap <C-Z> :Unite file_mru<CR>
+" ウィンドウを分割して開く
+au FileType unite nnoremap <silent> <buffer> <expr> <C-J> unite#do_action('split')
+au FileType unite inoremap <silent> <buffer> <expr> <C-J> unite#do_action('split')
+" ウィンドウを縦に分割して開く
+au FileType unite nnoremap <silent> <buffer> <expr> <C-K> unite#do_action('vsplit')
+au FileType unite inoremap <silent> <buffer> <expr> <C-K> unite#do_action('vsplit')
+" ESCキーを2回押すと終了する
+au FileType unite nnoremap <silent> <buffer> <ESC><ESC> :q<CR>
+au FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>:q<CR>
+" 初期設定関数を起動する
+au FileType unite call s:unite_my_settings()
+    function! s:unite_my_settings()
+    " Overwrite settings.
+endfunction
