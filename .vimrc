@@ -1,6 +1,7 @@
 " ==========================
 " BASE SETTING
 " ==========================
+" ==========================
 " 文字コードを指定
 set encoding=utf-8
 " 起動時のメッセージを消す
@@ -24,9 +25,8 @@ set backspace=indent,eol,start
 " 元ネタ：http://vim-jp.org/vim-users-jp/2009/05/27/Hack-17.html
 " :Rename {新しいファイル名}
 command! -nargs=1 -complete=file Rename file <args> | call delete(expand('#'))
-
 " python3をデフォルトにする(文字コードを指定ON)
-" let g:python3_host_prog = expand('~/.pyenv/shims/python3')
+" let g:python3_host_prog = '/usr/local/bin/python3'
 
 " ==========================
 " タブ・インデントの設定
@@ -73,33 +73,37 @@ set smartcase
 set hlsearch
 
 " ==========================
-" キーバインド
+" キーバインドの設定
 " ==========================
 " jjでインサートモードを抜ける
 inoremap <silent> jj <ESC>
 " ESCキー2通しでハイライトの切り替え
 nnoremap <silent><Esc><Esc> : <C-u>set nohlsearch!<CR>
+" ;を:に置き換え
+nnoremap ; :
 
 " ==========================
 " プラグインの設定
 " ==========================
-" ===テーマの設定===
+" ---テーマの設定
 colorscheme molokai
 "colorscheme desert
 set t_Co=256
 syntax on
-" ===vim-indent-guides===
+
+" ---vim-indent-guides
 " 自動的にvim-indent-guidesをオン
 let g:indent_guides_enable_on_vim_startup = 1
-" ===nerdtree===
+
+" ---nerdtree
 " ctl + e でツリーを開く
 nnoremap <silent><C-e> :NERDTreeToggle<CR>
 
-" ===unite===
+" ---unite
 " 入力モードで開始する
 let g:unite_enable_start_insert=1
 " バッファ一覧
-"noremap <C-P> :Unite buffer<CR>
+noremap <C-P> :Unite buffer<CR>
 " ファイル一覧
 noremap <C-N> :Unite -buffer-name=file file<CR>
 " 最近使ったファイルの一覧
