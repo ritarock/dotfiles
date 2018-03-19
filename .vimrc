@@ -48,6 +48,12 @@ set showmatch
 set wildmenu
 " 保存するコマンド履歴の数
 set history=300
+" ruby,html,cssのみタブの幅を2にする
+augroup vimrc
+autocmd! FileType html setlocal shiftwidth=2 tabstop=2 softtabstop=2
+autocmd! FileType css  setlocal shiftwidth=2 tabstop=2 softtabstop=2
+autocmd! FileType ruby setlocal shiftwidth=2 tabstop=2 softtabstop=2
+augroup END
 
 " ==========================
 " ステータスラインの設定
