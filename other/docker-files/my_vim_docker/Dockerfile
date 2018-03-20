@@ -2,8 +2,8 @@ FROM alpine:latest
 
 WORKDIR /root
 
-ADD my_vimpackage_manager.py /root
-ADD plugin.json /root
+ADD package_manager.py /root
+ADD package.json /root
 COPY vim.txt /root/.vimrc
 
 RUN set -x && \
@@ -12,6 +12,6 @@ RUN set -x && \
     apk add --no-cache git && \
     mkdir -p .vim/pack/mypackage/start/ && \
     mkdir -p .vim/pack/mypackage/opt/myplugin/ && \
-    python3 my_vimpackage_manager.py && \
+    python3 package_manager.py && \
     apk del --purge python3 && \
     apk del --purge git

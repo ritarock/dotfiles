@@ -23,17 +23,13 @@ set backspace=indent,eol,start
 " renameの設定
 " 元ネタ：http://vim-jp.org/vim-users-jp/2009/05/27/Hack-17.html
 " :Rename {新しいファイル名}
-command! -nargs=1 -complete=file Rename file <args> | call delete(expand('#'    ))
-augroup vimrc
-    autocmd!
-   " set filetype=xxx した場合に任意の filetype を設定する
-    autocmd FileType js set filetype=javascript
-    autocmd FileType py set filetype=python
-augroup END
+command! -nargs=1 -complete=file Rename file <args> | call delete(expand('#'))
+" python3をデフォルトにする(文字コードを指定ON)
+" let g:python3_host_prog = '/usr/local/bin/python3'
 
-" -----------------------------------
+" ==========================
 " タブ・インデントの設定
-" -----------------------------------
+" ==========================
 " タブ入力を複数の空白入力に置き換える
 set expandtab
 " タブ文字の幅
@@ -52,12 +48,16 @@ set showmatch
 set wildmenu
 " 保存するコマンド履歴の数
 set history=300
-" tabの可視化
-set list listchars=tab:\▸\-
+" ruby,html,cssのみタブの幅を2にする
+augroup vimrc
+autocmd! FileType html setlocal shiftwidth=2 tabstop=2 softtabstop=2
+autocmd! FileType css  setlocal shiftwidth=2 tabstop=2 softtabstop=2
+autocmd! FileType ruby setlocal shiftwidth=2 tabstop=2 softtabstop=2
+augroup END
 
-" -----------------------------------
+" ==========================
 " ステータスラインの設定
-" -----------------------------------
+" ==========================
 " ステータスラインを常に表示
 set laststatus=2
 " 現在のモードを表示
@@ -65,9 +65,9 @@ set showmode
 "カーソルの現在位置を表示
 set ruler
 
-" -----------------------------------
+" ==========================
 " 文字列検索の設定
-" -----------------------------------
+" ==========================
 " 1文字入力毎に検索
 set incsearch
 " 検索パターンに大文字小文字を区別しない
@@ -77,22 +77,53 @@ set smartcase
 " 検索文字のハイライト
 set hlsearch
 
-" -----------------------------------
-" キーバインド
-" -----------------------------------
+" ==========================
+" キーバインドの設定
+" ==========================
 " jjでインサートモードを抜ける
 inoremap <silent> jj <ESC>
 " ESCキー2通しでハイライトの切り替え
 nnoremap <silent><Esc><Esc> : <C-u>set nohlsearch!<CR>
-" インサートモードでのカーソル移動
-inoremap <C-j> <Down>
-inoremap <C-k> <Up>
-inoremap <C-h> <Left>
-inoremap <C-l> <Right>
-" ノーマルモードでスペースを挿入
-nnoremap <C-Space> i<Space><Esc><Right>
-" cntrol + e で NERDTreeToggle
-nnoremap <silent><C-e> :NERDTreeToggle<CR>
+" ;を:に置き換え
+nnoremap ; :
+
+" ==========================
+" プラグインの設定
+" ==========================
+" ---テーマの設定
 colorscheme molokai
+"colorscheme desert
 set t_Co=256
 syntax on
+
+" ---vim-indent-guides
+" 自動的にvim-indent-guidesをオン
+let g:indent_guides_enable_on_vim_startup = 1
+
+" ---nerdtree
+" ctl + e でツリーを開く
+nnoremap <silent><C-e> :NERDTreeToggle<CR>
+
+" ---unite
+" 入力モードで開始する
+let g:unite_enable_start_insert=1
+" バッファ一覧
+noremap <C-P> :Unite buffer<CR>
+" ファイル一覧
+noremap <C-N> :Unite -buffer-name=file file<CR>
+" 最近使ったファイルの一覧
+"noremap <C-Z> :Unite file_mru<CR>
+" ウィンドウを分割して開く
+au FileType unite nnoremap <silent> <buffer> <expr> <C-J> unite#do_action('split')
+au FileType unite inoremap <silent> <buffer> <expr> <C-J> unite#do_action('split')
+" ウィンドウを縦に分割して開く
+au FileType unite nnoremap <silent> <buffer> <expr> <C-K> unite#do_action('vsplit')
+au FileType unite inoremap <silent> <buffer> <expr> <C-K> unite#do_action('vsplit')
+" ESCキーを2回押すと終了する
+au FileType unite nnoremap <silent> <buffer> <ESC><ESC> :q<CR>
+au FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>:q<CR>
+" 初期設定関数を起動する
+au FileType unite call s:unite_my_settings()
+    function! s:unite_my_settings()
+    " Overwrite settings.
+endfunction
