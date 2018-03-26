@@ -17,6 +17,8 @@ set cursorline
 set noswapfile
 " バックスペースを有効にする
 set backspace=indent,eol,start
+" 入力中のコマンドを表示する
+set showcmd
 " バックアップの設定
 "set backup
 "set backupdir=$HOME/vimbackup
