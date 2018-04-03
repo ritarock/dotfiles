@@ -88,6 +88,8 @@ inoremap <silent> jj <ESC>
 nnoremap <silent><Esc><Esc> : <C-u>set nohlsearch!<CR>
 " ;を:に置き換え
 nnoremap ; :
+" normal modeでスペース2回でカーソル下の単語をハイライト
+nnoremap <silent> <Space><Space> "zyiw:let @/ = '\<' . @z . '\>'<CR>:set hlsearch<CR>
 
 " ==========================
 " プラグインの設定
