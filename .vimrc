@@ -80,7 +80,7 @@ set smartcase
 set hlsearch
 
 " ==========================
-" キーバインドの設定
+" キーマップの設定
 " ==========================
 " jjでインサートモードを抜ける
 inoremap <silent> jj <ESC>
@@ -90,6 +90,9 @@ nnoremap <silent><Esc><Esc> : <C-u>set nohlsearch!<CR>
 nnoremap ; :
 " normal modeでスペース2回でカーソル下の単語をハイライト
 nnoremap <silent> <Space><Space> "zyiw:let @/ = '\<' . @z . '\>'<CR>:set hlsearch<CR>
+" xとsでヤンクさせない
+nnoremap x "_x
+nnoremap s "_s
 
 " ==========================
 " プラグインの設定
