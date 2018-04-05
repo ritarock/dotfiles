@@ -93,6 +93,10 @@ nnoremap <silent> <Space><Space> "zyiw:let @/ = '\<' . @z . '\>'<CR>:set hlsearc
 " xとsでヤンクさせない
 nnoremap x "_x
 nnoremap s "_s
+nnoremap j gj
+nnoremap k gk
+nnoremap gj j
+nnoremap gk k
 
 " ==========================
 " プラグインの設定
