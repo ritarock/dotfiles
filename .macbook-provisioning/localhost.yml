@@ -1,0 +1,35 @@
+---
+  - hosts: localhost
+    connection: local
+    gather_facts: no
+    become: no
+
+    vars:
+      homebrew_packages:
+        - name: python
+        - name: fish
+        - name: git
+
+      homebrew_cask_packages:
+        - name: google-chrome
+        - name: virtualbox
+        - name: vagrant
+        - name: iTerm2
+        - name: atom
+        - name: docker
+
+    tasks:
+        - name: update homebrew
+          homebrew: update_homebrew=yes
+
+        # brew
+        - name: install homebrew_packages
+          homebrew:
+            name={{ item.name }}
+          with_items: '{{ homebrew_packages }}'
+
+        # homebrew_cask
+        - name: install homebrew_cask_packages
+          homebrew_cask:
+            name={{ item.name }}
+          with_items: '{{ homebrew_cask_packages }}'
