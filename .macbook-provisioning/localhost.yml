@@ -9,14 +9,20 @@
         - name: python
         - name: fish
         - name: git
+        - name: node
+        - name: pyenv
+        - name: tree
 
       homebrew_cask_packages:
         - name: google-chrome
+        - name: google-drive
         - name: virtualbox
         - name: vagrant
         - name: iTerm2
         - name: atom
         - name: docker
+        - name: evernote
+        - name: dropbox
 
     tasks:
         - name: update homebrew
