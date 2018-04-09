@@ -24,6 +24,7 @@
         - name: docker
         - name: evernote
         - name: dropbox
+        - name: slack
 
     tasks:
         - name: update homebrew
