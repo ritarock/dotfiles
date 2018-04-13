@@ -90,51 +90,31 @@ nnoremap <silent><Esc><Esc> : <C-u>set nohlsearch!<CR>
 nnoremap ; :
 " normal modeでスペース2回でカーソル下の単語をハイライト
 nnoremap <silent> <Space><Space> "zyiw:let @/ = '\<' . @z . '\>'<CR>:set hlsearch<CR>
-" xとsでヤンクさせない
-nnoremap x "_x
-nnoremap s "_s
-nnoremap j gj
-nnoremap k gk
-nnoremap gj j
-nnoremap gk k
 
-" ==========================
-" プラグインの設定
-" ==========================
-" ---テーマの設定
-colorscheme molokai
-"colorscheme desert
+colorscheme desert
 set t_Co=256
 syntax on
 
-" ---vim-indent-guides
-" 自動的にvim-indent-guidesをオン
-let g:indent_guides_enable_on_vim_startup = 1
+" ==========================
+" プラグイン
+" ==========================
+" vim-plug導入
+" curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+"   https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+call plug#begin('~/.vim/plugged')
 
-" ---nerdtree
-" ctl + e でツリーを開く
-nnoremap <silent><C-e> :NERDTreeToggle<CR>
+" ツリー表示
+Plug 'scrooloose/nerdtree'
+" 末尾の可視化
+Plug 'bronson/vim-trailing-whitespace'
+" ステータスバーを強化
+Plug 'itchyny/lightline.vim'
+" インデントの可視化
+Plug 'nathanaelkane/vim-indent-guides'
+" コメントアウトの強化
+Plug 'tomtom/tcomment_vim'
+" 括弧を自動で挿入
+Plug 'Townk/vim-autoclose'
 
-" ---unite
-" 入力モードで開始する
-let g:unite_enable_start_insert=1
-" バッファ一覧
-noremap <C-P> :Unite buffer<CR>
-" ファイル一覧
-noremap <C-N> :Unite -buffer-name=file file<CR>
-" 最近使ったファイルの一覧
-"noremap <C-Z> :Unite file_mru<CR>
-" ウィンドウを分割して開く
-au FileType unite nnoremap <silent> <buffer> <expr> <C-J> unite#do_action('split')
-au FileType unite inoremap <silent> <buffer> <expr> <C-J> unite#do_action('split')
-" ウィンドウを縦に分割して開く
-au FileType unite nnoremap <silent> <buffer> <expr> <C-K> unite#do_action('vsplit')
-au FileType unite inoremap <silent> <buffer> <expr> <C-K> unite#do_action('vsplit')
-" ESCキーを2回押すと終了する
-au FileType unite nnoremap <silent> <buffer> <ESC><ESC> :q<CR>
-au FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>:q<CR>
-" 初期設定関数を起動する
-au FileType unite call s:unite_my_settings()
-    function! s:unite_my_settings()
-    " Overwrite settings.
-endfunction
+call plug#end()
+
