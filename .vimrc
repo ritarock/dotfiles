@@ -11,8 +11,6 @@ set whichwrap =b,s,h,l,<,>,[,],~
 set number
 " 行の強調
 set cursorline
-" カーソルラインをハイライト
-set cursorline
 " swapファイルを作らない
 set noswapfile
 " バックスペースを有効にする
@@ -28,6 +26,10 @@ set showcmd
 command! -nargs=1 -complete=file Rename file <args> | call delete(expand('#'))
 " python3をデフォルトにする(文字コードを指定ON)
 " let g:python3_host_prog = '/usr/local/bin/python3'
+" カラースキーム
+colorscheme desert
+set t_Co=256
+syntax on
 
 " ==========================
 " タブ・インデントの設定
@@ -49,7 +51,7 @@ set showmatch
 " コマンドモードの補完
 set wildmenu
 " 保存するコマンド履歴の数
-set history=300
+set history=500
 " ruby,html,cssのみタブの幅を2にする
 augroup vimrc
 autocmd! FileType html setlocal shiftwidth=2 tabstop=2 softtabstop=2
@@ -66,6 +68,8 @@ set laststatus=2
 set showmode
 "カーソルの現在位置を表示
 set ruler
+" コマンドラインの高さ
+set cmdheight=2
 
 " ==========================
 " 文字列検索の設定
@@ -91,9 +95,6 @@ nnoremap ; :
 " normal modeでスペース2回でカーソル下の単語をハイライト
 nnoremap <silent> <Space><Space> "zyiw:let @/ = '\<' . @z . '\>'<CR>:set hlsearch<CR>
 
-colorscheme desert
-set t_Co=256
-syntax on
 
 " ==========================
 " プラグイン
@@ -117,4 +118,3 @@ Plug 'tomtom/tcomment_vim'
 Plug 'Townk/vim-autoclose'
 
 call plug#end()
-
