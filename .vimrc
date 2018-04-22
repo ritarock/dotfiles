@@ -17,19 +17,15 @@ set noswapfile
 set backspace=indent,eol,start
 " 入力中のコマンドを表示する
 set showcmd
-" バックアップの設定
-"set backup
-"set backupdir=$HOME/vimbackup
-" renameの設定
-" 元ネタ：http://vim-jp.org/vim-users-jp/2009/05/27/Hack-17.html
-" :Rename {新しいファイル名}
-command! -nargs=1 -complete=file Rename file <args> | call delete(expand('#'))
-" python3をデフォルトにする(文字コードを指定ON)
-" let g:python3_host_prog = '/usr/local/bin/python3'
 " カラースキーム
 colorscheme desert
 set t_Co=256
 syntax on
+" バックアップの設定
+"set backup
+"set backupdir=$HOME/vimbackup
+" python3をデフォルトにする(文字コードを指定ON)
+" let g:python3_host_prog = '/usr/local/bin/python3'
 
 " ==========================
 " タブ・インデントの設定
@@ -95,7 +91,6 @@ nnoremap ; :
 " normal modeでスペース2回でカーソル下の単語をハイライト
 nnoremap <silent> <Space><Space> "zyiw:let @/ = '\<' . @z . '\>'<CR>:set hlsearch<CR>
 
-
 " ==========================
 " プラグイン
 " ==========================
@@ -103,7 +98,6 @@ nnoremap <silent> <Space><Space> "zyiw:let @/ = '\<' . @z . '\>'<CR>:set hlsearc
 " curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 "   https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 call plug#begin('~/.vim/plugged')
-
 " ツリー表示
 Plug 'scrooloose/nerdtree'
 " 末尾の可視化
@@ -116,5 +110,6 @@ Plug 'nathanaelkane/vim-indent-guides'
 Plug 'tomtom/tcomment_vim'
 " 括弧を自動で挿入
 Plug 'Townk/vim-autoclose'
-
+" ES6のシンタックスハイライト
+Plug 'othree/yajs.vim'
 call plug#end()
