@@ -106,10 +106,23 @@ Plug 'bronson/vim-trailing-whitespace'
 Plug 'itchyny/lightline.vim'
 " インデントの可視化
 Plug 'nathanaelkane/vim-indent-guides'
+" 常にインデントの可視化
+let g:indent_guides_enable_on_vim_startup = 1
+" helpとnerdtreeは除く
+let g:indent_guides_exclude_filetypes = ['help', 'nerdtree']
 " コメントアウトの強化
 Plug 'tomtom/tcomment_vim'
 " 括弧を自動で挿入
 Plug 'Townk/vim-autoclose'
 " ES6のシンタックスハイライト
 Plug 'othree/yajs.vim'
+" gitの拡張
+Plug 'airblade/vim-gitgutter'
+" vim上でnodejsを実行
+Plug 'thinca/vim-quickrun'
+" 画面分割する
+set splitright
+let g:quickrun_config={'*': {'vsplit': ''}}
+
 call plug#end()
+
