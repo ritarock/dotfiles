@@ -25,7 +25,7 @@ syntax on
 "set backup
 "set backupdir=$HOME/vimbackup
 " python3をデフォルトにする(文字コードを指定ON)
-" let g:python3_host_prog = '/usr/local/bin/python3'
+"let g:python3_host_prog = '/usr/local/bin/python3'
 
 " ==========================
 " タブ・インデントの設定
@@ -53,6 +53,7 @@ augroup vimrc
 autocmd! FileType html setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd! FileType css  setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd! FileType ruby setlocal shiftwidth=2 tabstop=2 softtabstop=2
+autocmd! FileType vim  setlocal shiftwidth=2 tabstop=2 softtabstop=2
 augroup END
 
 " ==========================
@@ -118,6 +119,11 @@ Plug 'Townk/vim-autoclose'
 Plug 'othree/yajs.vim'
 " gitの拡張
 Plug 'airblade/vim-gitgutter'
+" +/-の見た目を変更
+let g:gitgutter_sign_added = '∙'
+let g:gitgutter_sign_modified = '∙'
+let g:gitgutter_sign_removed = '∙'
+let g:gitgutter_sign_modified_removed = '∙'
 " vim上でnodejsを実行
 Plug 'thinca/vim-quickrun'
 " 画面分割する
@@ -125,4 +131,3 @@ set splitright
 let g:quickrun_config={'*': {'vsplit': ''}}
 
 call plug#end()
-
