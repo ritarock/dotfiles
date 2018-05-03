@@ -101,6 +101,8 @@ nnoremap <silent> <Space><Space> "zyiw:let @/ = '\<' . @z . '\>'<CR>:set hlsearc
 call plug#begin('~/.vim/plugged')
 " ツリー表示
 Plug 'scrooloose/nerdtree'
+" 隠しファイルを表示
+let NERDTreeShowHidden = 1
 " 末尾の可視化
 Plug 'bronson/vim-trailing-whitespace'
 " ステータスバーを強化
