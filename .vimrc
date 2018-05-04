@@ -1,51 +1,29 @@
 " ==========================
 " BASE SETTING
 " ==========================
-" 文字コードを指定
-set encoding=utf-8
-" 起動時のメッセージを消す
-set shortmess+=I
-" カーソルの左右移動で行末から次の行頭へ移動が可能になる
-set whichwrap =b,s,h,l,<,>,[,],~
-" 行番号の表示
-set number
-" 行の強調
-set cursorline
-" swapファイルを作らない
-set noswapfile
-" バックスペースを有効にする
-set backspace=indent,eol,start
-" 入力中のコマンドを表示する
-set showcmd
-" カラースキーム
+set encoding=utf-8          "UTF-8 by default
+set shortmess+=I            "Remove splash screen
+set whichwrap =b,s,h,l,<,>,[,],~  "Enable line change with right or left cursor move
+set number                  "Set line number
+set cursorline              "Set cursor line
+set noswapfile              "Don't make swapfile
+set backspace=indent,eol,start "Enable backspace
+set showcmd                 "Show command
 colorscheme desert
 set t_Co=256
 syntax on
-" バックアップの設定
-"set backup
-"set backupdir=$HOME/vimbackup
-" python3をデフォルトにする(文字コードを指定ON)
-"let g:python3_host_prog = '/usr/local/bin/python3'
 
 " ==========================
-" タブ・インデントの設定
+" TAB,indent setting
 " ==========================
-" タブ入力を複数の空白入力に置き換える
-set expandtab
-" タブ文字の幅
-set tabstop=4
-" 連続空白に対してタブやバックスペースでカーソルがが動く幅
-set softtabstop=4
-" 改行前のインデントを維持する
-set autoindent
-" 改行前の構文をチェックし次の行のインデントを増減する
-set smartindent
-" smartindentで増減する幅
-set shiftwidth=4
-" 括弧の対応関係の表示
-set showmatch
-" コマンドモードの補完
-set wildmenu
+set expandtab               "Replace space with TAB
+set tabstop=2               "The one true Tab
+set softtabstop=2           "Spaces 'feel' like tabs
+set autoindent              "Carry over indenting from previous line
+set smartindent             "Set smartindent
+set shiftwidth=2            "Smartindent's space is 2
+set showmatch               "Hilight matching braces/parens/etc
+set wildmenu                "Show possible completions on command line
 " 保存するコマンド履歴の数
 set history=500
 " ruby,html,cssのみタブの幅を2にする
