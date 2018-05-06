@@ -4,8 +4,8 @@
 set encoding=utf-8          "UTF-8 by default
 set shortmess+=I            "Remove splash screen
 set whichwrap =b,s,h,l,<,>,[,],~  "Enable line change with right or left cursor move
-set number                  "Set line number
-set cursorline              "Set cursor line
+set number                  "Show line number
+set cursorline              "Show cursor line
 set noswapfile              "Don't make swapfile
 set backspace=indent,eol,start "Enable backspace
 set showcmd                 "Show command
@@ -14,7 +14,7 @@ set t_Co=256
 syntax on
 
 " ==========================
-" TAB,indent setting
+" TAB,INDENT SETTING
 " ==========================
 set expandtab               "Replace space with TAB
 set tabstop=2               "The one true Tab
@@ -34,7 +34,7 @@ set history=200             "How many lines of history to save
 " augroup END
 
 " ==========================
-" status line setting
+" STATUS LINE SETTING
 " ==========================
 set laststatus=2            "Always show the status bar
 set showmode                "Show mode
@@ -42,7 +42,7 @@ set ruler                   "Show row/col and percentage
 set cmdheight=2             "Command line's height is 2
 
 " ==========================
-" serach setting
+" SEARCH SETTING
 " ==========================
 set incsearch               "Search as you type
 set ignorecase              "Case insensitive
@@ -50,7 +50,7 @@ set smartcase               "Lets you search for ALL CAPS
 set hlsearch                "Hilight searching
 
 " ==========================
-" keymap setting
+" KEYMAP SETTING
 " ==========================
 nmap j gj
 nmap k gk
@@ -61,7 +61,7 @@ nnoremap ; :
 nnoremap <silent> <Space><Space> "zyiw:let @/ = '\<' . @z . '\>'<CR>:set hlsearch<CR>
 
 " ==========================
-" Plugin
+" PLUGIN
 " ==========================
 " Install vim-plug
 " curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
@@ -94,5 +94,8 @@ Plug 'thinca/vim-quickrun'
 "Split right
 set splitright
 let g:quickrun_config={'*': {'vsplit': ''}}
+"HELP in Japanese
+Plug 'vim-jp/vimdoc-ja'
+set helplang=ja,en
 
 call plug#end()
