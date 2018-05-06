@@ -1,14 +1,22 @@
 " ==========================
 " BASE SETTING
 " ==========================
-set encoding=utf-8          "UTF-8 by default
-set shortmess+=I            "Remove splash screen
-set whichwrap =b,s,h,l,<,>,[,],~  "Enable line change with right or left cursor move
-set number                  "Show line number
-set cursorline              "Show cursor line
-set noswapfile              "Don't make swapfile
-set backspace=indent,eol,start "Enable backspace
-set showcmd                 "Show command
+" UTF-8 by default
+set encoding=utf-8
+" Remove splash screen
+set shortmess+=I
+" Enable line change with right or left cursor move
+set whichwrap =b,s,h,l,<,>,[,],~
+" Show line number
+set number
+" Show cursor line
+set cursorline
+" Don't make swapfile
+set noswapfile
+" Enable backspace
+set backspace=indent,eol,start
+" Show command
+set showcmd
 colorscheme desert
 set t_Co=256
 syntax on
@@ -16,15 +24,24 @@ syntax on
 " ==========================
 " TAB,INDENT SETTING
 " ==========================
-set expandtab               "Replace space with TAB
-set tabstop=2               "The one true Tab
-set softtabstop=2           "Spaces 'feel' like tabs
-set autoindent              "Carry over indenting from previous line
-set smartindent             "Set smartindent
-set shiftwidth=2            "Smartindent's space is 2
-set showmatch               "Hilight matching braces/parens/etc
-set wildmenu                "Show possible completions on command line
-set history=200             "How many lines of history to save
+" Replace space with TAB
+set expandtab
+" The one true Tab
+set tabstop=2
+" Spaces 'feel' like tabs
+set softtabstop=2
+" Carry over indenting from previous line
+set autoindent
+" Set smartindent
+set smartindent
+" Smartindent's space is 2
+set shiftwidth=2
+" Hilight matching braces/parens/etc
+set showmatch
+" Show possible completions on command line
+set wildmenu
+" How many lines of history to save
+set history=200
 
 " augroup vimrc
 " autocmd! FileType html setlocal shiftwidth=2 tabstop=2 softtabstop=2
@@ -36,18 +53,26 @@ set history=200             "How many lines of history to save
 " ==========================
 " STATUS LINE SETTING
 " ==========================
-set laststatus=2            "Always show the status bar
-set showmode                "Show mode
-set ruler                   "Show row/col and percentage
-set cmdheight=2             "Command line's height is 2
+" Always show the status bar
+set laststatus=2
+" Show mode
+set showmode
+" Show row/col and percentage
+set ruler
+" Command line's height is 2
+set cmdheight=2
 
 " ==========================
 " SEARCH SETTING
 " ==========================
-set incsearch               "Search as you type
-set ignorecase              "Case insensitive
-set smartcase               "Lets you search for ALL CAPS
-set hlsearch                "Hilight searching
+" Search as you type
+set incsearch
+" Case insensitive
+set ignorecase
+" Lets you search for ALL CAPS
+set smartcase
+" Hilight searching
+set hlsearch
 
 " ==========================
 " KEYMAP SETTING
@@ -68,33 +93,33 @@ nnoremap <silent> <Space><Space> "zyiw:let @/ = '\<' . @z . '\>'<CR>:set hlsearc
 " https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 call plug#begin('~/.vim/plugged')
 
-"Show tree
+" Show tree
 Plug 'scrooloose/nerdtree'
-"Show dotfile
+" Show dotfile
 let NERDTreeShowHidden = 1
-"Causes all trailing whitespace to be highlighted in red
+" Causes all trailing whitespace to be highlighted in red
 Plug 'bronson/vim-trailing-whitespace'
-"Power up status line
+" Power up status line
 Plug 'itchyny/lightline.vim'
-"Easy commentout (gcc)
+" Easy commentout (gcc)
 Plug 'tomtom/tcomment_vim'
-"Auto insert braces/parens/etc
+" Auto insert braces/parens/etc
 Plug 'Townk/vim-autoclose'
-"Syntax highlight ES6
+" Syntax highlight ES6
 Plug 'othree/yajs.vim'
-"Git config
+" Git config
 Plug 'airblade/vim-gitgutter'
-"GitGutter styling to use · instead of +/-
+" GitGutter styling to use · instead of +/-
 let g:gitgutter_sign_added = '∙'
 let g:gitgutter_sign_modified = '∙'
 let g:gitgutter_sign_removed = '∙'
 let g:gitgutter_sign_modified_removed = '∙'
-"Run commands quickly
+" Run commands quickly
 Plug 'thinca/vim-quickrun'
-"Split right
+" Split right
 set splitright
 let g:quickrun_config={'*': {'vsplit': ''}}
-"HELP in Japanese
+" HELP in Japanese
 Plug 'vim-jp/vimdoc-ja'
 set helplang=ja,en
 
