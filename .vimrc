@@ -124,3 +124,12 @@ Plug 'vim-jp/vimdoc-ja'
 set helplang=ja,en
 
 call plug#end()
+
+" My command
+command! -nargs=0 Pytemplate call PyTemplate()
+function! PyTemplate()
+  call setline(1,"def main():")
+  call setline(2,"")
+  call setline(3,"if __name__ == '__main__':")
+  call setline(4,"    main()")
+endfunction
