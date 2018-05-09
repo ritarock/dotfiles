@@ -98,16 +98,25 @@ call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree'
 " Show dotfile
 let NERDTreeShowHidden = 1
+
 " Causes all trailing whitespace to be highlighted in red
 Plug 'bronson/vim-trailing-whitespace'
+
 " Power up status line
 Plug 'itchyny/lightline.vim'
+let g:lightline = {
+  \'colorscheme': 'wombat',
+  \}
+
 " Easy commentout (gcc)
 Plug 'tomtom/tcomment_vim'
+
 " Auto insert braces/parens/etc
 Plug 'Townk/vim-autoclose'
+
 " Syntax highlight ES6
 Plug 'othree/yajs.vim'
+
 " Git config
 Plug 'airblade/vim-gitgutter'
 " GitGutter styling to use · instead of +/-
@@ -115,11 +124,13 @@ let g:gitgutter_sign_added = '∙'
 let g:gitgutter_sign_modified = '∙'
 let g:gitgutter_sign_removed = '∙'
 let g:gitgutter_sign_modified_removed = '∙'
+
 " Run commands quickly
 Plug 'thinca/vim-quickrun'
 " Split right
 set splitright
 let g:quickrun_config={'*': {'vsplit': ''}}
+
 " HELP in Japanese
 Plug 'vim-jp/vimdoc-ja'
 set helplang=ja,en
