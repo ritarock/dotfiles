@@ -84,6 +84,7 @@ nnoremap <silent><Esc><Esc> : <C-u>set nohlsearch!<CR>
 nnoremap ; :
 " Highlight the word under the cursor in normal mode with 2 spaces
 nnoremap <silent> <Space><Space> "zyiw:let @/ = '\<' . @z . '\>'<CR>:set hlsearch<CR>
+nmap \e :NERDTreeToggle<CR>
 
 " ==========================
 " PLUGIN
