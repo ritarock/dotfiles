@@ -104,9 +104,7 @@ Plug 'bronson/vim-trailing-whitespace'
 
 " Power up status line
 Plug 'itchyny/lightline.vim'
-let g:lightline = {
-  \'colorscheme': 'wombat',
-  \}
+"let g:lightline = {'colorscheme': 'wombat'}
 
 " Easy commentout (gcc)
 Plug 'tomtom/tcomment_vim'
@@ -138,10 +136,32 @@ set helplang=ja,en
 call plug#end()
 
 " My command
-command! -nargs=0 Pytemplate call PyTemplate()
-function! PyTemplate()
+command! -nargs=0 TemplatePy call TemplatePy()
+function! TemplatePy()
+  set filetype=python
   call setline(1,"def main():")
   call setline(2,"")
   call setline(3,"if __name__ == '__main__':")
   call setline(4,"    main()")
+endfunction
+
+command! -nargs=0 TemplateHtml call TemplateHtml()
+function! TemplateHtml()
+  set filetype=html
+  call setline(1,"<!DOCTYPE html>")
+  call setline(2,"<html>")
+  call setline(3,"  <head>")
+  call setline(4,"    <meta charset=\"utf-8\">")
+  call setline(5,"    <title>TITLE</title>")
+  call setline(6,"  </head>")
+  call setline(7,"  <body>")
+  call setline(8,"    <!-- BODY -->")
+  call setline(9,"  </body>")
+  call setline(10,"</html>")
+endfunction
+
+command! -nargs=0 TemplateSh call TemplateSh()
+function! TemplateSh()
+  set filetype=sh
+  call setline(1,"#!/bin/sh")
 endfunction
