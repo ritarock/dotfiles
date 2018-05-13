@@ -1,6 +1,6 @@
-" ==========================
+" ====================================================
 " BASE SETTING
-" ==========================
+" ====================================================
 " UTF-8 by default
 set encoding=utf-8
 " Remove splash screen
@@ -21,9 +21,9 @@ colorscheme desert
 set t_Co=256
 syntax on
 
-" ==========================
+" ====================================================
 " TAB,INDENT SETTING
-" ==========================
+" ====================================================
 " Replace space with TAB
 set expandtab
 " The one true Tab
@@ -43,16 +43,9 @@ set wildmenu
 " How many lines of history to save
 set history=200
 
-" augroup vimrc
-" autocmd! FileType html setlocal shiftwidth=2 tabstop=2 softtabstop=2
-" autocmd! FileType css  setlocal shiftwidth=2 tabstop=2 softtabstop=2
-" autocmd! FileType ruby setlocal shiftwidth=2 tabstop=2 softtabstop=2
-" autocmd! FileType vim  setlocal shiftwidth=2 tabstop=2 softtabstop=2
-" augroup END
-
-" ==========================
+" ====================================================
 " STATUS LINE SETTING
-" ==========================
+" ====================================================
 " Always show the status bar
 set laststatus=2
 " Show mode
@@ -62,9 +55,9 @@ set ruler
 " Command line's height is 2
 set cmdheight=2
 
-" ==========================
+" ====================================================
 " SEARCH SETTING
-" ==========================
+" ====================================================
 " Search as you type
 set incsearch
 " Case insensitive
@@ -74,9 +67,9 @@ set smartcase
 " Hilight searching
 set hlsearch
 
-" ==========================
+" ====================================================
 " KEYMAP SETTING
-" ==========================
+" ====================================================
 nmap j gj
 nmap k gk
 inoremap <silent> jj <ESC>
@@ -85,10 +78,12 @@ nnoremap ; :
 " Highlight the word under the cursor in normal mode with 2 spaces
 nnoremap <silent> <Space><Space> "zyiw:let @/ = '\<' . @z . '\>'<CR>:set hlsearch<CR>
 nmap \e :NERDTreeToggle<CR>
+nnoremap x "_x
+nnoremap s "_s
 
-" ==========================
+" ====================================================
 " PLUGIN
-" ==========================
+" ====================================================
 " Install vim-plug
 " curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 " https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -135,7 +130,9 @@ set helplang=ja,en
 
 call plug#end()
 
-" My command
+" ====================================================
+" MY COMMAND
+" ====================================================
 command! -nargs=0 TemplatePy call TemplatePy()
 function! TemplatePy()
   set filetype=python
@@ -164,4 +161,14 @@ command! -nargs=0 TemplateSh call TemplateSh()
 function! TemplateSh()
   set filetype=sh
   call setline(1,"#!/bin/sh")
+endfunction
+
+command! -nargs=0 DebugPy call DebugPy()
+function! DebugPy()
+  call append(line("."),"print('')")
+endfunction
+
+command! -nargs=0 DebugJs call DebugJs()
+function! DebugJs()
+  call append(line("."),"console.log('');")
 endfunction
