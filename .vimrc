@@ -42,6 +42,10 @@ set showmatch
 set wildmenu
 " How many lines of history to save
 set history=200
+" Change indent when python
+augroup vimrc
+autocmd! FileType python setlocal shiftwidth=4 tabstop=4 softtabstop=4
+augroup END
 
 " ====================================================
 " STATUS LINE SETTING
@@ -163,12 +167,15 @@ function! TemplateSh()
   call setline(1,"#!/bin/sh")
 endfunction
 
-command! -nargs=0 DebugPy call DebugPy()
-function! DebugPy()
-  call append(line("."),"print('')")
+command! -nargs=0 DebugLog call Debuglog()
+function! Debuglog()
+  let ft = &filetype
+  if ft == "python"
+    call append(line("."),"print('')")
+  elseif ft == "javascript"
+    call append(line("."),"console.log('');")
+  else
+    echo "processing"
+  endif
 endfunction
 
-command! -nargs=0 DebugJs call DebugJs()
-function! DebugJs()
-  call append(line("."),"console.log('');")
-endfunction
