@@ -137,34 +137,32 @@ call plug#end()
 " ====================================================
 " MY COMMAND
 " ====================================================
-command! -nargs=0 TemplatePy call TemplatePy()
-function! TemplatePy()
-  set filetype=python
-  call setline(1,"def main():")
-  call setline(2,"")
-  call setline(3,"if __name__ == '__main__':")
-  call setline(4,"    main()")
-endfunction
-
-command! -nargs=0 TemplateHtml call TemplateHtml()
-function! TemplateHtml()
-  set filetype=html
-  call setline(1,"<!DOCTYPE html>")
-  call setline(2,"<html>")
-  call setline(3,"  <head>")
-  call setline(4,"    <meta charset=\"utf-8\">")
-  call setline(5,"    <title>TITLE</title>")
-  call setline(6,"  </head>")
-  call setline(7,"  <body>")
-  call setline(8,"    <!-- BODY -->")
-  call setline(9,"  </body>")
-  call setline(10,"</html>")
-endfunction
-
-command! -nargs=0 TemplateSh call TemplateSh()
-function! TemplateSh()
-  set filetype=sh
-  call setline(1,"#!/bin/sh")
+command! -nargs=1 Template call Template(<f-args>)
+function! Template(argft)
+  if a:argft == "python"
+    set filetype=python
+    call setline(1,"def main():")
+    call setline(2,"")
+    call setline(3,"if __name__ == '__main__':")
+    call setline(4,"    main()")
+  elseif a:argft == "sh"
+    set filetype=sh
+    call setline(1,"#!/bin/sh")
+  elseif a:argft == "html"
+    set filetype=html
+    call setline(1,"<!DOCTYPE html>")
+    call setline(2,"<html>")
+    call setline(3,"  <head>")
+    call setline(4,"    <meta charset=\"utf-8\">")
+    call setline(5,"    <title>TITLE</title>")
+    call setline(6,"  </head>")
+    call setline(7,"  <body>")
+    call setline(8,"    <!-- BODY -->")
+    call setline(9,"  </body>")
+    call setline(10,"</html>")
+  else
+    echo "processing"
+  endif
 endfunction
 
 command! -nargs=0 DebugLog call Debuglog()
