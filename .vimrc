@@ -165,15 +165,16 @@ function! Template(argft)
   endif
 endfunction
 
-command! -nargs=0 DebugLog call Debuglog()
-function! Debuglog()
+command! -nargs=1 DebugLog call DebugLog(<f-args>)
+function! DebugLog(charg)
   let ft = &filetype
   if ft == "python"
-    call append(line("."),"print('')")
+    let message = "print(" . a:charg . ")"
+    call append(line("."),message)
   elseif ft == "javascript"
-    call append(line("."),"console.log('');")
+    let message = "console.log(" . a:charg . ");"
+    call append(line("."),message)
   else
     echo "processing"
   endif
 endfunction
-
