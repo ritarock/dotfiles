@@ -132,6 +132,13 @@ let g:quickrun_config={'*': {'vsplit': ''}}
 Plug 'vim-jp/vimdoc-ja'
 set helplang=ja,en
 
+" Resize window
+Plug 'simeji/winresizer'
+" The change width of window size when left or right key is pressed
+let g:winresizer_vert_resize = 1
+" The change height of window size when down or up key is pressed
+let g:winresizer_horiz_resize = 1
+
 call plug#end()
 
 " ====================================================
@@ -161,7 +168,7 @@ function! Template(argft)
     call setline(9,"  </body>")
     call setline(10,"</html>")
   else
-    echo "processing"
+    echo "Not Compatible"
   endif
 endfunction
 
@@ -175,6 +182,6 @@ function! DebugLog(charg)
     let message = "console.log(" . a:charg . ");"
     call append(line("."),message)
   else
-    echo "processing"
+    echo "Not Compatible"
   endif
 endfunction
