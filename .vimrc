@@ -13,6 +13,8 @@ set number
 set cursorline
 " Don't make swapfile
 set noswapfile
+" Don't make undofile
+set noundofile
 " Enable backspace
 set backspace=indent,eol,start
 " Show command
@@ -134,6 +136,7 @@ set helplang=ja,en
 
 " Resize window
 Plug 'simeji/winresizer'
+" Press keys Ctrl + E
 " The change width of window size when left or right key is pressed
 let g:winresizer_vert_resize = 1
 " The change height of window size when down or up key is pressed
