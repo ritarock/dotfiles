@@ -1,5 +1,5 @@
 " ====================================================
-" PLUGIN
+" PLUGIN AND SETTING
 " ====================================================
 " Install vim-plug
 " curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
@@ -44,6 +44,7 @@ let g:winresizer_vert_resize = 1
 " The change height of window size when down or up key is pressed
 let g:winresizer_horiz_resize = 1
 
+"colorscheme
 Plug 'tomasr/molokai'
 
 call plug#end()
@@ -69,6 +70,8 @@ set noundofile
 set backspace=indent,eol,start
 " Show command
 set showcmd
+
+"colorscheme
 "colorscheme desert
 colorscheme molokai
 set t_Co=256
@@ -129,12 +132,12 @@ set hlsearch
 " ====================================================
 nmap j gj
 nmap k gk
+nmap \e :NERDTreeToggle<CR>
 inoremap <silent> jj <ESC>
 nnoremap <silent><Esc><Esc> : <C-u>set nohlsearch!<CR>
 nnoremap ; :
 " Highlight the word under the cursor in normal mode with 2 spaces
 nnoremap <silent> <Space><Space> "zyiw:let @/ = '\<' . @z . '\>'<CR>:set hlsearch<CR>
-nmap \e :NERDTreeToggle<CR>
 nnoremap x "_x
 nnoremap s "_s
 
@@ -165,7 +168,7 @@ function! Template(argft)
     call setline(9,"  </body>")
     call setline(10,"</html>")
   else
-    echo "Not Compatible"
+    echo "Not Applicable"
   endif
 endfunction
 
@@ -179,6 +182,6 @@ function! DebugLog(charg)
     let message = "console.log(" . a:charg . ");"
     call append(line("."),message)
   else
-    echo "Not Compatible"
+    echo "Not Applicable"
   endif
 endfunction
