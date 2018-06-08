@@ -44,8 +44,14 @@ let g:winresizer_vert_resize = 1
 " The change height of window size when down or up key is pressed
 let g:winresizer_horiz_resize = 1
 
-"colorscheme
+" colorscheme
 Plug 'tomasr/molokai'
+
+" Syntax typescript
+Plug 'leafgarland/typescript-vim'
+
+" Auto close parentheses and repeat by dot dot dot...
+Plug 'cohama/lexima.vim'
 
 call plug#end()
 
@@ -72,8 +78,8 @@ set backspace=indent,eol,start
 set showcmd
 
 "colorscheme
-"colorscheme desert
-colorscheme molokai
+colorscheme desert
+"colorscheme molokai
 set t_Co=256
 syntax on
 
@@ -185,3 +191,6 @@ function! DebugLog(charg)
     echo "Not Applicable"
   endif
 endfunction
+
+imap <C-f> World
+imap <C-b><C-f> Hello
