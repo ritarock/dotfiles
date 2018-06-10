@@ -10,17 +10,23 @@ call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree'
 " Show dotfile
 let NERDTreeShowHidden = 1
+
 " Causes all trailing whitespace to be highlighted in red
 Plug 'bronson/vim-trailing-whitespace'
-" Power up status line
+
+" status line (powerline)
 Plug 'itchyny/lightline.vim'
 "let g:lightline = {'colorscheme': 'wombat'}
+
 " Easy commentout (gcc)
 Plug 'tomtom/tcomment_vim'
+
 " Auto insert braces/parens/etc
 Plug 'Townk/vim-autoclose'
+
 " Syntax highlight ES6
 Plug 'othree/yajs.vim'
+
 " Git config
 Plug 'airblade/vim-gitgutter'
 " GitGutter styling to use · instead of +/-
@@ -28,14 +34,17 @@ let g:gitgutter_sign_added = '∙'
 let g:gitgutter_sign_modified = '∙'
 let g:gitgutter_sign_removed = '∙'
 let g:gitgutter_sign_modified_removed = '∙'
+
 " Run commands quickly
 Plug 'thinca/vim-quickrun'
 " Split right
 set splitright
 let g:quickrun_config={'*': {'vsplit': ''}}
+
 " HELP in Japanese
 Plug 'vim-jp/vimdoc-ja'
 set helplang=ja,en
+
 " Resize window
 Plug 'simeji/winresizer'
 " Press keys Ctrl + E
@@ -50,7 +59,7 @@ Plug 'tomasr/molokai'
 " Syntax typescript
 Plug 'leafgarland/typescript-vim'
 
-" Auto close parentheses and repeat by dot dot dot...
+" automatically close pairs such as (), {}, ...
 Plug 'cohama/lexima.vim'
 
 call plug#end()
@@ -76,7 +85,6 @@ set noundofile
 set backspace=indent,eol,start
 " Show command
 set showcmd
-
 "colorscheme
 colorscheme desert
 "colorscheme molokai
@@ -146,6 +154,10 @@ nnoremap ; :
 nnoremap <silent> <Space><Space> "zyiw:let @/ = '\<' . @z . '\>'<CR>:set hlsearch<CR>
 nnoremap x "_x
 nnoremap s "_s
+imap <C-h> <Left>
+imap <C-j> <Down>
+imap <C-k> <Up>
+imap <C-l> <Right>
 
 " ====================================================
 " MY COMMAND
