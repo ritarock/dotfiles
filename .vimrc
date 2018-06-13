@@ -62,6 +62,9 @@ Plug 'leafgarland/typescript-vim'
 " automatically close pairs such as (), {}, ...
 Plug 'cohama/lexima.vim'
 
+" Easy move
+Plug 'easymotion/vim-easymotion'
+
 call plug#end()
 
 " ====================================================
@@ -147,6 +150,8 @@ set hlsearch
 nmap j gj
 nmap k gk
 nmap \e :NERDTreeToggle<CR>
+" \s {char}
+map <Leader> <Plug>(easymotion-prefix)
 inoremap <silent> jj <ESC>
 nnoremap <silent><Esc><Esc> : <C-u>set nohlsearch!<CR>
 nnoremap ; :
