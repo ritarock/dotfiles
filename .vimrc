@@ -18,7 +18,7 @@ Plug 'bronson/vim-trailing-whitespace'
 Plug 'itchyny/lightline.vim'
 "let g:lightline = {'colorscheme': 'wombat'}
 
-" Easy commentout (gcc)
+" Easy commentout (ctl + --)
 Plug 'tomtom/tcomment_vim'
 
 " Auto insert braces/parens/etc
@@ -89,8 +89,8 @@ set backspace=indent,eol,start
 " Show command
 set showcmd
 "colorscheme
-colorscheme desert
-"colorscheme molokai
+"colorscheme desert
+colorscheme molokai
 set t_Co=256
 syntax on
 
