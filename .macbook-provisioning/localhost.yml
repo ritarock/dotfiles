@@ -16,7 +16,6 @@
 
       homebrew_cask_packages:
         - name: google-chrome
-        - name: google-drive
         - name: virtualbox
         - name: vagrant
         - name: iTerm2
@@ -25,6 +24,7 @@
         - name: evernote
         - name: dropbox
         - name: slack
+        - name: vlc
 
     tasks:
         - name: update homebrew
