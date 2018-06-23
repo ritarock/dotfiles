@@ -65,6 +65,23 @@ Plug 'cohama/lexima.vim'
 " Easy move
 Plug 'easymotion/vim-easymotion'
 
+" Setting Markdown
+" syntax Markdwon
+Plug 'tpope/vim-markdown'
+let g:markdown_fenced_languages = [
+\  'css',
+\  'javascript',
+\  'js=javascript',
+\  'json=javascript',
+\  'ruby',
+\  'python',
+\]
+" align table
+Plug 'h1mesuke/vim-alignta'
+" preview
+Plug 'kannokanno/previm'
+Plug 'tyru/open-browser.vim'
+
 call plug#end()
 
 " ====================================================
@@ -163,6 +180,7 @@ imap <C-h> <Left>
 imap <C-j> <Down>
 imap <C-k> <Up>
 imap <C-l> <Right>
+vnoremap <Leader>mdu ygvs[] (<c-r>")<ESC>?[]<cr>a
 
 " ====================================================
 " MY COMMAND
@@ -202,6 +220,9 @@ function! DebugLog(charg)
     let message = "print(" . a:charg . ")"
     call append(line("."),message)
   elseif ft == "javascript"
+    let message = "console.log(" . a:charg . ");"
+    call append(line("."),message)
+  elseif ft == "typescript"
     let message = "console.log(" . a:charg . ");"
     call append(line("."),message)
   else
