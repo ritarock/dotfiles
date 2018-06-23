@@ -180,6 +180,7 @@ imap <C-h> <Left>
 imap <C-j> <Down>
 imap <C-k> <Up>
 imap <C-l> <Right>
+" Use Markdown
 vnoremap <Leader>mdu ygvs[] (<c-r>")<ESC>?[]<cr>a
 
 " ====================================================
@@ -208,6 +209,15 @@ function! Template(argft)
     call setline(8,"    <!-- BODY -->")
     call setline(9,"  </body>")
     call setline(10,"</html>")
+  elseif a:argft == "Dockerfile"
+    call setline(1, "FROM <image>")
+    call setline(2, "MAINTAINER <name>")
+    call setline(3, "RUN <command>")
+    call setline(4, "ADD <src>")
+    call setline(5, "COPY <src>")
+    call setline(6, "USER <name>")
+    call setline(7, "WORKDIR /path/to/workdir")
+    call setline(8, "ENV <key> <value>")
   else
     echo "Not Applicable"
   endif
