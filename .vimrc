@@ -181,7 +181,7 @@ imap <C-j> <Down>
 imap <C-k> <Up>
 imap <C-l> <Right>
 " Use Markdown
-vnoremap <Leader>mdu ygvs[] (<c-r>")<ESC>?[]<cr>a
+vnoremap <Leader>mdu ygvs[](<c-r>")<ESC>?[]<cr>a
 
 " ====================================================
 " MY COMMAND
