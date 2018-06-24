@@ -8,13 +8,13 @@ call plug#begin('~/.vim/plugged')
 
 " Show tree
 Plug 'scrooloose/nerdtree'
-" Show dotfile
+" Show dotfiles
 let NERDTreeShowHidden = 1
 
 " Causes all trailing whitespace to be highlighted in red
 Plug 'bronson/vim-trailing-whitespace'
 
-" status line (powerline)
+" Customize status line (powerline)
 Plug 'itchyny/lightline.vim'
 "let g:lightline = {'colorscheme': 'wombat'}
 
@@ -38,8 +38,8 @@ let g:gitgutter_sign_modified_removed = '∙'
 " Run commands quickly
 Plug 'thinca/vim-quickrun'
 " Split right
-set splitright
-let g:quickrun_config={'*': {'vsplit': ''}}
+" set splitright
+" let g:quickrun_config={'*': {'vsplit': ''}}
 
 " HELP in Japanese
 Plug 'vim-jp/vimdoc-ja'
@@ -66,7 +66,7 @@ Plug 'cohama/lexima.vim'
 Plug 'easymotion/vim-easymotion'
 
 " Setting Markdown
-" syntax Markdwon
+" Syntax Markdwon
 Plug 'tpope/vim-markdown'
 let g:markdown_fenced_languages = [
 \  'css',
@@ -90,7 +90,7 @@ call plug#end()
 " UTF-8 by default
 set encoding=utf-8
 " Remove splash screen
-set shortmess+=I
+"set shortmess+=I
 " Enable line change with right or left cursor move
 set whichwrap =b,s,h,l,<,>,[,],~
 " Show line number
