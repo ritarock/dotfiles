@@ -82,6 +82,13 @@ Plug 'h1mesuke/vim-alignta'
 Plug 'kannokanno/previm'
 Plug 'tyru/open-browser.vim'
 
+" Setting Language Server
+" Plug 'natebosch/vim-lsc'
+" let g:lsc_server_commands = {
+" \  'python': 'pyls',
+" \  'typescript': 'typescript-language-server --stdio',
+" \}
+
 call plug#end()
 
 " ====================================================
