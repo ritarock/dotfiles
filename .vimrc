@@ -14,9 +14,8 @@ let NERDTreeShowHidden = 1
 " Causes all trailing whitespace to be highlighted in red
 Plug 'bronson/vim-trailing-whitespace'
 
-" Customize status line (powerline)
-Plug 'itchyny/lightline.vim'
-"let g:lightline = {'colorscheme': 'wombat'}
+"  status/tabline
+Plug 'vim-airline/vim-airline'
 
 " Easy commentout (ctl + --)
 Plug 'tomtom/tcomment_vim'
@@ -83,11 +82,11 @@ Plug 'kannokanno/previm'
 Plug 'tyru/open-browser.vim'
 
 " Setting Language Server
-" Plug 'natebosch/vim-lsc'
-" let g:lsc_server_commands = {
-" \  'python': 'pyls',
-" \  'typescript': 'typescript-language-server --stdio',
-" \}
+Plug 'natebosch/vim-lsc'
+let g:lsc_server_commands = {
+\  'python': 'pyls',
+\  'typescript': 'typescript-language-server --stdio',
+\}
 
 call plug#end()
 
