@@ -13,6 +13,7 @@
         - name: pyenv
         - name: tree
         - name: vim
+        - name: fzf
 
       homebrew_cask_packages:
         - name: google-chrome
