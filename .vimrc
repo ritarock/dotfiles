@@ -138,6 +138,10 @@ set showmatch
 set wildmenu
 " How many lines of history to save
 set history=200
+" Show whitespace as special chars - see listchars
+set list
+" Unicode characters for various things
+set listchars=tab:»\ ,extends:›,precedes:‹,nbsp:·,trail:·
 " Change indent when python
 augroup vimrc
 autocmd! FileType python setlocal shiftwidth=4 tabstop=4 softtabstop=4
