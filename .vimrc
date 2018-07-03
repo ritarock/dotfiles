@@ -222,11 +222,11 @@ function! Template(argft)
   elseif a:argft == "Dockerfile"
     call setline(1, "FROM <image>")
     call setline(2, "MAINTAINER <name>")
-    call setline(3, "RUN <command>")
-    call setline(4, "ADD <src>")
-    call setline(5, "COPY <src>")
-    call setline(6, "USER <name>")
-    call setline(7, "WORKDIR /path/to/workdir")
+    call setline(3, "WORKDIR /path/to/workdir")
+    call setline(4, "RUN <command>")
+    call setline(5, "ADD <src>")
+    call setline(6, "COPY <src>")
+    call setline(7, "USER <name>")
     call setline(8, "ENV <key> <value>")
   elseif a:argft == "markdown"
     set filetype=markdown
