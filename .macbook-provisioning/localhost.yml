@@ -6,26 +6,26 @@
 
     vars:
       homebrew_packages:
-        - name: python
         - name: fish
+        - name: fzf
         - name: git
+        - name: go
         - name: node
         - name: pyenv
+        - name: python
         - name: tree
         - name: vim
-        - name: fzf
-        - name: go
 
       homebrew_cask_packages:
-        - name: google-chrome
-        - name: virtualbox
-        - name: vagrant
-        - name: iTerm2
         - name: atom
         - name: docker
-        - name: evernote
         - name: dropbox
+        - name: evernote
+        - name: google-chrome
+        - name: iTerm2
         - name: slack
+        - name: vagrant
+        - name: virtualbox
         - name: vlc
 
     tasks:
