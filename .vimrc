@@ -82,11 +82,13 @@ Plug 'kannokanno/previm'
 Plug 'tyru/open-browser.vim'
 
 " Setting Language Server
-" Plug 'natebosch/vim-lsc'
-" let g:lsc_server_commands = {
-" \  'python': 'pyls',
-" \  'typescript': 'typescript-language-server --stdio',
-" \}
+Plug 'natebosch/vim-lsc'
+let g:lsc_server_commands = {
+\  'python': 'pyls',
+\  'typescript': 'typescript-language-server --stdio',
+\}
+" Automatically close the document window
+autocmd CompleteDone * silent! pclose
 
 call plug#end()
 
@@ -179,6 +181,8 @@ nmap k gk
 nmap \e :NERDTreeToggle<CR>
 " \s {char}
 map <Leader> <Plug>(easymotion-prefix)
+" Open(split) .vimrc
+map <F2> :split ~/.vimrc<CR>
 inoremap <silent> jj <ESC>
 nnoremap <silent><Esc><Esc> : <C-u>set nohlsearch!<CR>
 nnoremap ; :
