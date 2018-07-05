@@ -27,6 +27,7 @@
         - name: vagrant
         - name: virtualbox
         - name: vlc
+        - name: visual-studio-code
 
     tasks:
         - name: update homebrew
