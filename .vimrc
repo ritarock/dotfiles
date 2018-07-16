@@ -11,9 +11,6 @@ Plug 'scrooloose/nerdtree'
 " Show dotfiles
 let NERDTreeShowHidden = 1
 
-" Causes all trailing whitespace to be highlighted in red
-Plug 'bronson/vim-trailing-whitespace'
-
 "  status/tabline
 Plug 'vim-airline/vim-airline'
 
@@ -68,12 +65,15 @@ Plug 'easymotion/vim-easymotion'
 " Syntax Markdwon
 Plug 'tpope/vim-markdown'
 let g:markdown_fenced_languages = [
+\  'html',
 \  'css',
 \  'javascript',
 \  'js=javascript',
 \  'json=javascript',
 \  'ruby',
 \  'python',
+\  'bash=sh',
+\  'yaml',
 \]
 " align table
 Plug 'h1mesuke/vim-alignta'
@@ -82,13 +82,13 @@ Plug 'kannokanno/previm'
 Plug 'tyru/open-browser.vim'
 
 " Setting Language Server
-Plug 'natebosch/vim-lsc'
-let g:lsc_server_commands = {
-\  'python': 'pyls',
-\  'typescript': 'typescript-language-server --stdio',
-\}
-" Automatically close the document window
-autocmd CompleteDone * silent! pclose
+" Plug 'natebosch/vim-lsc'
+" let g:lsc_server_commands = {
+" \  'python': 'pyls',
+" \  'typescript': 'typescript-language-server --stdio',
+" \}
+" " Automatically close the document window
+" autocmd CompleteDone * silent! pclose
 
 call plug#end()
 
