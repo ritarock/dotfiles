@@ -81,6 +81,9 @@ Plug 'h1mesuke/vim-alignta'
 Plug 'kannokanno/previm'
 Plug 'tyru/open-browser.vim'
 
+" golang plugin
+" Plug 'fatih/vim-go'
+
 " Setting Language Server
 " Plug 'natebosch/vim-lsc'
 " let g:lsc_server_commands = {
@@ -89,6 +92,7 @@ Plug 'tyru/open-browser.vim'
 " \}
 " " Automatically close the document window
 " autocmd CompleteDone * silent! pclose
+
 
 call plug#end()
 
