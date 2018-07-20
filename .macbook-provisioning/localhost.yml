@@ -17,7 +17,6 @@
         - name: vim
 
       homebrew_cask_packages:
-        - name: atom
         - name: docker
         - name: dropbox
         - name: evernote
