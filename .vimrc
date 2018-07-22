@@ -41,11 +41,6 @@ Plug 'othree/yajs.vim'
 
 " Git config
 Plug 'airblade/vim-gitgutter'
-" GitGutter styling to use · instead of +/-
-let g:gitgutter_sign_added = '∙'
-let g:gitgutter_sign_modified = '∙'
-let g:gitgutter_sign_removed = '∙'
-let g:gitgutter_sign_modified_removed = '∙'
 
 " Run commands quickly
 Plug 'thinca/vim-quickrun'
@@ -78,8 +73,8 @@ Plug 'cohama/lexima.vim'
 Plug 'easymotion/vim-easymotion'
 
 " Setting Markdown
-" Syntax Markdwon
 Plug 'tpope/vim-markdown'
+" Syntax Markdwon
 let g:markdown_fenced_languages = [
 \  'html',
 \  'css',
