@@ -12,7 +12,23 @@ Plug 'scrooloose/nerdtree'
 let NERDTreeShowHidden = 1
 
 "  status/tabline
-Plug 'vim-airline/vim-airline'
+Plug 'itchyny/lightline.vim'
+let g:lightline = {
+      \'active': {
+      \ 'left': [ ['mode', 'paste'],
+      \         ['readonly', 'filepath', 'modified'] ]
+      \},
+      \'component_function': {
+      \'filepath': 'FilePath'
+      \},
+      \}
+function! FilePath()
+  if winwidth(0) > 90
+    return expand("%:s")
+  else
+    return expand("%:t")
+  endif
+endfunction
 
 " Easy commentout (ctl + --)
 Plug 'tomtom/tcomment_vim'
@@ -92,7 +108,6 @@ Plug 'tyru/open-browser.vim'
 " \}
 " " Automatically close the document window
 " autocmd CompleteDone * silent! pclose
-
 
 call plug#end()
 
