@@ -192,6 +192,8 @@ set hlsearch
 " ====================================================
 nmap j gj
 nmap k gk
+nmap <S-h> ^
+nmap <S-l> $
 nmap \e :NERDTreeToggle<CR>
 " \s {char}
 map <Leader> <Plug>(easymotion-prefix)
