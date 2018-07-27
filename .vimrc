@@ -1,18 +1,20 @@
-" ====================================================
-" PLUGIN AND SETTING
-" ====================================================
-" Install vim-plug
+" Install vim-plug {{{====================
 " curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 " https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+" }}}
+
+" Setting vim-plug {{{====================
 call plug#begin('~/.vim/plugged')
 
-" Show tree
+" Show tree {{{
 Plug 'scrooloose/nerdtree'
 " Show dotfiles
 let NERDTreeShowHidden = 1
+" }}}
 
-"  status/tabline
+" Customize status/tab line {{{
 Plug 'itchyny/lightline.vim'
+" Show file path
 let g:lightline = {
       \'active': {
       \ 'left': [ ['mode', 'paste'],
@@ -29,50 +31,64 @@ function! FilePath()
     return expand("%:t")
   endif
 endfunction
+" }}}
 
-" Easy commentout (ctl + --)
+" Easy commentout {{{
+" Usage ctl + --
 Plug 'tomtom/tcomment_vim'
+" }}}
 
-" Auto insert braces/parens/etc
+" Auto insert braces/parens/etc {{{
 Plug 'Townk/vim-autoclose'
+" }}}
 
-" Syntax highlight ES6
+" Syntax highlight ES6 {{{
 Plug 'othree/yajs.vim'
+" }}}
 
-" Git config
+" Git config {{{
 Plug 'airblade/vim-gitgutter'
+" }}}
 
-" Run commands quickly
+" Run commands quickly {{{
 Plug 'thinca/vim-quickrun'
 " Split right
 " set splitright
 " let g:quickrun_config={'*': {'vsplit': ''}}
+" }}}
 
-" HELP in Japanese
+" HELP in Japanese {{{
 Plug 'vim-jp/vimdoc-ja'
 set helplang=ja,en
+" }}}
 
-" Resize window
+" Resize window {{{
 Plug 'simeji/winresizer'
-" Press keys Ctrl + E
+" Usage ctl + e
 " The change width of window size when left or right key is pressed
 let g:winresizer_vert_resize = 1
 " The change height of window size when down or up key is pressed
 let g:winresizer_horiz_resize = 1
+" }}}
 
-" colorscheme
+" Colorscheme {{{
 Plug 'tomasr/molokai'
+colorscheme molokai
+" }}}
 
-" Syntax typescript
+" Syntax typescript {{{
 Plug 'leafgarland/typescript-vim'
+" }}}
 
-" automatically close pairs such as (), {}, ...
+" Automatically close pairs such as (), {}, ... {{{
 Plug 'cohama/lexima.vim'
+" }}}
 
-" Easy move
+" Easy move {{{
 Plug 'easymotion/vim-easymotion'
+" }}}
 
-" Setting Markdown
+" Setting Markdown {{{
 Plug 'tpope/vim-markdown'
 " Syntax Markdwon
 let g:markdown_fenced_languages = [
@@ -86,29 +102,32 @@ let g:markdown_fenced_languages = [
 \  'bash=sh',
 \  'yaml',
 \]
-" align table
+" Align table {{{
 Plug 'h1mesuke/vim-alignta'
-" preview
+" }}}
+" Preview {{{
 Plug 'kannokanno/previm'
 Plug 'tyru/open-browser.vim'
+" }}}
+" }}}
 
-" golang plugin
+" Golang plugin {{{
 " Plug 'fatih/vim-go'
+" }}}
 
-" Setting Language Server
+" Setting Language Server {{{
 " Plug 'natebosch/vim-lsc'
 " let g:lsc_server_commands = {
 " \  'python': 'pyls',
 " \  'typescript': 'typescript-language-server --stdio',
 " \}
-" " Automatically close the document window
+" Automatically close the document window
 " autocmd CompleteDone * silent! pclose
 
 call plug#end()
+" }}}
 
-" ====================================================
-" BASE SETTING
-" ====================================================
+" Base setting {{{====================
 " UTF-8 by default
 set encoding=utf-8
 " Remove splash screen
@@ -127,15 +146,13 @@ set noundofile
 set backspace=indent,eol,start
 " Show command
 set showcmd
-"colorscheme
-"colorscheme desert
-colorscheme molokai
+" Colorscheme
+" colorscheme desert
 set t_Co=256
 syntax on
+" }}}
 
-" ====================================================
-" TAB,INDENT SETTING
-" ====================================================
+" Tab,Indent Setting {{{====================
 " Replace space with TAB
 set expandtab
 " The one true Tab
@@ -162,10 +179,9 @@ set listchars=tab:»\ ,extends:›,precedes:‹,nbsp:·,trail:·
 augroup vimrc
 autocmd! FileType python setlocal shiftwidth=4 tabstop=4 softtabstop=4
 augroup END
+" }}}
 
-" ====================================================
-" STATUS LINE SETTING
-" ====================================================
+" Status line setting {{{====================
 " Always show the status bar
 set laststatus=2
 " Show mode
@@ -174,10 +190,9 @@ set showmode
 set ruler
 " Command line's height is 2
 set cmdheight=2
+" }}}
 
-" ====================================================
-" SEARCH SETTING
-" ====================================================
+" Search setting {{{====================
 " Search as you type
 set incsearch
 " Case insensitive
@@ -186,10 +201,9 @@ set ignorecase
 set smartcase
 " Hilight searching
 set hlsearch
+" }}}
 
-" ====================================================
-" KEYMAP SETTING
-" ====================================================
+" Keymap setting {{{====================
 nmap j gj
 nmap k gk
 nmap <S-h> ^
@@ -212,10 +226,9 @@ imap <C-k> <Up>
 imap <C-l> <Right>
 " Use Markdown
 vnoremap <Leader>mdu ygvs[](<c-r>")<ESC>?[]<cr>a
+" }}}
 
-" ====================================================
-" MY COMMAND
-" ====================================================
+" My command {{{====================
 command! -nargs=1 Template call Template(<f-args>)
 function! Template(argft)
   if a:argft == "python"
@@ -295,3 +308,4 @@ endfunction
 
 imap <C-f> World
 imap <C-b><C-f> Hello
+" }}}
