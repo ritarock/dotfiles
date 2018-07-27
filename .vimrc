@@ -73,7 +73,6 @@ let g:winresizer_horiz_resize = 1
 
 " Colorscheme {{{
 Plug 'tomasr/molokai'
-colorscheme molokai
 " }}}
 
 " Syntax typescript {{{
@@ -148,6 +147,7 @@ set backspace=indent,eol,start
 set showcmd
 " Colorscheme
 " colorscheme desert
+colorscheme molokai
 set t_Co=256
 syntax on
 " }}}
