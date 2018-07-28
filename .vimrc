@@ -176,8 +176,9 @@ set list
 " Unicode characters for various things
 set listchars=tab:»\ ,extends:›,precedes:‹,nbsp:·,trail:·
 " Change indent when python
-augroup vimrc
-autocmd! FileType python setlocal shiftwidth=4 tabstop=4 softtabstop=4
+augroup python
+autocmd!
+autocmd FileType python setlocal shiftwidth=4 tabstop=4 softtabstop=4
 augroup END
 " }}}
 
@@ -231,17 +232,20 @@ vnoremap <S-l> $
 " }}}
 
 " My command {{{====================
-command! -nargs=1 Template call Template(<f-args>)
-function! Template(argft)
+command! -nargs=1 Template call s:template(<f-args>)
+function! s:template(argft)
   if a:argft == "python"
     set filetype=python
     call setline(1,"def main():")
-    call setline(2,"")
+    call setline(2,"     ")
     call setline(3,"if __name__ == '__main__':")
     call setline(4,"    main()")
-  elseif a:argft == "sh"
+    call cursor(2,5)
+  elseif a:argft == "shell"
     set filetype=sh
     call setline(1,"#!/bin/sh")
+    call setline(2,"")
+    call cursor(2,1)
   elseif a:argft == "html"
     set filetype=html
     call setline(1,"<!DOCTYPE html>")
@@ -254,6 +258,7 @@ function! Template(argft)
     call setline(8,"    <!-- BODY -->")
     call setline(9,"  </body>")
     call setline(10,"</html>")
+    call cursor(8,5)
   elseif a:argft == "Dockerfile"
     call setline(1, "FROM <image>")
     call setline(2, "MAINTAINER <name>")
@@ -291,8 +296,8 @@ function! Template(argft)
   endif
 endfunction
 
-command! -nargs=1 DebugLog call DebugLog(<f-args>)
-function! DebugLog(charg)
+command! -nargs=1 DebugLog call s:debugLog(<f-args>)
+function! s:debugLog(charg)
   let ft = &filetype
   if ft == "python"
     let message = "print(" . a:charg . ")"
@@ -311,3 +316,8 @@ endfunction
 imap <C-f> World
 imap <C-b><C-f> Hello
 " }}}
+
+command! -nargs=1 Sample call s:sample()
+function! s:sample()
+  echo 'sample'
+endfunction
