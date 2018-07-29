@@ -123,6 +123,10 @@ Plug 'tyru/open-browser.vim'
 " Automatically close the document window
 " autocmd CompleteDone * silent! pclose
 
+" Delete end-space {{{
+Plug 'ritarock/vim-sweep_trail'
+" }}}
+
 call plug#end()
 " }}}
 
@@ -291,6 +295,47 @@ function! s:template(argft)
     call setline(18, "| Left align | Right align | Center align |")
     call setline(19, "|:-----------|------------:|:------------:|")
     call setline(20, "|text        |text         |text          |")
+  elseif a:argft == "autoload"
+    set filetype=vim
+    call setline(1,"\" プラグインの説明")
+    call setline(2,"\" Version: 1.0")
+    call setline(3,"\" Author: AUTHOR NAME <AUTHOR@MAIL>")
+    call setline(4,"\" License: VIM LICENSE")
+    call setline(5,"")
+    call setline(6,"\" 副作用の回避")
+    call setline(7,"let s:save_cpo = &cpo")
+    call setline(8,"set cpo&vim")
+    call setline(9,"")
+    call setline(10,"\" 実際の処理")
+    call setline(11,"function! {plugin-name}#sample()")
+    call setline(12,"\"  処理内容")
+    call setline(13,"endfunction")
+    call setline(14,"")
+    call setline(15,"let &cpo = s:save_cpo")
+    call setline(16,"unlet s:save_cpo")
+  elseif a:argft == "plugin"
+    set filetype=vim
+    call setline(1,"\" 行末スペースを削除")
+    call setline(2,"\" Version: 1.0")
+    call setline(3,"\" Author: AUTHOR NAME <AUTHOR@MAIL>")
+    call setline(4,"\" License: VIM LICENSE")
+    call setline(5,"")
+    call setline(6,"\" 多重ロード防止")
+    call setline(7,"\" 慣習的にg:loaded_{plugin-name} とするのが一般的")
+    call setline(8,"if exists('g:loaded_{plugin-name}')")
+    call setline(9,"  finish")
+    call setline(10,"endif")
+    call setline(11,"let g:loaded_{plugin-name} = 1")
+    call setline(12,"")
+    call setline(13,"\" 副作用の回避")
+    call setline(14,"let s:save_cpo = &cpo")
+    call setline(15,"set cpo&vim")
+    call setline(16,"")
+    call setline(17,"\" 処理の呼び出し")
+    call setline(18,"command! -bar Sample call {plugin-name}#sample()")
+    call setline(19,"")
+    call setline(20,"let &cpo = s:save_cpo")
+    call setline(21,"unlet s:save_cpo")
   else
     echo "Not Applicable"
   endif
