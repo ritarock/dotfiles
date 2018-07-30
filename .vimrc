@@ -10,6 +10,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree'
 " Show dotfiles
 let NERDTreeShowHidden = 1
+nmap \e :NERDTreeToggle<CR>
 " }}}
 
 " Customize status/tab line {{{
@@ -48,6 +49,13 @@ Plug 'othree/yajs.vim'
 
 " Git config {{{
 Plug 'airblade/vim-gitgutter'
+" GitGutter styling to use · instead of +/-
+let g:gitgutter_sign_added = '∙'
+let g:gitgutter_sign_modified = '∙'
+let g:gitgutter_sign_removed = '∙'
+let g:gitgutter_sign_modified_removed = '∙'
+nmap ]g :GitGutterNextHunk<CR>
+nmap [g :GitGutterPrevHunk<CR>
 " }}}
 
 " Run commands quickly {{{
@@ -85,6 +93,8 @@ Plug 'cohama/lexima.vim'
 
 " Easy move {{{
 Plug 'easymotion/vim-easymotion'
+" \s {char}
+map <Leader> <Plug>(easymotion-prefix)
 " }}}
 
 " Setting Markdown {{{
@@ -108,6 +118,8 @@ Plug 'h1mesuke/vim-alignta'
 Plug 'kannokanno/previm'
 Plug 'tyru/open-browser.vim'
 " }}}
+" Use Markdown
+vnoremap <Leader>mdu ygvs[](<c-r>")<ESC>?[]<cr>a
 " }}}
 
 " Golang plugin {{{
@@ -213,9 +225,6 @@ nmap j gj
 nmap k gk
 nmap <S-h> ^
 nmap <S-l> $
-nmap \e :NERDTreeToggle<CR>
-" \s {char}
-map <Leader> <Plug>(easymotion-prefix)
 " Open(split) .vimrc
 map <F2> :split ~/.vimrc<CR>
 inoremap <silent> jj <ESC>
@@ -229,8 +238,6 @@ imap <C-h> <Left>
 imap <C-j> <Down>
 imap <C-k> <Up>
 imap <C-l> <Right>
-" Use Markdown
-vnoremap <Leader>mdu ygvs[](<c-r>")<ESC>?[]<cr>a
 vnoremap <S-h> ^
 vnoremap <S-l> $
 " }}}
@@ -357,10 +364,10 @@ function! s:debugLog(charg)
     echo "Not Applicable"
   endif
 endfunction
+" }}}
 
 imap <C-f> World
 imap <C-b><C-f> Hello
-" }}}
 
 command! -nargs=1 Sample call s:sample()
 function! s:sample()
