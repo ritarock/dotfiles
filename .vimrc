@@ -134,6 +134,7 @@ vnoremap <Leader>mdu ygvs[](<c-r>")<ESC>?[]<cr>a
 " \}
 " Automatically close the document window
 " autocmd CompleteDone * silent! pclose
+" }}}
 
 " Delete end-space {{{
 Plug 'ritarock/vim-sweep_trail'
