@@ -226,6 +226,10 @@ nmap j gj
 nmap k gk
 nmap <S-h> ^
 nmap <S-l> $
+" These are things that I mistype and want ignored.
+nmap Q  <silent>
+nmap q: <silent>
+nmap K  <silent>
 " Open(split) .vimrc
 map <F2> :split ~/.vimrc<CR>
 inoremap <silent> jj <ESC>
