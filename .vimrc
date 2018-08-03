@@ -1,3 +1,11 @@
+"
+"    __   __ ( )  _ __ ___    _ _    ___
+"    \ \ / / | | | '_ ` _ \  | '_|  / __|
+"     \ V /  | | | | | | | | | |   | (__
+"  ( ) \_/   |_| |_| |_| |_| |_|    \___|
+"
+" rita's .vimrc
+
 " Install vim-plug {{{====================
 " curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 " https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -122,6 +130,11 @@ Plug 'tyru/open-browser.vim'
 vnoremap <Leader>mdu ygvs[](<c-r>")<ESC>?[]<cr>a
 " }}}
 
+" Setting fzf {{{
+Plug '/usr/local/opt/fzf'
+Plug 'junegunn/fzf.vim'
+" }}}
+
 " Golang plugin {{{
 " Plug 'fatih/vim-go'
 " }}}
@@ -233,7 +246,7 @@ nmap q: <silent>
 nmap K <silent>
 nmap <Space><Space> V
 " Open(split) .vimrc
-map <F2> :split ~/.vimrc<CR>
+nmap <F2> :split ~/.vimrc<CR>
 inoremap <silent> jj <ESC>
 nnoremap <silent><Esc><Esc> : <C-u>set nohlsearch!<CR>
 nnoremap ; :
