@@ -256,6 +256,7 @@ nnoremap ; :
 " nnoremap <silent> <Space><Space> "zyiw:let @/ = '\<' . @z . '\>'<CR>:set hlsearch<CR>
 nnoremap x "_x
 nnoremap s "_s
+nnoremap Y y$
 imap <C-h> <Left>
 imap <C-j> <Down>
 imap <C-k> <Up>
