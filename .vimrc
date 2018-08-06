@@ -233,6 +233,8 @@ set ignorecase
 set smartcase
 " Hilight searching
 set hlsearch
+" Get matching number
+" :%s/hoge/&/gn
 " }}}
 
 " Keymap setting {{{====================
