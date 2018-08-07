@@ -55,6 +55,11 @@ Plug 'Townk/vim-autoclose'
 Plug 'othree/yajs.vim'
 " }}}
 
+" HTML5 + inline SVG omnicomplete function, indent and syntax {{{
+Plug 'othree/html5.vim'
+" }}}
+
+
 " Git config {{{
 Plug 'airblade/vim-gitgutter'
 " GitGutter styling to use · instead of +/-
@@ -246,14 +251,13 @@ nmap <S-l> $
 nmap Q <silent>
 nmap q: <silent>
 nmap K <silent>
-nmap <Space><Space> V
 " Open(split) .vimrc
 nmap <F2> :split ~/.vimrc<CR>
 inoremap <silent> jj <ESC>
 nnoremap <silent><Esc><Esc> : <C-u>set nohlsearch!<CR>
 nnoremap ; :
 " Highlight the word under the cursor in normal mode with 2 spaces
-" nnoremap <silent> <Space><Space> "zyiw:let @/ = '\<' . @z . '\>'<CR>:set hlsearch<CR>
+nnoremap <silent> <Space><Space> "zyiw:let @/ = '\<' . @z . '\>'<CR>:set hlsearch<CR>
 nnoremap x "_x
 nnoremap s "_s
 nnoremap Y y$
@@ -263,7 +267,6 @@ imap <C-k> <Up>
 imap <C-l> <Right>
 vnoremap <S-h> ^
 vnoremap <S-l> $
-vnoremap <Space><Space> <ESC>
 " }}}
 
 " My command {{{====================
