@@ -375,24 +375,6 @@ function! s:template(argft)
   endif
 endfunction
 
-command! -nargs=1 DebugLog call s:debugLog(<f-args>)
-function! s:debugLog(charg)
-  let ft = &filetype
-  if ft == "python"
-    let message = "print(" . a:charg . ")"
-    call append(line("."),message)
-  elseif ft == "javascript"
-    let message = "console.log(" . a:charg . ");"
-    call append(line("."),message)
-  elseif ft == "typescript"
-    let message = "console.log(" . a:charg . ");"
-    call append(line("."),message)
-  else
-    echo "Not Applicable"
-  endif
-endfunction
-" }}}
-
 imap <C-f> World
 imap <C-b><C-f> Hello
 

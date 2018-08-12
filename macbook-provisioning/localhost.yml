@@ -23,6 +23,7 @@
         - name: google-chrome
         - name: iTerm2
         - name: slack
+        - name: skype
         - name: vagrant
         - name: virtualbox
         - name: vlc
