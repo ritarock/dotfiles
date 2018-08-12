@@ -141,7 +141,7 @@ Plug 'junegunn/fzf.vim'
 " }}}
 
 " Golang plugin {{{
-" Plug 'fatih/vim-go'
+Plug 'fatih/vim-go'
 " }}}
 
 " Setting Language Server {{{
