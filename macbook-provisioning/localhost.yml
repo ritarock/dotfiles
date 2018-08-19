@@ -22,6 +22,7 @@
         - name: evernote
         - name: google-chrome
         - name: iTerm2
+        - name: postman
         - name: slack
         - name: skype
         - name: vagrant
