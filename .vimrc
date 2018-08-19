@@ -43,7 +43,7 @@ endfunction
 " }}}
 
 " Easy commentout {{{
-" Usage ctl + --
+" Usage ctl + //
 Plug 'tomtom/tcomment_vim'
 " }}}
 
