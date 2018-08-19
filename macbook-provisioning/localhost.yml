@@ -6,6 +6,7 @@
 
     vars:
       homebrew_packages:
+        - name: yarn
         - name: fish
         - name: fzf
         - name: git
