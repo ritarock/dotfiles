@@ -6,15 +6,16 @@
 
     vars:
       homebrew_packages:
-        - name: yarn
         - name: fish
         - name: fzf
         - name: git
         - name: go
+        - name: jq
         - name: node
         - name: pyenv
         - name: python
         - name: tree
+        - name: yarn
         - name: vim
 
       homebrew_cask_packages:
