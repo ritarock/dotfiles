@@ -180,12 +180,24 @@ set noundofile
 set backspace=indent,eol,start
 " Show command
 set showcmd
-" Colorscheme
-" colorscheme desert
-autocmd Colorscheme * highlight Visual ctermbg=222
-colorscheme molokai
-set t_Co=256
-syntax on
+" }}}
+
+" Colorscheme {{{====================
+if has('vim_starting')
+  syntax enable
+  set background=dark
+  set t_Co=256
+  autocmd Colorscheme * highlight Visual ctermbg=222
+  if &t_Co < 256
+    colorscheme default
+  else
+    try
+      colorscheme molokai
+    catch
+      colorscheme desert
+    endtry
+  endif
+endif
 " }}}
 
 " Tab,Indent Setting {{{====================
