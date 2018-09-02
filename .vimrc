@@ -59,7 +59,6 @@ Plug 'othree/yajs.vim'
 Plug 'othree/html5.vim'
 " }}}
 
-
 " Git config {{{
 Plug 'airblade/vim-gitgutter'
 " GitGutter styling to use · instead of +/-
