@@ -381,6 +381,14 @@ function! s:template(argft)
     call setline(19,"")
     call setline(20,"let &cpo = s:save_cpo")
     call setline(21,"unlet s:save_cpo")
+  elseif a:argft == "lambda-python"
+    set filetype=python
+    call setline(1,"def lambda_handler(event, context):")
+    call setline(2,"    return \"python_lambda_function\"")
+  elseif a:argft == "lambda-node"
+    set filetype=javascript
+    call setline(1,"def lambda_handler(event, context):")
+    call setline(2,"    return \"python_lambda_function\"")
   else
     echo "Not Applicable"
   endif
