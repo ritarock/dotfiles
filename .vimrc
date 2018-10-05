@@ -383,12 +383,25 @@ function! s:template(argft)
     call setline(21,"unlet s:save_cpo")
   elseif a:argft == "lambda-python"
     set filetype=python
-    call setline(1,"def lambda_handler(event, context):")
-    call setline(2,"    return \"python_lambda_function\"")
+    call setline(1,"import json")
+    call setline(2,"def lambda_handler(event, context):")
+    call setline(3,"    # TODO implement")
+    call setline(4,"    return {")
+    call setline(5,"        \"statusCode\": 200,")
+    call setline(6,"        \"body: json.dumps('Hello from Lambda!')")
+    call setline(7,"    }")
+    call cursor(1,1)
   elseif a:argft == "lambda-node"
     set filetype=javascript
-    call setline(1,"def lambda_handler(event, context):")
-    call setline(2,"    return \"python_lambda_function\"")
+    call setline(1,"exports.handler = async (event) => {")
+    call setline(2,"    // TODO implement")
+    call setline(3,"    const response = {")
+    call setline(4,"        statusCode: 200,")
+    call setline(5,"        body: JSON.stringify('Hello from Lambda!')")
+    call setline(6,"    };")
+    call setline(7,"    return response;")
+    call setline(8,"};")
+    call cursor(1,1)
   else
     echo "Not Applicable"
   endif
