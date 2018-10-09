@@ -266,7 +266,7 @@ nmap K <silent>
 nmap <F2> :split ~/.vimrc<CR>
 inoremap <silent> jj <ESC>
 nnoremap <silent><Esc><Esc> : <C-u>set nohlsearch!<CR>
-nnoremap ; :
+" nnoremap ; :
 " Highlight the word under the cursor in normal mode with 2 spaces
 nnoremap <silent> <Space><Space> "zyiw:let @/ = '\<' . @z . '\>'<CR>:set hlsearch<CR>
 nnoremap x "_x
