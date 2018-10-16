@@ -83,12 +83,12 @@ set helplang=ja,en
 " }}}
 
 " Resize window {{{
-Plug 'simeji/winresizer'
+" Plug 'simeji/winresizer'
 " Usage ctl + e
 " The change width of window size when left or right key is pressed
-let g:winresizer_vert_resize = 1
+" let g:winresizer_vert_resize = 1
 " The change height of window size when down or up key is pressed
-let g:winresizer_horiz_resize = 1
+" let g:winresizer_horiz_resize = 1
 " }}}
 
 " Colorscheme {{{
