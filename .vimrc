@@ -280,6 +280,7 @@ vnoremap <S-h> ^
 vnoremap <S-l> $
 cnoremap <C-p> <Up>
 cnoremap <C-n> <Down>
+cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/':'%%'
 " }}}
 
 " My command {{{====================
