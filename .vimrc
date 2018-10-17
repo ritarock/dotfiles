@@ -152,6 +152,10 @@ Plug 'fatih/vim-go'
 " Automatically close the document window
 " autocmd CompleteDone * silent! pclose
 " }}}
+"
+" Change and add such surroundings in pairs{{{
+Plug 'tpope/vim-surround'
+" }}}
 
 " Delete end-space {{{
 Plug 'ritarock/vim-sweep_trail'
@@ -281,6 +285,8 @@ vnoremap <S-l> $
 cnoremap <C-p> <Up>
 cnoremap <C-n> <Down>
 cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/':'%%'
+let mapleader=","
+noremap \ ,
 " }}}
 
 " My command {{{====================
