@@ -267,7 +267,6 @@ nmap Q <silent>
 nmap q: <silent>
 nmap K <silent>
 " Open(split) .vimrc
-nmap <F2> :split ~/.vimrc<CR>
 inoremap <silent> jj <ESC>
 nnoremap <silent><Esc><Esc> : <C-u>set nohlsearch!<CR>
 " nnoremap ; :
