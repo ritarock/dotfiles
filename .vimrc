@@ -1,29 +1,20 @@
-"
-"    __   __ ( )  _ __ ___    _ _    ___
-"    \ \ / / | | | '_ ` _ \  | '_|  / __|
-"     \ V /  | | | | | | | | | |   | (__
-"  ( ) \_/   |_| |_| |_| |_| |_|    \___|
-"
-" rita's .vimrc
+"""""""""""""""""""""
+" vimrc configuration
+"""""""""""""""""""""
 
-" Install vim-plug {{{====================
+" install vim-plug
 " curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 " https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-" }}}
 
-" Setting vim-plug {{{====================
+"""""""""""""""""""""
+" plugin configuration
+"""""""""""""""""""""
 call plug#begin('~/.vim/plugged')
 
-" Show tree {{{
-Plug 'scrooloose/nerdtree'
-" Show dotfiles
-let NERDTreeShowHidden = 1
-nmap \e :NERDTreeToggle<CR>
-" }}}
-
-" Customize status/tab line {{{
+""" BASE
+" customize status/tab line
 Plug 'itchyny/lightline.vim'
-" Show file path
+" show file path
 let g:lightline = {
       \'active': {
       \ 'left': [ ['mode', 'paste'],
@@ -40,78 +31,27 @@ function! FilePath()
     return expand("%:t")
   endif
 endfunction
-" }}}
 
-" Easy commentout {{{
-" Usage ctl + //
-Plug 'tomtom/tcomment_vim'
-" }}}
+" auto insert braces/parens/etc
+Plug 'cohama/lexima.vim'
 
-" Auto insert braces/parens/etc {{{
-Plug 'Townk/vim-autoclose'
-" }}}
+" colorscheme
+Plug 'tomasr/molokai'
 
-" Syntax highlight ES6 {{{
-Plug 'othree/yajs.vim'
-" }}}
-
-" HTML5 + inline SVG omnicomplete function, indent and syntax {{{
-Plug 'othree/html5.vim'
-" }}}
-
-" Git config {{{
-Plug 'airblade/vim-gitgutter'
-" GitGutter styling to use · instead of +/-
-let g:gitgutter_sign_added = '∙'
-let g:gitgutter_sign_modified = '∙'
-let g:gitgutter_sign_removed = '∙'
-let g:gitgutter_sign_modified_removed = '∙'
-nmap ]g :GitGutterNextHunk<CR>
-nmap [g :GitGutterPrevHunk<CR>
-" }}}
-
-" Run commands quickly {{{
-Plug 'thinca/vim-quickrun'
-" Split right
-" set splitright
-" let g:quickrun_config={'*': {'vsplit': ''}}
-" }}}
-
-" HELP in Japanese {{{
+" help in Japanese
 Plug 'vim-jp/vimdoc-ja'
 set helplang=ja,en
-" }}}
 
-" Resize window {{{
-" Plug 'simeji/winresizer'
-" Usage ctl + e
-" The change width of window size when left or right key is pressed
-" let g:winresizer_vert_resize = 1
-" The change height of window size when down or up key is pressed
-" let g:winresizer_horiz_resize = 1
-" }}}
+""" LANGUAGE
+" syntax highlight ES6
+Plug 'othree/yajs.vim'
 
-" Colorscheme {{{
-Plug 'tomasr/molokai'
-" }}}
-
-" Syntax typescript {{{
+" syntax typescript
 Plug 'leafgarland/typescript-vim'
-" }}}
 
-" Automatically close pairs such as (), {}, ... {{{
-Plug 'cohama/lexima.vim'
-" }}}
-
-" Easy move {{{
-Plug 'easymotion/vim-easymotion'
-" \s {char}
-map <Leader> <Plug>(easymotion-prefix)
-" }}}
-
-" Setting Markdown {{{
+" setting Markdown
 Plug 'tpope/vim-markdown'
-" Syntax Markdwon
+" syntax Markdwon
 let g:markdown_fenced_languages = [
 \  'html',
 \  'css',
@@ -123,69 +63,79 @@ let g:markdown_fenced_languages = [
 \  'bash=sh',
 \  'yaml',
 \]
-" Align table {{{
+" use Markdown
+vnoremap <Leader>mdu ygvs[](<c-r>")<ESC>?[]<cr>a
+
+" Golang plugin
+Plug 'fatih/vim-go'
+
+""" TOOLS
+" show tree
+Plug 'scrooloose/nerdtree'
+" show dotfiles
+let NERDTreeShowHidden = 1
+nmap \e :NERDTreeToggle<CR>
+
+" easy commentout
+" usage ctl + //
+Plug 'tomtom/tcomment_vim'
+
+" git configuration
+Plug 'airblade/vim-gitgutter'
+" GitGutter styling to use · instead of +/-
+let g:gitgutter_sign_added = '∙'
+let g:gitgutter_sign_modified = '∙'
+let g:gitgutter_sign_removed = '∙'
+let g:gitgutter_sign_modified_removed = '∙'
+
+" run commands quickly
+Plug 'thinca/vim-quickrun'
+
+" easy move
+Plug 'easymotion/vim-easymotion'
+" \s {char}
+map <Leader> <Plug>(easymotion-prefix)
+
+" align table
 Plug 'h1mesuke/vim-alignta'
-" }}}
-" Preview {{{
+" preview
 Plug 'kannokanno/previm'
 Plug 'tyru/open-browser.vim'
-" }}}
-" Use Markdown
-vnoremap <Leader>mdu ygvs[](<c-r>")<ESC>?[]<cr>a
-" }}}
 
-" Setting fzf {{{
+" setting fzf
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
-" }}}
-
-" Golang plugin {{{
-Plug 'fatih/vim-go'
-" }}}
-
-" Setting Language Server {{{
-" Plug 'natebosch/vim-lsc'
-" let g:lsc_server_commands = {
-" \  'python': 'pyls',
-" \  'typescript': 'typescript-language-server --stdio',
-" \}
-" Automatically close the document window
-" autocmd CompleteDone * silent! pclose
-" }}}
-"
-" Change and add such surroundings in pairs{{{
-Plug 'tpope/vim-surround'
-" }}}
-
-" Delete end-space {{{
-Plug 'ritarock/vim-sweep_trail'
-" }}}
 
 call plug#end()
-" }}}
 
-" Base setting {{{====================
-" UTF-8 by default
+"""""""""""""""""""""
+" base configuration
+"""""""""""""""""""""
+" utf-8 by default
 set encoding=utf-8
-" Remove splash screen
-"set shortmess+=I
-" Enable line change with right or left cursor move
-set whichwrap =b,s,h,l,<,>,[,],~
-" Show line number
-set number
-" Show cursor line
-set cursorline
-" Don't make swapfile
-set noswapfile
-" Don't make undofile
-set noundofile
-" Enable backspace
-set backspace=indent,eol,start
-" Show command
-set showcmd
-" }}}
 
-" Colorscheme {{{====================
+" enable line change with right or left cursor move
+set whichwrap =b,s,h,l,<,>,[,],~
+
+" show line number
+set number
+
+" show cursor line
+set cursorline
+
+" don't make swapfile
+set noswapfile
+
+" don't make undofile
+set noundofile
+
+" enable backspace
+set backspace=indent,eol,start
+
+" show command
+set showcmd
+
+" colorscheme configuration
 if has('vim_starting')
   syntax enable
   set background=dark
@@ -201,94 +151,105 @@ if has('vim_starting')
     endtry
   endif
 endif
-" }}}
 
-" Tab,Indent Setting {{{====================
-" Replace space with TAB
+"""""""""""""""""""""
+" tab, indent configuration
+"""""""""""""""""""""
+" replace space with tab
 set expandtab
-" The one true Tab
+
+" the one true Tab
 set tabstop=2
-" Spaces 'feel' like tabs
+
+" spaces 'feel' like tabs
 set softtabstop=2
-" Carry over indenting from previous line
+
+" carry over indenting from previous line
 set autoindent
-" Set smartindent
+
+" set smartindent
 set smartindent
-" Smartindent's space is 2
+
+" smartindent's space is 2
 set shiftwidth=2
-" Hilight matching braces/parens/etc
+
+" hilight matching braces/parens/etc
 set showmatch
-" Show possible completions on command line
+
+" show possible completions on command line
 set wildmenu
-" How many lines of history to save
+
+" how many lines of history to save
 set history=200
-" Show whitespace as special chars - see listchars
+
+" show whitespace as special chars - see listchars
 set list
-" Unicode characters for various things
+
+" unicode characters for various things
 set listchars=tab:»\ ,extends:›,precedes:‹,nbsp:·,trail:·
-" Change indent when python
+
+" change indent when python
 augroup python
 autocmd!
 autocmd FileType python setlocal shiftwidth=4 tabstop=4 softtabstop=4
 augroup END
-" }}}
 
-" Status line setting {{{====================
-" Always show the status bar
-set laststatus=2
-" Show mode
-set showmode
-" Show row/col and percentage
-set ruler
-" Command line's height is 2
-set cmdheight=2
-" }}}
-
-" Search setting {{{====================
-" Search as you type
+"""""""""""""""""""""
+" search configuration
+"""""""""""""""""""""
+" search as you type
 set incsearch
-" Case insensitive
+" case insensitive
 set ignorecase
-" Lets you search for ALL CAPS
+" lets you search for ALL CAPS
 set smartcase
-" Hilight searching
+" hilight searching
 set hlsearch
-" Get matching number
-" :%s/hoge/&/gn
-" }}}
 
-" Keymap setting {{{====================
+"""""""""""""""""""""
+" status line configuration
+"""""""""""""""""""""
+" always show the status bar
+set laststatus=2
+" show mode
+set showmode
+" show row/col and percentage
+set ruler
+" command line's height is 2
+set cmdheight=2
+
+"""""""""""""""""""""
+" keymapping configuration
+"""""""""""""""""""""
 nmap j gj
 nmap k gk
 nmap <S-h> ^
 nmap <S-l> $
-" These are things that I mistype and want ignored.
+
+" mistype and want ignored
 nmap Q <silent>
 nmap q: <silent>
 nmap K <silent>
-" Open(split) .vimrc
-inoremap <silent> jj <ESC>
-nnoremap <silent><Esc><Esc> : <C-u>set nohlsearch!<CR>
-" nnoremap ; :
-" Highlight the word under the cursor in normal mode with 2 spaces
-" nnoremap <silent> <Space><Space> "zyiw:let @/ = '\<' . @z . '\>'<CR>:set hlsearch<CR>
+
 nnoremap x "_x
 nnoremap s "_s
 nnoremap Y y$
+
 imap <C-h> <Left>
 imap <C-j> <Down>
 imap <C-k> <Up>
 imap <C-l> <Right>
+inoremap <silent> jj <ESC>
+
 vnoremap <S-h> ^
 vnoremap <S-l> $
+
 cnoremap <C-p> <Up>
 cnoremap <C-n> <Down>
+" current directory path
 cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/':'%%'
-let mapleader=","
-noremap \ ,
-" }}}
 
-" My command {{{====================
+" my command
 command! -nargs=1 Template call s:template(<f-args>)
 function! s:template(argft)
   if a:argft == "python"
