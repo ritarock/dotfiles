@@ -13,25 +13,9 @@ call plug#begin('~/.vim/plugged')
 
 """ BASE
 " customize status/tab line
-" Plug 'itchyny/lightline.vim'
 Plug 'vim-airline/vim-airline'
-" show file path
-" let g:lightline = {
-"       \'active': {
-"       \ 'left': [ ['mode', 'paste'],
-"       \         ['readonly', 'filepath', 'modified'] ]
-"       \},
-"       \'component_function': {
-"       \'filepath': 'FilePath'
-"       \},
-"       \}
-" function! FilePath()
-"   if winwidth(0) > 90
-"     return expand("%:s")
-"   else
-"     return expand("%:t")
-"   endif
-" endfunction
+let g:airline#extensions#branch#enabled = 1
+let g:airline#extensions#default#layout = [['a', 'c'], ['x', 'y', 'z']]
 
 " auto insert braces/parens/etc
 Plug 'cohama/lexima.vim'
@@ -54,14 +38,15 @@ Plug 'leafgarland/typescript-vim'
 Plug 'tpope/vim-markdown'
 " syntax Markdwon
 let g:markdown_fenced_languages = [
-\  'html',
+\  'bash=sh',
 \  'css',
+\  'go',
+\  'html',
 \  'javascript',
 \  'js=javascript',
 \  'json=javascript',
-\  'ruby',
 \  'python',
-\  'bash=sh',
+\  'ruby',
 \  'yaml',
 \]
 " use Markdown
@@ -78,7 +63,6 @@ let NERDTreeShowHidden = 1
 nmap \e :NERDTreeToggle<CR>
 
 " easy commentout
-" usage ctl + //
 Plug 'tomtom/tcomment_vim'
 
 " git configuration
@@ -99,7 +83,7 @@ map <Leader> <Plug>(easymotion-prefix)
 
 " align table
 Plug 'h1mesuke/vim-alignta'
-" preview
+" preview Markdown
 Plug 'kannokanno/previm'
 Plug 'tyru/open-browser.vim'
 
@@ -113,7 +97,7 @@ call plug#end()
 " base configuration
 """""""""""""""""""""
 " utf-8 by default
-set encoding=utf-8
+set encoding=UTF-8
 
 " enable line change with right or left cursor move
 set whichwrap =b,s,h,l,<,>,[,],~
