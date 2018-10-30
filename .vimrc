@@ -13,24 +13,25 @@ call plug#begin('~/.vim/plugged')
 
 """ BASE
 " customize status/tab line
-Plug 'itchyny/lightline.vim'
+" Plug 'itchyny/lightline.vim'
+Plug 'vim-airline/vim-airline'
 " show file path
-let g:lightline = {
-      \'active': {
-      \ 'left': [ ['mode', 'paste'],
-      \         ['readonly', 'filepath', 'modified'] ]
-      \},
-      \'component_function': {
-      \'filepath': 'FilePath'
-      \},
-      \}
-function! FilePath()
-  if winwidth(0) > 90
-    return expand("%:s")
-  else
-    return expand("%:t")
-  endif
-endfunction
+" let g:lightline = {
+"       \'active': {
+"       \ 'left': [ ['mode', 'paste'],
+"       \         ['readonly', 'filepath', 'modified'] ]
+"       \},
+"       \'component_function': {
+"       \'filepath': 'FilePath'
+"       \},
+"       \}
+" function! FilePath()
+"   if winwidth(0) > 90
+"     return expand("%:s")
+"   else
+"     return expand("%:t")
+"   endif
+" endfunction
 
 " auto insert braces/parens/etc
 Plug 'cohama/lexima.vim'
