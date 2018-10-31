@@ -17,6 +17,7 @@ Plug 'vim-airline/vim-airline'
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#default#layout = [['a', 'c'], ['x', 'y', 'z']]
 
+
 " auto insert braces/parens/etc
 Plug 'cohama/lexima.vim'
 
@@ -228,6 +229,10 @@ inoremap <silent> jj <ESC>
 
 vnoremap <S-h> ^
 vnoremap <S-l> $
+
+vnoremap <silent> y y`]
+vnoremap <silent> p p`]
+nnoremap <silent> p p`]
 
 cnoremap <C-p> <Up>
 cnoremap <C-n> <Down>
