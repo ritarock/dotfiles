@@ -17,7 +17,6 @@ Plug 'vim-airline/vim-airline'
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#default#layout = [['a', 'c'], ['x', 'y', 'z']]
 
-
 " auto insert braces/parens/etc
 Plug 'cohama/lexima.vim'
 
@@ -34,6 +33,7 @@ Plug 'othree/yajs.vim'
 
 " syntax typescript
 Plug 'leafgarland/typescript-vim'
+Plug 'Quramy/tsuquyomi'
 
 " setting Markdown
 Plug 'tpope/vim-markdown'
@@ -240,8 +240,8 @@ cnoremap <C-n> <Down>
 cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/':'%%'
 
 " my command
-command! -nargs=1 Template call s:template(<f-args>)
-function! s:template(argft)
+command! -nargs=1 Format call s:format(<f-args>)
+function! s:format(argft)
   if a:argft == "python"
     set filetype=python
     call setline(1,"def main():")
