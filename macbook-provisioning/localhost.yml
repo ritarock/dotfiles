@@ -8,6 +8,7 @@
       homebrew_packages:
         - name: fish
         - name: fzf
+        - name: ghq
         - name: git
         - name: go
         - name: jq
@@ -15,8 +16,8 @@
         - name: pyenv
         - name: python
         - name: tree
-        - name: yarn
         - name: vim
+        - name: yarn
 
       homebrew_cask_packages:
         - name: docker
