@@ -141,6 +141,13 @@ if has('vim_starting')
   endif
 endif
 
+" golang auto write
+augroup go
+autocmd!
+autocmd FileType go setlocal autowrite
+augroup END
+
+
 """""""""""""""""""""
 " tab, indent configuration
 """""""""""""""""""""
