@@ -190,6 +190,10 @@ autocmd!
 autocmd FileType python setlocal shiftwidth=4 tabstop=4 softtabstop=4
 augroup END
 
+" Highlight err when golang
+autocmd FileType go :highlight goErr cterm=bold ctermfg=214
+autocmd FileType go :match goErr /\<err\>/
+
 """""""""""""""""""""
 " search configuration
 """""""""""""""""""""
