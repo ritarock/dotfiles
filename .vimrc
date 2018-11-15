@@ -253,15 +253,6 @@ cnoremap <C-n> <Down>
 " current directory path
 cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/':'%%'
 
-" my command
-imap <C-f> World
-imap <C-b><C-f> Hello
-
-command! -nargs=1 Sample call s:sample()
-function! s:sample()
-  echo 'sample'
-endfunction
-
 command! -nargs=? Jq call s:Jq(<f-args>)
 function! s:Jq(...)
     if 0 == a:0
@@ -270,4 +261,13 @@ function! s:Jq(...)
         let l:arg = a:1
     endif
     execute "%! jq \"" . l:arg . "\""
+endfunction
+
+" my command
+imap <C-f> World
+imap <C-b><C-f> Hello
+
+command! -nargs=1 Sample call s:sample()
+function! s:sample()
+  echo 'sample'
 endfunction
