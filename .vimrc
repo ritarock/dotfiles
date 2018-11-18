@@ -140,6 +140,8 @@ if has('vim_starting')
     endtry
   endif
 endif
+" comment color
+highlight Comment ctermfg=green
 
 " golang auto write
 augroup go
