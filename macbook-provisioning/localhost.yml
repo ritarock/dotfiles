@@ -6,7 +6,6 @@
 
     vars:
       homebrew_packages:
-        - name: fish
         - name: fzf
         - name: ghq
         - name: git
@@ -18,6 +17,7 @@
         - name: tree
         - name: vim
         - name: yarn
+        - name: zsh
 
       homebrew_cask_packages:
         - name: docker
