@@ -149,6 +149,8 @@ autocmd!
 autocmd FileType go setlocal autowrite
 augroup END
 
+" not beep
+set visualbell
 
 """""""""""""""""""""
 " tab, indent configuration
