@@ -234,6 +234,7 @@ nmap <S-l> $
 nmap Q <silent>
 nmap q: <silent>
 nmap K <silent>
+nmap <Leader>w :w<CR>
 
 nnoremap x "_x
 nnoremap s "_s
