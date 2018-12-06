@@ -225,10 +225,14 @@ set cmdheight=2
 """""""""""""""""""""
 " keymapping configuration
 """""""""""""""""""""
+let mapleader = "\<Space>"
+
 nmap j gj
 nmap k gk
 nmap <S-h> ^
 nmap <S-l> $
+nmap <Leader>p "+p
+nmap <Leader>P "+P
 
 " mistype and want ignored
 nmap Q <silent>
