@@ -225,8 +225,6 @@ set cmdheight=2
 """""""""""""""""""""
 " keymapping configuration
 """""""""""""""""""""
-let mapleader = "\<Space>"
-
 nmap j gj
 nmap k gk
 nmap <S-h> ^
