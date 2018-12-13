@@ -236,7 +236,6 @@ nmap <S-l> $
 nmap <Leader>p "+p
 nmap <Leader>P "+P
 
-" mistype and want ignored
 nmap Q <silent>
 nmap q: <silent>
 nmap K <silent>
@@ -274,7 +273,6 @@ function! s:Jq(...)
     execute "%! jq \"" . l:arg . "\""
 endfunction
 
-" my command
 imap <C-f> World
 imap <C-b><C-f> Hello
 
