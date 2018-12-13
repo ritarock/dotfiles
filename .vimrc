@@ -56,6 +56,9 @@ vnoremap <Leader>mdu ygvs[](<c-r>")<ESC>?[]<cr>a
 " Golang plugin
 Plug 'fatih/vim-go'
 
+" highlight csv
+Plug 'mechatroner/rainbow_csv'
+
 """ TOOLS
 " show tree
 Plug 'scrooloose/nerdtree'
@@ -141,7 +144,8 @@ if has('vim_starting')
   endif
 endif
 " comment color
-highlight Comment ctermfg=green
+" highlight Comment ctermfg=green
+highlight Comment ctermfg=yellow
 
 " golang auto write
 augroup go
