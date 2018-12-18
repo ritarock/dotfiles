@@ -98,6 +98,10 @@ Plug 'junegunn/fzf.vim'
 " template
 Plug 'ritarock/vim-template'
 
+" lsp
+Plug 'prabirshrestha/async.vim'
+Plug 'prabirshrestha/vim-lsp'
+
 call plug#end()
 
 """""""""""""""""""""
@@ -152,6 +156,20 @@ augroup go
 autocmd!
 autocmd FileType go setlocal autowrite
 augroup END
+
+" when write python
+if executable('pyls')
+  " pip install python-language-server
+  augroup LspPython
+    au!
+    autocmd User lsp_setup call lsp#register_server({
+        \ 'name': 'pyls',
+        \ 'cmd': {server_info->['pyls']},
+        \ 'whitelist': ['python'],
+        \ })
+    autocmd FileType python setlocal omnifunc=lsp#complete
+  augroup END
+endif
 
 " not beep
 set visualbell
