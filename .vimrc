@@ -141,7 +141,8 @@ if has('vim_starting')
     colorscheme default
   else
     try
-      colorscheme molokai
+      " colorscheme molokai
+      colorscheme slate
     catch
       colorscheme desert
     endtry
