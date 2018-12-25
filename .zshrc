@@ -62,3 +62,4 @@ bindkey -v
 # alias
 alias ll='ls -l'
 alias ltr='ls -ltr'
+alias la='ls -a'
