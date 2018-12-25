@@ -299,3 +299,8 @@ command! -nargs=1 Sample call s:sample()
 function! s:sample()
   echo 'sample'
 endfunction
+
+command! -nargs=1 Count call s:count(<f-args>)
+function! s:count(...)
+  execute "%s/" . a:1 . "//gn"
+endfunction
