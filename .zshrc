@@ -58,3 +58,7 @@ bindkey -v
 # }
 # zle -N zle-line-init
 # zle -N zle-keymap-select
+
+# alias
+alias ll='ls -l'
+alias ltr='ls -ltr'
