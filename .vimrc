@@ -175,6 +175,9 @@ endif
 " not beep
 set visualbell
 
+" Chanege leader
+let mapleader = "\<Space>"
+
 """""""""""""""""""""
 " tab, indent configuration
 """""""""""""""""""""
