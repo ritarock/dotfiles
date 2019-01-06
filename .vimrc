@@ -151,6 +151,11 @@ endif
 " highlight Comment ctermfg=green
 " highlight Comment ctermfg=yellow
 
+" popup menu color
+hi Pmenu ctermbg=8
+hi PmenuSel ctermbg=1
+hi PmenuSbar ctermbg=0
+
 " golang auto write
 augroup go
 autocmd!
