@@ -179,8 +179,11 @@ endif
 " not beep
 set visualbell
 
-" Chanege leader
+" chanege leader
 let mapleader = "\<Space>"
+
+" disable preview window
+set completeopt-=preview
 
 """""""""""""""""""""
 " tab, indent configuration
