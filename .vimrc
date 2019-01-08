@@ -19,9 +19,6 @@ let g:airline#extensions#default#layout = [['a', 'c'], ['x', 'y', 'z']]
 " auto insert braces/parens/etc
 Plug 'cohama/lexima.vim'
 
-" colorscheme
-Plug 'tomasr/molokai'
-
 " help in Japanese
 Plug 'vim-jp/vimdoc-ja'
 set helplang=ja,en
@@ -140,7 +137,6 @@ if has('vim_starting')
     colorscheme default
   else
     try
-      " colorscheme molokai
       colorscheme slate
     catch
       colorscheme desert
