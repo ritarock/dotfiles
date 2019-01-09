@@ -14,6 +14,7 @@
         - name: node
         - name: pyenv
         - name: python
+        - name: tmux
         - name: tree
         - name: vim
         - name: yarn
