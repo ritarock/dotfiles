@@ -98,6 +98,10 @@ Plug 'ritarock/vim-template'
 Plug 'prabirshrestha/async.vim'
 Plug 'prabirshrestha/vim-lsp'
 
+" html close tag
+Plug 'alvan/vim-closetag'
+let g:closetag_filenames = '*.html'
+
 call plug#end()
 
 """""""""""""""""""""
