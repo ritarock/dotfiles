@@ -147,9 +147,6 @@ if has('vim_starting')
     endtry
   endif
 endif
-" comment color
-" highlight Comment ctermfg=green
-" highlight Comment ctermfg=yellow
 
 " popup menu color
 hi Pmenu ctermbg=8
@@ -301,9 +298,6 @@ function! s:Jq(...)
     endif
     execute "%! jq \"" . l:arg . "\""
 endfunction
-
-imap <C-f> World
-imap <C-b><C-f> Hello
 
 command! -nargs=1 Sample call s:sample()
 function! s:sample()
