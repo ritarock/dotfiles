@@ -49,6 +49,9 @@ let g:markdown_fenced_languages = [
 " use Markdown
 vnoremap <Leader>mdu ygvs[](<c-r>")<ESC>?[]<cr>a
 
+" colorscheme
+Plug 'altercation/vim-colors-solarized'
+
 " Golang plugin
 Plug 'fatih/vim-go'
 
@@ -132,21 +135,11 @@ set backspace=indent,eol,start
 set showcmd
 
 " colorscheme configuration
-if has('vim_starting')
-  syntax enable
-  set background=dark
-  set t_Co=256
-  autocmd Colorscheme * highlight Visual ctermbg=222
-  if &t_Co < 256
-    colorscheme default
-  else
-    try
-      colorscheme slate
-    catch
-      colorscheme desert
-    endtry
-  endif
-endif
+set background=dark
+try
+  colorscheme solarized
+catch
+endtry
 
 " popup menu color
 hi Pmenu ctermbg=8
