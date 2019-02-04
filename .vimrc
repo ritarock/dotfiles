@@ -169,9 +169,6 @@ endif
 " not beep
 set visualbell
 
-" chanege leader
-let mapleader = "\<Space>"
-
 " disable preview window
 set completeopt-=preview
 
