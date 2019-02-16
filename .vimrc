@@ -51,6 +51,7 @@ vnoremap <Leader>mdu ygvs[](<c-r>")<ESC>?[]<cr>a
 
 " colorscheme
 Plug 'altercation/vim-colors-solarized'
+Plug 'tomasr/molokai'
 
 " Golang plugin
 Plug 'fatih/vim-go'
@@ -134,10 +135,13 @@ set backspace=indent,eol,start
 " show command
 set showcmd
 
+" colorscheme solarized
 " colorscheme configuration
 set background=dark
+set t_Co=256
+syntax on
 try
-  colorscheme solarized
+  colorscheme molokai
 catch
 endtry
 
