@@ -150,11 +150,18 @@ hi Pmenu ctermbg=8
 hi PmenuSel ctermbg=1
 hi PmenuSbar ctermbg=0
 
-" golang auto write
-augroup go
-autocmd!
-autocmd FileType go setlocal autowrite
-augroup END
+" when write go
+if executable('golsp')
+  augroup LspGo
+    au!
+    autocmd User lsp_setup call lsp#register_server({
+        \ 'name': 'go-lang',
+        \ 'cmd': {server_info->['golsp', '-mode', 'stdio']},
+        \ 'whitelist': ['go'],
+        \ })
+    autocmd FileType go setlocal omnifunc=lsp#complete
+  augroup END
+endif
 
 " when write python
 if executable('pyls')
