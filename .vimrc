@@ -66,6 +66,9 @@ Plug 'scrooloose/nerdtree'
 let NERDTreeShowHidden = 1
 nmap \e :NERDTreeToggle<CR>
 
+" mappings to easily delete, change and add
+Plug 'tpope/vim-surround'
+
 " easy commentout
 Plug 'tomtom/tcomment_vim'
 
