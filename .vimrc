@@ -45,8 +45,10 @@ let g:markdown_fenced_languages = [
 \  'js=javascript',
 \  'json=javascript',
 \  'python',
+\  'py=python',
 \  'ruby',
-\  'yaml',
+\  'rb=ruby',
+\  'yaml'
 \]
 " use Markdown
 vnoremap <Leader>mdu ygvs[](<c-r>")<ESC>?[]<cr>a
