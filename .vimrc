@@ -144,6 +144,7 @@ syntax on
 try
   colorscheme molokai
 catch
+  colorscheme desert
 endtry
 
 " popup menu color
