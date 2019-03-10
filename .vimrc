@@ -5,12 +5,9 @@
 " curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 " https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-"""""""""""""""""""""
-" plugin configuration
-"""""""""""""""""""""
+" ===== {{{ plugin configuration
 call plug#begin('~/.vim/plugged')
-
-""" BASE
+" { Base
 " customize status/tab line
 Plug 'vim-airline/vim-airline'
 let g:airline#extensions#branch#enabled = 1
@@ -23,7 +20,12 @@ Plug 'cohama/lexima.vim'
 Plug 'vim-jp/vimdoc-ja'
 set helplang=ja,en
 
-""" LANGUAGE
+" colorscheme
+Plug 'altercation/vim-colors-solarized'
+Plug 'tomasr/molokai'
+" }
+
+" { Language
 " syntax highlight ES6
 Plug 'othree/yajs.vim'
 
@@ -49,17 +51,18 @@ let g:markdown_fenced_languages = [
 " use Markdown
 vnoremap <Leader>mdu ygvs[](<c-r>")<ESC>?[]<cr>a
 
-" colorscheme
-Plug 'altercation/vim-colors-solarized'
-Plug 'tomasr/molokai'
-
 " Golang plugin
 Plug 'fatih/vim-go'
 
 " highlight csv
 Plug 'mechatroner/rainbow_csv'
 
-""" TOOLS
+" html close tag
+Plug 'alvan/vim-closetag'
+let g:closetag_filenames = '*.html'
+" }
+
+" { Tools
 " show tree
 Plug 'scrooloose/nerdtree'
 " show dotfiles
@@ -104,16 +107,12 @@ Plug 'ritarock/vim-template'
 " lsp
 Plug 'prabirshrestha/async.vim'
 Plug 'prabirshrestha/vim-lsp'
-
-" html close tag
-Plug 'alvan/vim-closetag'
-let g:closetag_filenames = '*.html'
+" }
 
 call plug#end()
+" ===== }}}
 
-"""""""""""""""""""""
-" base configuration
-"""""""""""""""""""""
+" ===== {{{ base configuration
 " utf-8 by default
 set encoding=UTF-8
 
@@ -138,7 +137,6 @@ set backspace=indent,eol,start
 " show command
 set showcmd
 
-" colorscheme solarized
 " colorscheme configuration
 set background=dark
 set t_Co=256
@@ -185,10 +183,9 @@ set visualbell
 
 " disable preview window
 set completeopt-=preview
+" ===== }}}
 
-"""""""""""""""""""""
-" tab, indent configuration
-"""""""""""""""""""""
+" ===== {{{ tab, indent configuration
 " replace space with tab
 set expandtab
 
@@ -224,17 +221,16 @@ set listchars=tab:»\ ,extends:›,precedes:‹,nbsp:·,trail:·
 
 " change indent when python
 augroup python
-autocmd!
-autocmd FileType python setlocal shiftwidth=4 tabstop=4 softtabstop=4
+  autocmd!
+  autocmd BufNewFile,BufRead *.py setlocal tabstop=4 softtabstop=4 shiftwidth=4
 augroup END
 
 " Highlight err when golang
 autocmd FileType go :highlight goErr cterm=bold ctermfg=214
 autocmd FileType go :match goErr /\<err\>/
+" ===== }}}
 
-"""""""""""""""""""""
-" search configuration
-"""""""""""""""""""""
+" ===== {{{ search configuration
 " search as you type
 set incsearch
 " case insensitive
@@ -243,10 +239,9 @@ set ignorecase
 set smartcase
 " hilight searching
 set hlsearch
+" ===== }}}
 
-"""""""""""""""""""""
-" status line configuration
-"""""""""""""""""""""
+" ===== {{{ status line configuration
 " always show the status bar
 set laststatus=2
 " show mode
@@ -255,10 +250,9 @@ set showmode
 set ruler
 " command line's height is 2
 set cmdheight=2
+" ===== }}}
 
-"""""""""""""""""""""
-" keymapping configuration
-"""""""""""""""""""""
+" ===== {{{ keymapping configuration
 nmap j gj
 nmap k gk
 nmap <S-h> ^
@@ -312,3 +306,4 @@ command! -nargs=1 Count call s:count(<f-args>)
 function! s:count(...)
   execute "%s/" . a:1 . "//gn"
 endfunction
+" ===== }}}
