@@ -28,6 +28,7 @@
         - name: iTerm2
         - name: postman
         - name: slack
+        - name: station
         - name: skype
         - name: vagrant
         - name: virtualbox
