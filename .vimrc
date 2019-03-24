@@ -153,6 +153,7 @@ endtry
 hi Pmenu ctermbg=8
 hi PmenuSel ctermbg=1
 hi PmenuSbar ctermbg=0
+set pumheight=10
 
 " when write go
 if executable('golsp')
@@ -271,6 +272,9 @@ nmap <Leader>w :w<CR>
 nnoremap x "_x
 nnoremap s "_s
 nnoremap Y y$
+
+nnoremap + <C-a>
+nnoremap - <C-x>
 
 imap <C-h> <Left>
 imap <C-j> <Down>
