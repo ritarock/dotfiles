@@ -155,30 +155,35 @@ hi PmenuSel ctermbg=1
 hi PmenuSbar ctermbg=0
 set pumheight=10
 
-" when write go
-" if executable('gopls')
-"   augroup LspGo
-"     au!
-"     autocmd User lsp_setup call lsp#register_server({
-"         \ 'name': 'gopls',
-"         \ 'cmd': {server_info->['gopls', '-mode', 'stdio']},
-"         \ 'whitelist': ['go'],
-"         \ })
-"     autocmd FileType go setlocal omnifunc=lsp#complete
-"   augroup END
-" endif
-
-if executable('bingo')
+if executable('gopls')
   augroup LspGo
     au!
-    au User lsp_setup call lsp#register_server({
-        \ 'name': 'bingo',
-        \ 'cmd': {server_info->['bingo', '-mode', 'stdio']},
+    autocmd User lsp_setup call lsp#register_server({
+        \ 'name': 'go-lang',
+        \ 'cmd': {server_info->['gopls']},
         \ 'whitelist': ['go'],
         \ })
-    au FileType go setlocal omnifunc=lsp#complete
+    autocmd FileType go setlocal omnifunc=lsp#complete
+    autocmd FileType go nmap <buffer> gd <plug>(lsp-definition)
+    autocmd FileType go nmap <buffer> ,n <plug>(lsp-next-error)
+    autocmd FileType go nmap <buffer> ,p <plug>(lsp-previous-error)
   augroup END
 endif
+
+let g:go_fmt_command = 'goimports'
+let g:go_def_mode = 'godef'
+let g:go#use_vimproc = 0
+"let g:go_snippet_engine = "minisnip"
+let g:go_def_mapping_enabled = 0
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_operators = 1
+let g:go_term_enabled = 1
+let g:go_highlight_build_constraints = 1
+let g:go_template_autocreate = 0
+let g:go_gocode_unimported_packages = 1
+let g:sonictemplate_enable_pattern = 1
 
 " when write python
 if executable('pyls')
