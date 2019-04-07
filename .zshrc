@@ -2,6 +2,8 @@
 export LANG=ja_JP.UTF-8
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
+[[ -z "$TMUX" && ! -z "$PS1"  ]] && exec tmux
+
 
 # color
 autoload -Uz colors
@@ -13,6 +15,21 @@ HISTSIZE=1000
 SAVEHIST=1000
 
 # prompt
+# %M    ホスト名
+# %m    ホスト名
+# %d    カレントディレクトリ(フルパス)
+# %~    カレントディレクトリ(フルパス2)
+# %C    カレントディレクトリ(相対パス)
+# %c    カレントディレクトリ(相対パス)
+# %n    ユーザ名
+# %#    ユーザ種別
+# %?    直前のコマンドの戻り値
+# %D    日付(yy-mm-dd)
+# %W    日付(yy/mm/dd)
+# %w    日付(day dd)
+# %*    時間(hh:flag_mm:ss)
+# %T    時間(hh:mm)
+# %t    時間(hh:mm(am/pm))
 PROMPT="%{${fg[green]}%}[%n@%m]%{${reset_color}%} %~
 %# "
 
