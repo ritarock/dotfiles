@@ -4,7 +4,6 @@ export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 [[ -z "$TMUX" && ! -z "$PS1"  ]] && exec tmux
 
-
 # color
 autoload -Uz colors
 colors
@@ -59,39 +58,26 @@ setopt share_history
 # ignore same command
 setopt hist_ignore_all_dups
 
-# vim keybind
-bindkey -v
-# show prompt mode
-# function zle-line-init zle-keymap-select {
-#   case $KEYMAP in
-#     vicmd)
-#     PROMPT="%{$fg[red]%}[%{$reset_color%}%n/%{$fg_bold[red]%}NOR%{$reset_color%}%{$fg[red]%}]%#%{$reset_color%} "
-#     ;;
-#     main|viins)
-#     PROMPT="%{$fg[red]%}[%{$reset_color%}%n/%{$fg_bold[cyan]%}INS%{$reset_color%}%{$fg[red]%}]%#%{$reset_color%} "
-#     ;;
-#   esac
-#   zle reset-prompt
-# }
-# zle -N zle-line-init
-# zle -N zle-keymap-select
-
 # alias
 alias ll='ls -l'
 alias ltr='ls -ltr'
 alias la='ls -a'
 alias cp='cp -r'
 
-bindkey '^]' peco-src
-
-function peco-src() {
-  local src=$(ghq list --full-path | peco --query "$LBUFFER")
-  if [-n "$src"]; then
-    BUFFER="cd $src"
-    zle accept-line
-  fi
-
-  zle -R -c
+function fzf-src() {
+  local dir
+  dir=$(ghq list --full-path | fzf-tmux --reverse +m) &&
+    cd $dir
 }
+zle -N fzf-src
+bindkey '^]' fzf-src
 
-zle -N peco-src
+# function zle-line-init zle-keymap-select {
+#     VIM_NORMAL="%K{208}%F{black}⮀%k%f%K{208}%F{white} % NORMAL %k%f%K{black}%F{208}⮀%k%f"
+#     VIM_INSERT="%K{075}%F{black}⮀%k%f%K{075}%F{white} % INSERT %k%f%K{black}%F{075}⮀%k%f"
+#     RPS1="${${KEYMAP/vicmd/$VIM_NORMAL}/(main|viins)/$VIM_INSERT}"
+#     RPS2=$RPS1
+#     zle reset-prompt
+# }
+# zle -N zle-line-init
+# zle -N zle-keymap-select
