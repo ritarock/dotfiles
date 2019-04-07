@@ -12,6 +12,7 @@
         - name: go
         - name: jq
         - name: node
+        - name: peco
         - name: pyenv
         - name: python
         - name: tmux
