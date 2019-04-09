@@ -31,12 +31,14 @@ SAVEHIST=1000
 # %t    時間(hh:mm(am/pm))
 # PROMPT="%{${fg[green]}%}[%n@%m]%{${reset_color}%} %~
 # %# "
-PROMPT="%{${fg[green]}%}[%n]%{${reset_color}%} %~
-%# "
+
+PROMPT="%{${fg[green]}%}[%n] %{${reset_color}%}%~
+$ "
 
 # completion
 autoload -Uz compinit
 compinit
+zstyle ':completion:*' menu select
 # case insensitive
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 # after ../ does not complement the directory that is PWD
