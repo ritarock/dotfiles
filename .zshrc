@@ -29,7 +29,9 @@ SAVEHIST=1000
 # %*    時間(hh:flag_mm:ss)
 # %T    時間(hh:mm)
 # %t    時間(hh:mm(am/pm))
-PROMPT="%{${fg[green]}%}[%n@%m]%{${reset_color}%} %~
+# PROMPT="%{${fg[green]}%}[%n@%m]%{${reset_color}%} %~
+# %# "
+PROMPT="%{${fg[green]}%}[%n]%{${reset_color}%} %~
 %# "
 
 # completion
