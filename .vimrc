@@ -84,6 +84,7 @@ let g:gitgutter_sign_added = '∙'
 let g:gitgutter_sign_modified = '∙'
 let g:gitgutter_sign_removed = '∙'
 let g:gitgutter_sign_modified_removed = '∙'
+Plug 'tpope/vim-fugitive'
 
 " run commands quickly
 Plug 'thinca/vim-quickrun'
