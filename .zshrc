@@ -76,6 +76,8 @@ function fzf-src() {
 zle -N fzf-src
 bindkey '^]' fzf-src
 
+function chpwd() { ls  }
+
 # function zle-line-init zle-keymap-select {
 #     VIM_NORMAL="%K{208}%F{black}⮀%k%f%K{208}%F{white} % NORMAL %k%f%K{black}%F{208}⮀%k%f"
 #     VIM_INSERT="%K{075}%F{black}⮀%k%f%K{075}%F{white} % INSERT %k%f%K{black}%F{075}⮀%k%f"
