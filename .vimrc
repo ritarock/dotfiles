@@ -241,11 +241,14 @@ set list
 " unicode characters for various things
 set listchars=tab:»\ ,extends:›,precedes:‹,nbsp:·,trail:·
 
+" change indent when typescript
+autocmd Filetype typescript setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
+
+" change indent when javascript
+autocmd Filetype javascript setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
+
 " change indent when python
-augroup python
-  autocmd!
-  autocmd BufNewFile,BufRead *.py setlocal tabstop=4 softtabstop=4 shiftwidth=4
-augroup END
+autocmd Filetype python setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
 
 " Highlight err when golang
 autocmd FileType go :highlight goErr cterm=bold ctermfg=214
@@ -286,6 +289,9 @@ nmap Q <silent>
 nmap q: <silent>
 nmap K <silent>
 nmap <Leader>w :w<CR>
+
+nmap n nzz
+nmap N Nzz
 
 nnoremap x "_x
 nnoremap s "_s
