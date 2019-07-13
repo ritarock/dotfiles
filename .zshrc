@@ -2,7 +2,6 @@
 export LANG=ja_JP.UTF-8
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
-[[ -z "$TMUX" && ! -z "$PS1"  ]] && exec tmux
 
 # color
 autoload -Uz colors
@@ -78,20 +77,10 @@ bindkey '^]' fzf-src
 
 function chpwd() { ls  }
 
-# function zle-line-init zle-keymap-select {
-#     VIM_NORMAL="%K{208}%F{black}⮀%k%f%K{208}%F{white} % NORMAL %k%f%K{black}%F{208}⮀%k%f"
-#     VIM_INSERT="%K{075}%F{black}⮀%k%f%K{075}%F{white} % INSERT %k%f%K{black}%F{075}⮀%k%f"
-#     RPS1="${${KEYMAP/vicmd/$VIM_NORMAL}/(main|viins)/$VIM_INSERT}"
-#     RPS2=$RPS1
-#     zle reset-prompt
-# }
-# zle -N zle-line-init
-# zle -N zle-keymap-select
-
-# autoload -Uz vcs_info
-# precmd_vcs_info() { vcs_info  }
-# precmd_functions+=( precmd_vcs_info  )
-# setopt prompt_subst
-# RPROMPT=\$vcs_info_msg_0_
+autoload -Uz vcs_info
+precmd_vcs_info() { vcs_info }
+precmd_functions+=( precmd_vcs_info )
+setopt prompt_subst
+RPROMPT=\$vcs_info_msg_0_
 # PROMPT=\$vcs_info_msg_0_'%# '
-# zstyle ':vcs_info:git:*' formats '%b'
+zstyle ':vcs_info:git:*' formats '%b'
