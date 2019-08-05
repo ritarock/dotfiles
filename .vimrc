@@ -21,7 +21,6 @@ Plug 'vim-jp/vimdoc-ja'
 set helplang=ja,en
 
 " colorscheme
-Plug 'altercation/vim-colors-solarized'
 Plug 'tomasr/molokai'
 " }
 
@@ -71,9 +70,6 @@ Plug 'scrooloose/nerdtree'
 let NERDTreeShowHidden = 1
 nmap \e :NERDTreeToggle<CR>
 
-" mappings to easily delete, change and add
-Plug 'tpope/vim-surround'
-
 " easy commentout
 Plug 'tomtom/tcomment_vim'
 
@@ -84,7 +80,6 @@ let g:gitgutter_sign_added = '∙'
 let g:gitgutter_sign_modified = '∙'
 let g:gitgutter_sign_removed = '∙'
 let g:gitgutter_sign_modified_removed = '∙'
-Plug 'tpope/vim-fugitive'
 
 " run commands quickly
 Plug 'thinca/vim-quickrun'
@@ -151,10 +146,10 @@ catch
 endtry
 
 " popup menu color
-hi Pmenu ctermbg=8
-hi PmenuSel ctermbg=1
-hi PmenuSbar ctermbg=0
-set pumheight=10
+" hi Pmenu ctermbg=8
+" hi PmenuSel ctermbg=1
+" hi PmenuSbar ctermbg=0
+" set pumheight=10
 
 if executable('gopls')
   augroup LspGo
@@ -256,11 +251,11 @@ autocmd FileType go :match goErr /\<err\>/
 " ===== }}}
 
 " ===== {{{ search configuration
-" search as you type
+" search when type
 set incsearch
 " case insensitive
 set ignorecase
-" lets you search for ALL CAPS
+" search for ALL CAPS
 set smartcase
 " hilight searching
 set hlsearch
@@ -315,26 +310,4 @@ nnoremap <silent> p p`]
 
 cnoremap <C-p> <Up>
 cnoremap <C-n> <Down>
-" current directory path
-cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/':'%%'
-
-command! -nargs=? Jq call s:Jq(<f-args>)
-function! s:Jq(...)
-    if 0 == a:0
-        let l:arg = "."
-    else
-        let l:arg = a:1
-    endif
-    execute "%! jq \"" . l:arg . "\""
-endfunction
-
-command! -nargs=1 Sample call s:sample()
-function! s:sample()
-  echo 'sample'
-endfunction
-
-command! -nargs=1 Count call s:count(<f-args>)
-function! s:count(...)
-  execute "%s/" . a:1 . "//gn"
-endfunction
 " ===== }}}
