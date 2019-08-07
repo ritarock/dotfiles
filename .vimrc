@@ -195,6 +195,14 @@ if executable('pyls')
   augroup END
 endif
 
+" when write ruby
+call lexima#add_rule({
+\   "at" : '\S\%#',
+\   "char" : '.',
+\   "input" : '.<C-x><C-o><C-p>',
+\   "filetype" : "ruby"
+\})
+
 " not beep
 set visualbell
 
@@ -311,3 +319,4 @@ nnoremap <silent> p p`]
 cnoremap <C-p> <Up>
 cnoremap <C-n> <Down>
 " ===== }}}
+

@@ -98,6 +98,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# environment variable
 export LANG=ja_JP.UTF-8
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
@@ -123,4 +124,4 @@ alias ltr='ls -ltr'
 alias la='ls -a'
 alias cp='cp -r'
 
-# environment variable
+function chpwd() { ls }
