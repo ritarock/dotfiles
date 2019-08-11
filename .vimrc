@@ -47,6 +47,7 @@ let g:markdown_fenced_languages = [
 \  'py=python',
 \  'ruby',
 \  'rb=ruby',
+\  'sql',
 \  'yaml'
 \]
 " use Markdown
