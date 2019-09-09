@@ -124,4 +124,6 @@ alias ltr='ls -ltr'
 alias la='ls -a'
 alias cp='cp -r'
 
+alias gst='git status'
+
 function chpwd() { ls }
