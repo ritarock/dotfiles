@@ -6,10 +6,12 @@
 
     vars:
       homebrew_packages:
+        - name: fish
         - name: fzf
         - name: ghq
         - name: git
         - name: go
+        - name: hugo
         - name: jq
         - name: node
         - name: peco
@@ -29,13 +31,12 @@
         - name: google-chrome
         - name: iTerm2
         - name: postman
-        - name: slack
-        - name: station
         - name: skype
+        - name: slack
         - name: vagrant
         - name: virtualbox
-        - name: vlc
         - name: visual-studio-code
+        - name: vlc
 
     tasks:
         - name: update homebrew

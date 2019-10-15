@@ -62,6 +62,10 @@ Plug 'mechatroner/rainbow_csv'
 " html close tag
 Plug 'alvan/vim-closetag'
 let g:closetag_filenames = '*.html'
+
+" hilight slim
+Plug 'slim-template/vim-slim'
+
 " }
 
 " { Tools
@@ -321,3 +325,9 @@ cnoremap <C-p> <Up>
 cnoremap <C-n> <Down>
 " ===== }}}
 
+" ===== {{{ my command
+command! -nargs=1 Vdiff call s:vdiff(<f-args>)
+function! s:vdiff(...)
+  execute "vertical diffsplit" .a:1
+endfunction
+" ===== }}}
