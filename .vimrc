@@ -79,6 +79,7 @@ nmap \e :NERDTreeToggle<CR>
 Plug 'tomtom/tcomment_vim'
 
 " git configuration
+Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 " GitGutter styling to use · instead of +/-
 let g:gitgutter_sign_added = '∙'
