@@ -22,6 +22,7 @@ set helplang=ja,en
 
 " colorscheme
 Plug 'tomasr/molokai'
+Plug 'dracula/vim', { 'as': 'dracula'  }
 " }
 
 " { Language
@@ -146,7 +147,7 @@ set background=dark
 set t_Co=256
 syntax on
 try
-  colorscheme molokai
+  colorscheme dracula
 catch
   colorscheme desert
 endtry

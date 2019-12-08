@@ -29,6 +29,7 @@
         - name: dropbox
         - name: evernote
         - name: google-chrome
+        - name: google-japanese-ime
         - name: iTerm2
         - name: postman
         - name: skype
