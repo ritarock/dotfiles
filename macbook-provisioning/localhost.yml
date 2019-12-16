@@ -24,6 +24,7 @@
         - name: zsh
 
       homebrew_cask_packages:
+        - name: clipy
         - name: dash
         - name: docker
         - name: dropbox
@@ -31,7 +32,9 @@
         - name: google-chrome
         - name: google-japanese-ime
         - name: iTerm2
+        - name: licecap
         - name: postman
+        - name: simplenote
         - name: skype
         - name: slack
         - name: vagrant
