@@ -333,3 +333,4 @@ function! s:vdiff(...)
   execute "vertical diffsplit" .a:1
 endfunction
 " ===== }}}
+
