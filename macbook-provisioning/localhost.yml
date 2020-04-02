@@ -8,13 +8,10 @@
       homebrew_packages:
         - name: fish
         - name: fzf
-        - name: ghq
         - name: git
         - name: go
         - name: hugo
-        - name: jq
         - name: node
-        - name: peco
         - name: pyenv
         - name: python
         - name: tmux
@@ -25,16 +22,12 @@
 
       homebrew_cask_packages:
         - name: clipy
-        - name: dash
         - name: docker
-        - name: dropbox
-        - name: evernote
         - name: google-chrome
         - name: google-japanese-ime
         - name: iTerm2
         - name: licecap
         - name: postman
-        - name: simplenote
         - name: skype
         - name: slack
         - name: vagrant
