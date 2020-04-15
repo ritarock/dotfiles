@@ -1,4 +1,5 @@
 alias ltr 'ls -ltr'
-alias gst 'git status'
 alias tree 'tree -NC'
+alias gst 'git status'
 alias gdf 'git diff --color-words'
+alias gc 'git checkout'
