@@ -28,6 +28,7 @@
         - name: iTerm2
         - name: licecap
         - name: postman
+        - name: shiftit
         - name: skype
         - name: slack
         - name: vagrant
