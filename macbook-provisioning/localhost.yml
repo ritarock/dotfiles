@@ -11,6 +11,7 @@
         - name: git
         - name: go
         - name: hugo
+        - name: jq
         - name: node
         - name: pyenv
         - name: python
