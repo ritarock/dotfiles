@@ -15,6 +15,7 @@
         - name: node
         - name: pyenv
         - name: python
+        - name: tig
         - name: tmux
         - name: tree
         - name: vim
