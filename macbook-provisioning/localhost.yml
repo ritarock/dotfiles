@@ -25,6 +25,7 @@
 
       homebrew_cask_packages:
         - name: clipy
+        - name: dash
         - name: docker
         - name: google-chrome
         - name: google-japanese-ime
