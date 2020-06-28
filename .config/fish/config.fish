@@ -9,8 +9,13 @@ function cd
 end
 
 function rocket
-  set d (ls ~/dev/git-dir|fzf)
-  cd ~/dev/git-dir/{$d}
+  set d (ls ~/work|fzf)
+  cd ~/work/{$d}
+end
+
+function hislog
+  set d (history|fzf)
+  echo $d
 end
 
 set __fish_git_prompt_showdirtystate 'yes'
