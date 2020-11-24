@@ -1,5 +1,6 @@
 alias ltr 'ls -ltr'
 alias tree 'tree -NC'
+alias coder 'code . -r'
 
 alias gst 'git status'
 alias gdf 'git diff --color-words'
