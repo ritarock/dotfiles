@@ -13,6 +13,11 @@ function rocket
   cd ~/work/{$d}
 end
 
+function cc
+  set d (ls .|fzf)
+  cd ./{$d}
+end
+
 function hislog
   set d (history|fzf)
   echo $d
