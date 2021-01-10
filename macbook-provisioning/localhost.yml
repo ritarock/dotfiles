@@ -10,8 +10,8 @@
         - name: fzf
         - name: git
         - name: go
+        - name: htop
         - name: hub
-        - name: hugo
         - name: jq
         - name: node
         - name: pyenv
