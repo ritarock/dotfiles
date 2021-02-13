@@ -16,6 +16,7 @@
         - name: node
         - name: pyenv
         - name: python
+        - name: starship
         - name: tig
         - name: tmux
         - name: tree
@@ -28,18 +29,17 @@
         - name: clipy
         - name: dash
         - name: docker
+        - name: font-fira-code-nerd-font
         - name: google-chrome
         - name: google-japanese-ime
         - name: iTerm2
         - name: licecap
         - name: postman
         - name: shiftit
-        - name: skype
         - name: slack
         - name: vagrant
         - name: virtualbox
         - name: visual-studio-code
-        - name: vlc
 
     tasks:
         - name: update homebrew

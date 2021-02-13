@@ -1,0 +1,35 @@
+add_newline = false
+
+[package]
+disabled = true
+
+[cmd_duration]
+disabled = true
+
+[line_break]
+disabled = true
+
+[directory]
+truncation_length = 10
+truncate_to_repo  = false
+
+[git_branch]
+symbol = "🌱 "
+
+[git_status]
+untracked = "U"
+modified  = "M"
+deleted   = "D"
+staged    = '[++\($count\)](green)'
+
+[golang]
+disabled = true
+
+[nodejs]
+disabled = true
+
+[python]
+disabled = true
+
+[ruby]
+disabled = true
