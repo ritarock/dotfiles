@@ -23,4 +23,8 @@ function hislog
   echo $d
 end
 
+# dir color
+export LSCOLORS=gxfxcxdxbxegedabagacad
+
 starship init fish | source
+
