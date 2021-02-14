@@ -9,7 +9,7 @@ function cd
 end
 
 function rocket
-  set d (ls ~/work|fzf)
+  set d (ls ~/dev|fzf)
   cd ~/work/{$d}
 end
 
