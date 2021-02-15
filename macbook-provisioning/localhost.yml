@@ -53,13 +53,13 @@
         with_items: '{{ homebrew_taps  }}'
 
       - name: brew install packages
-        homebrew_tap:
+        community.general.homebrew:
           name={{ item.name  }}
           update_homebrew=yes
         with_items: '{{ homebrew_packages }}'
 
       - name: brew install cask-packages
-        homebrew_tap:
+        community.general.homebrew:
           name={{ item.name  }}
           update_homebrew=yes
         with_items: '{{ homebrew_cask_packages }}'
