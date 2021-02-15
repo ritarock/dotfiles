@@ -5,6 +5,11 @@
     become: no
 
     vars:
+      homebrew_taps:
+        - name: homebrew/cask
+        - name: homebrew/cask-fonts
+        - name: homebrew/core
+
       homebrew_packages:
         - name: fish
         - name: fzf
@@ -42,17 +47,20 @@
         - name: visual-studio-code
 
     tasks:
-        - name: update homebrew
-          homebrew: update_homebrew=yes
+      - name: brew tap
+        homebrew_tap:
+          name={{ item.name  }}
+        with_items: '{{ homebrew_taps  }}'
 
-        # brew
-        - name: install homebrew_packages
-          homebrew:
-            name={{ item.name }}
-          with_items: '{{ homebrew_packages }}'
+      - name: brew install packages
+        homebrew_tap:
+          name={{ item.name  }}
+          update_homebrew=yes
+        with_items: '{{ homebrew_packages }}'
 
-        # homebrew_cask
-        - name: install homebrew_cask_packages
-          homebrew_cask:
-            name={{ item.name }}
-          with_items: '{{ homebrew_cask_packages }}'
+      - name: brew install cask-packages
+        homebrew_tap:
+          name={{ item.name  }}
+          update_homebrew=yes
+        with_items: '{{ homebrew_cask_packages }}'
+

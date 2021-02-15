@@ -8,12 +8,14 @@ $ xcode-select --install
 $ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 ```
 
-### install brew
+### install ansible
 ```
 $ brew install ansible
+$ ansible-galaxy collection install community.general
 ```
 
 ### setup
 ```
 $ ansible-playbook -i hosts localhost.yml
 ```
+
