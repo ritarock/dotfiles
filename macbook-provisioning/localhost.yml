@@ -59,7 +59,7 @@
         with_items: '{{ homebrew_packages }}'
 
       - name: brew install cask-packages
-        community.general.homebrew:
+        community.general.homebrew_cask:
           name={{ item.name  }}
           update_homebrew=yes
         with_items: '{{ homebrew_cask_packages }}'
