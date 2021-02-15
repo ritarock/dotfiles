@@ -49,18 +49,18 @@
     tasks:
       - name: brew tap
         homebrew_tap:
-          name={{ item.name  }}
-        with_items: '{{ homebrew_taps  }}'
+          name={{ item.name }}
+        with_items: '{{ homebrew_taps }}'
 
       - name: brew install packages
         community.general.homebrew:
-          name={{ item.name  }}
+          name={{ item.name }}
           update_homebrew=yes
         with_items: '{{ homebrew_packages }}'
 
       - name: brew install cask-packages
         community.general.homebrew_cask:
-          name={{ item.name  }}
+          name={{ item.name }}
           update_homebrew=yes
         with_items: '{{ homebrew_cask_packages }}'
 
