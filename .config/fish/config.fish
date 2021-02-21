@@ -10,7 +10,7 @@ end
 
 function rocket
   set d (ls ~/dev|fzf)
-  cd ~/work/{$d}
+  cd ~/dev/{$d}
 end
 
 function cc
