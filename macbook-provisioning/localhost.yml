@@ -35,6 +35,7 @@
         - name: dash
         - name: docker
         - name: font-fira-code-nerd-font
+        - name: git-delta
         - name: google-chrome
         - name: google-japanese-ime
         - name: iTerm2
