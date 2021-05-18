@@ -37,3 +37,5 @@ disabled = true
 [terraform]
 disabled = true
 
+[deno]
+disabled = true

@@ -40,7 +40,7 @@
         - name: iTerm2
         - name: licecap
         - name: postman
-        - name: shiftit
+        - name: rectangle
         - name: slack
         - name: vagrant
         - name: virtualbox
