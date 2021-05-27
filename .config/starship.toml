@@ -13,9 +13,6 @@ disabled = true
 truncation_length = 10
 truncate_to_repo  = false
 
-[git_branch]
-symbol = "🌱 "
-
 [git_status]
 untracked = "U"
 modified  = "M"
@@ -39,3 +36,4 @@ disabled = true
 
 [deno]
 disabled = true
+
