@@ -43,13 +43,11 @@
         - name: postman
         - name: rectangle
         - name: slack
-        - name: vagrant
-        - name: virtualbox
         - name: visual-studio-code
 
     tasks:
       - name: brew tap
-        homebrew_tap:
+        community.general.homebrew_tap:
           name={{ item.name }}
         with_items: '{{ homebrew_taps }}'
 
