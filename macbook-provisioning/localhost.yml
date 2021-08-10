@@ -27,7 +27,6 @@
         - name: tree
         - name: vim
         - name: yarn
-        - name: zsh
 
       homebrew_cask_packages:
         - name: boostnote
