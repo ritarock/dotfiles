@@ -39,6 +39,7 @@
         - name: google-japanese-ime
         - name: iTerm2
         - name: licecap
+        - name: mapture
         - name: postman
         - name: rectangle
         - name: slack
