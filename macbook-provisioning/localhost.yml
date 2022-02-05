@@ -41,6 +41,7 @@
         - name: licecap
         - name: mapture
         - name: postman
+        - name: raycast
         - name: rectangle
         - name: slack
         - name: visual-studio-code
