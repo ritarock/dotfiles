@@ -29,8 +29,6 @@
         - name: yarn
 
       homebrew_cask_packages:
-        - name: boostnote
-        - name: clipy
         - name: dash
         - name: docker
         - name: font-fira-code-nerd-font
@@ -40,6 +38,7 @@
         - name: iTerm2
         - name: licecap
         - name: mapture
+        - name: obsidian
         - name: postman
         - name: raycast
         - name: rectangle
