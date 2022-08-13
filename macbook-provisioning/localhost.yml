@@ -30,6 +30,7 @@
 
       homebrew_cask_packages:
         - name: dash
+        - name: discord
         - name: docker
         - name: font-fira-code-nerd-font
         - name: git-delta
