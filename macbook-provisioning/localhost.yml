@@ -66,3 +66,5 @@
           update_homebrew=yes
         with_items: '{{ homebrew_cask_packages }}'
 
+      - name: brew install --no-quarantine gcenx/wine/unofficial-wineskin
+        shell: brew install --no-quarantine gcenx/wine/unofficial-wineskin
