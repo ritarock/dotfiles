@@ -11,6 +11,7 @@
         - name: homebrew/core
 
       homebrew_packages:
+        - name: fd
         - name: fish
         - name: fzf
         - name: git
@@ -44,6 +45,7 @@
         - name: raycast
         - name: rectangle
         - name: slack
+        - name: steam
         - name: visual-studio-code
 
     tasks:
