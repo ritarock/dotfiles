@@ -44,6 +44,7 @@
         - name: postman
         - name: raycast
         - name: rectangle
+        - name: shotcut
         - name: slack
         - name: steam
         - name: visual-studio-code
