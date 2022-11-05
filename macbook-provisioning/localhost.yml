@@ -17,20 +17,18 @@
         - name: git
         - name: go
         - name: htop
-        - name: hub
         - name: jq
         - name: node
         - name: pyenv
         - name: python
         - name: starship
-        - name: tig
         - name: tmux
         - name: tree
         - name: vim
         - name: yarn
+        - name: youtube-dl
 
       homebrew_cask_packages:
-        - name: dash
         - name: discord
         - name: docker
         - name: font-fira-code-nerd-font
@@ -43,7 +41,6 @@
         - name: obsidian
         - name: postman
         - name: raycast
-        - name: rectangle
         - name: shotcut
         - name: slack
         - name: steam
