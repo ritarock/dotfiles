@@ -37,3 +37,6 @@ disabled = true
 [deno]
 disabled = true
 
+[buf]
+disabled = true
+
