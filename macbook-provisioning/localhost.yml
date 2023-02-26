@@ -6,9 +6,7 @@
 
     vars:
       homebrew_taps:
-        - name: homebrew/cask
         - name: homebrew/cask-fonts
-        - name: homebrew/core
 
       homebrew_packages:
         - name: fd
@@ -21,6 +19,7 @@
         - name: node
         - name: pyenv
         - name: python
+        - name: rust
         - name: starship
         - name: tmux
         - name: tree
