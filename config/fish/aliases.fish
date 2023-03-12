@@ -15,3 +15,5 @@ alias dcd 'docker-compose down'
 alias dcr 'docker-compose run --rm'
 alias dpurge 'docker stop (docker ps -aq) && docker rm (docker ps -aq)'
 
+alias gmt 'go mod tidy'
+
