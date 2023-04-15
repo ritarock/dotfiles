@@ -1,7 +1,7 @@
 alias ltr 'ls -ltr'
 alias tree 'tree -NC'
 
-alias .. 'cd ../..'
+alias .. 'cd ./..'
 
 alias gst   'git status'
 alias gd    'git diff --color-words'
