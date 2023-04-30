@@ -14,9 +14,11 @@
         - name: fzf
         - name: git
         - name: go
+        - name: grpcurl
         - name: htop
         - name: jq
         - name: node
+        - name: protobuf
         - name: pyenv
         - name: python
         - name: rust
