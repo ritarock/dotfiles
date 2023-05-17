@@ -33,6 +33,7 @@
         - name: discord
         - name: docker
         - name: font-fira-code-nerd-font
+        - name: fuwari
         - name: git-delta
         - name: google-chrome
         - name: google-japanese-ime
