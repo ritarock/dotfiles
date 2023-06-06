@@ -39,7 +39,6 @@
         - name: google-japanese-ime
         - name: iTerm2
         - name: licecap
-        - name: mapture
         - name: obsidian
         - name: postman
         - name: raycast
@@ -65,6 +64,3 @@
           name={{ item.name }}
           update_homebrew=yes
         with_items: '{{ homebrew_cask_packages }}'
-
-      - name: brew install --no-quarantine gcenx/wine/unofficial-wineskin
-        shell: brew install --no-quarantine gcenx/wine/unofficial-wineskin
