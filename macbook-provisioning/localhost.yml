@@ -17,6 +17,7 @@
         - name: grpcurl
         - name: htop
         - name: jq
+        - name: mockery
         - name: node
         - name: protobuf
         - name: pyenv
