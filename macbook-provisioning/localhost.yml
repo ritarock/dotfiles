@@ -39,6 +39,7 @@
         - name: google-chrome
         - name: google-japanese-ime
         - name: iTerm2
+        - name: kindle
         - name: licecap
         - name: obsidian
         - name: postman
