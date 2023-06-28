@@ -18,11 +18,6 @@ function cc
   cd ./{$d}
 end
 
-function hislog
-  set d (history|fzf)
-  echo $d
-end
-
 # dir color
 export LSCOLORS=gxfxcxdxbxegedabagacad
 
