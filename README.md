@@ -15,6 +15,6 @@ $ brew install ansible
 
 ### setup
 ```
-$ ansible-playbook localhost.yml [[--extra-vars="not_develop=true"]] --check
-$ ansible-playbook localhost.yml [[--extra-vars="not_develop=true"]]
+$ ansible-playbook localhost.yml [[--extra-vars="not_development=true"]] --check
+$ ansible-playbook localhost.yml [[--extra-vars="not_development=true"]]
 ```
