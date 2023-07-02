@@ -4,3 +4,4 @@
       - homebrew_tap
       - homebrew
       - homebrew_cask
+      - configs

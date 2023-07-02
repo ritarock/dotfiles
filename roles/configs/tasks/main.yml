@@ -1,0 +1,25 @@
+---
+  - name: setting fish-aliases
+    copy:
+      src: ../files/fish/aliases.fish
+      dest: ~/.config/fish/
+
+  - name: setting fish-config
+    copy:
+      src: ../files/fish/config.fish
+      dest: ~/.config/fish/
+
+  - name: setting fish-env
+    copy:
+      src: ../files/fish/env.fish
+      dest: ~/.config/fish/
+
+  - name: setting starship
+    copy:
+      src: ../files/starship/starship.toml
+      dest: ~/.config/
+
+  - name: setting tmux
+    copy:
+      src: ../files/tmux/.tmux.conf
+      dest: ~/
