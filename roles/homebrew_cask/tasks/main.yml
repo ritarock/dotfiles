@@ -1,0 +1,11 @@
+---
+  - name: brew install cask-packages
+    community.general.homebrew_cask:
+      name: '{{ item }}'
+    loop: '{{ brew_cask_packages }}'
+
+  - name: brew install cask-packages (not development)
+    community.general.homebrew_cask:
+      name: '{{ item }}'
+    loop: '{{ brew_cask_packages_not_development }}'
+    when: not_development

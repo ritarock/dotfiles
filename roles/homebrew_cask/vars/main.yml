@@ -1,0 +1,19 @@
+brew_cask_packages:
+  - docker
+  - font-fira-code-nerd-font
+  - fuwari # スクリーンショットを付箋にする
+  - google-chrome
+  - google-japanese-ime
+  - iTerm2
+  - licecap # gif 作成
+  - obsidian
+  - postman
+  - raycast
+  - slack
+  - visual-studio-code
+
+brew_cask_packages_not_development:
+  - discord
+  - kindle
+  - shotcut # 動画編集
+  - steam

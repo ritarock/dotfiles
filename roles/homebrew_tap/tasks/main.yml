@@ -1,0 +1,5 @@
+---
+  - name: brew tap
+    community.general.homebrew_tap:
+      name: '{{ item }}'
+    loop: '{{ brew_taps }}'

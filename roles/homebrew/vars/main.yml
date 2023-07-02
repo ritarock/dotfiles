@@ -1,0 +1,24 @@
+brew_packages:
+  - fd # find の代替コマンド
+  - fish
+  - fzf
+  - git
+  - git-delta # git diff を良い感じに出力する
+  - go
+  - grpcurl
+  - htop
+  - jq
+  - mockery # モックコード自動生成
+  - node
+  - protobuf
+  - pyenv
+  - python
+  - rust
+  - starship
+  - tmux
+  - tree
+  - vim
+  - yarn
+
+brew_packages_not_development:
+  - youtube-dl
