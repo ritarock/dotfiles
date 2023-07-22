@@ -5,7 +5,8 @@ alias gco   'git checkout'
 
 alias gdiff 'git diff --color-words'
 
-alias glog  'git log --oneline'
+alias glog  'git log'
+alias glogo 'git log --oneline'
 alias glogg 'git log --graph'
 
 alias gpull 'git pull'
