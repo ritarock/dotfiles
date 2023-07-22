@@ -2,17 +2,22 @@
   - name: setting fish-aliases
     copy:
       src: ../files/fish/aliases.fish
-      dest: ~/.config/fish/
+      dest: ~/.config/fish/conf.d/
+
+  - name: setting fish-git-aliases
+    copy:
+      src: ../files/fish/git_aliases.fish
+      dest: ~/.config/fish/conf.d/
 
   - name: setting fish-config
     copy:
       src: ../files/fish/config.fish
-      dest: ~/.config/fish/
+      dest: ~/.config/fish/conf.d/
 
   - name: setting fish-env
     copy:
       src: ../files/fish/env.fish
-      dest: ~/.config/fish/
+      dest: ~/.config/fish/conf.d/
 
   - name: setting starship
     copy:
