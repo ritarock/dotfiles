@@ -8,6 +8,7 @@ brew_packages:
   - grpcurl
   - htop
   - jq
+  - minikube
   - mockery # モックコード自動生成
   - node
   - protobuf
