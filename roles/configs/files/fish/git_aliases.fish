@@ -16,4 +16,3 @@ alias gss   'git stash save'
 alias gsl   'git stash list'
 alias gsp   'git stash pop stash@{0}'
 alias gsd   'git stash drop stash@{0}'
-
