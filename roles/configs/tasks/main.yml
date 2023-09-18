@@ -28,3 +28,9 @@
     copy:
       src: ../files/tmux/.tmux.conf
       dest: ~/
+
+  - name: setting vim
+    copy:
+      src: ../files/vim/.vimrc
+      dest: ~/
+
