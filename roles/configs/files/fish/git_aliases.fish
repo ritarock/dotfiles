@@ -4,10 +4,11 @@ alias gbdel 'git branch --merged | grep -v "*" | xargs -I git branch -d %'
 alias gco 'git checkout'
 alias gsw 'git switch'
 
-alias gdiff 'git diff --color-words'
+alias gd 'git diff --color-words'
 
-alias glog 'git log --oneline'
-alias glogg 'git log --graph'
+alias gl 'git log'
+alias glo 'git log --oneline'
+alias glg 'git log --graph'
 
 alias gpull 'git pull'
 
@@ -23,4 +24,3 @@ end
 function gsdrop
   git stash drop "stash@{$argv[1]}"
 end
-
