@@ -1,6 +1,7 @@
 brew_packages:
   - fd # find の代替コマンド
   - fish
+  - font-monaspace
   - fzf
   - git
   - git-delta # git diff を良い感じに出力する
