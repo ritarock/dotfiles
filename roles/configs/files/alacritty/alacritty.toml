@@ -3,3 +3,6 @@ family = "Monaspace Neon"
 
 [window]
 opacity = 0.8
+
+dimensions = { columns = 150, lines = 40 }
+
