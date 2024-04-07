@@ -6,3 +6,7 @@ opacity = 0.8
 
 dimensions = { columns = 150, lines = 40 }
 
+padding = { x = 8, y = 4 }
+
+[scrolling]
+history = 10000
