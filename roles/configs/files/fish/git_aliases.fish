@@ -12,7 +12,7 @@ alias glg 'git log --graph'
 
 alias gpull 'git pull'
 
-alias gst 'git status'
+alias gst 'git status -sb'
 
 alias gss 'git stash save -u'
 alias gsl 'git stash list'
