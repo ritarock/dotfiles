@@ -6,3 +6,5 @@ alias .. 'cd ./..'
 alias dpurge 'docker stop (docker ps -aq) && docker rm (docker ps -aq)'
 
 alias gmt 'go mod tidy'
+
+alias k 'kubectl'

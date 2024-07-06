@@ -15,6 +15,10 @@ function cc
   cd ./{$d}
 end
 
+function unset
+  set --erase $argv
+end
+
 # dir color
 export LSCOLORS=gxfxcxdxbxegedabagacad
 
