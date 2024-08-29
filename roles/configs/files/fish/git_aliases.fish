@@ -1,27 +1,37 @@
-alias gb 'git branch'
-alias gbdel 'git branch --merged | grep -v "*" | xargs -I git branch -d %'
-
-alias gco 'git checkout'
+alias g 'git'
 
 alias gsw 'git switch'
 
-alias gdiff 'git diff --color-words'
+alias gco 'git checkout'
 
-alias gl 'git log'
-alias glo 'git log --oneline'
-alias glg 'git log --graph'
+alias gst 'git status'
 
-alias gp 'git pull'
+# move root directory
+alias grt 'cd "$(git rev-parse --show-toplevel || echo .)"'
 
-alias gst 'git status -sb'
+alias gb    'git branch'
+alias gbdel 'git branch --merged | egrep -v "\*|develop|main" | xargs git branch -d'
 
-alias gss 'git stash save -u'
-alias gsl 'git stash list'
+alias gd  'git diff'
+alias gdw 'git diff --word-diff'
+alias gds 'git diff --staged'
 
-function gspop
-  git stash pop "stash@{$argv[1]}"
-end
+alias glo   'git log --oneline --decorate'
+alias glog  'git log --oneline --decorate --graph'
+alias gloga 'git log --oneline --decorate --graph --all'
 
-function gsdrop
-  git stash drop "stash@{$argv[1]}"
+alias gp  'git pull'
+alias gpo 'git pull origin (current_branch)'
+alias gpu 'git pull upstream (current_branch)'
+
+alias grs 'git reset --soft'
+alias grh 'git reset --hard'
+
+alias gstl 'git stash list'
+alias gsta 'git stash push'
+alias gstp 'git stash pop'
+alias gstd 'git stash drop'
+
+function current_branch
+  git branch --show-current
 end
