@@ -6,9 +6,6 @@ alias gco 'git checkout'
 
 alias gst 'git status'
 
-# move root directory
-alias grt 'cd "$(git rev-parse --show-toplevel || echo .)"'
-
 # git branch
 alias gb     'git branch'
 alias gbd    'git branch -D'
@@ -20,7 +17,7 @@ alias gd  'git diff'
 alias gdw 'git diff --word-diff'
 alias gds 'git diff --staged'
 
-# git diff
+# git log
 alias glo   'git log --oneline --decorate'
 alias glog  'git log --oneline --decorate --graph'
 alias gloga 'git log --oneline --decorate --graph --all'
@@ -29,6 +26,14 @@ alias gloga 'git log --oneline --decorate --graph --all'
 alias gp  'git pull'
 alias gpo 'git pull origin (current_branch)'
 alias gpu 'git pull upstream (current_branch)'
+
+# git add
+alias ga  'git add'
+alias gaa 'git add --all'
+
+# git commit
+alias gc    'git commit'
+alias gcmsg 'git commit --message'
 
 # git reset
 alias grs 'git reset --soft'
@@ -40,10 +45,15 @@ alias gsta 'git stash push'
 alias gstp 'git stash pop'
 alias gstd 'git stash drop'
 
+# move root directory
+alias grt 'cd "$(git rev-parse --show-toplevel || echo .)"'
+
+# get current branch
 function current_branch
   git branch --show-current
 end
 
+# pull pr
 function grw
   set pr $argv[1]
   git fetch upstream pull/$pr/head:$pr
