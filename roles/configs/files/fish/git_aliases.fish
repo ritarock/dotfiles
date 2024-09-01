@@ -13,9 +13,11 @@ alias gbda   'git branch --merged | egrep -v "\*|develop|dev|main" | xargs git b
 alias gprune 'git remote prune'
 
 # git diff
-alias gd  'git diff'
-alias gdw 'git diff --word-diff'
-alias gds 'git diff --staged'
+alias gd   'git diff'
+alias gdw  'git diff --word-diff'
+alias gdc  'git diff --cached'
+alias gdcw 'git diff --cached --word-diff'
+alias gds  'git diff --staged'
 
 # git log
 alias glo   'git log --oneline --decorate'
