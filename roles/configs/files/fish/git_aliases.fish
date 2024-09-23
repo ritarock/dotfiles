@@ -9,8 +9,7 @@ alias gst 'git status'
 # git branch
 alias gb     'git branch'
 alias gbd    'git branch -D'
-alias gbda   'git branch --merged | egrep -v "\*|develop|dev|main" | xargs git branch -d'
-alias gprune 'git remote prune'
+alias gbda   'git branch --merged | egrep -v "\*|develop|dev|master|main" | xargs git branch -d && git remote prune'
 
 # git diff
 alias gd   'git diff'
