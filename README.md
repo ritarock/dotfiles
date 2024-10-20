@@ -15,6 +15,6 @@ $ brew install ansible
 
 ### setup
 ```
-$ ansible-playbook setup.yml [[--extra-vars="not_development=true"]] --check
-$ ansible-playbook setup.yml [[--extra-vars="not_development=true"]]
+$ ansible-playbook setup.yml {{ --extra-vars="job=true" --extra-vars="extra=true" }} --check
+$ ansible-playbook setup.yml {{ --extra-vars="job=true" --extra-vars="extra=true" }}
 ```

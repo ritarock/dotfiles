@@ -1,15 +1,22 @@
 ---
-  - name: brew update
+  - name: brew update & upgrade
     community.general.homebrew:
-      update_homebrew: yes
+      update_homebrew: true
+      upgrade_all: true
 
   - name: brew install packages
     community.general.homebrew:
       name: '{{ item }}'
     loop: '{{ brew_packages }}'
 
-  - name: brew install packages (not development)
+  - name: brew install job packages
     community.general.homebrew:
       name: '{{ item }}'
-    loop: '{{ brew_packages_not_development }}'
-    when: not_development
+    loop: '{{ brew_job_packages }}'
+    when: job
+
+  - name: brew install extra packages
+    community.general.homebrew:
+      name: '{{ item }}'
+    loop: '{{ brew_extra_packages }}'
+    when: extra

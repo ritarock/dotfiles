@@ -1,11 +1,22 @@
 ---
+  - name: brew cask update & upgrade
+    community.general.homebrew_cask:
+      update_homebrew: true
+      upgrade_all: true
+
   - name: brew install cask-packages
     community.general.homebrew_cask:
       name: '{{ item }}'
     loop: '{{ brew_cask_packages }}'
 
-  - name: brew install cask-packages (not development)
+  - name: brew install job cask-packages
     community.general.homebrew_cask:
       name: '{{ item }}'
-    loop: '{{ brew_cask_packages_not_development }}'
-    when: not_development
+    loop: '{{ brew_job_cask_packages }}'
+    when: job
+
+  - name: brew install extra cask-packages
+    community.general.homebrew_cask:
+      name: '{{ item }}'
+    loop: '{{ brew_extra_cask_packages }}'
+    when: extra

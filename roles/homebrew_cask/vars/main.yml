@@ -1,17 +1,20 @@
 brew_cask_packages:
+  - alacritty
   - docker
   - fuwari # スクリーンショットを付箋にする
   - google-chrome
   - google-japanese-ime
-  - iTerm2
-  - licecap # gif 作成
   - obsidian
   - postman
   - raycast
-  - slack
   - visual-studio-code
 
-brew_cask_packages_not_development:
+brew_job_cask_packages:
+  - iTerm2
+  - licecap # gif 作成
+  - slack
+
+brew_extra_cask_packages:
   - discord
   - shotcut # 動画編集
   - steam

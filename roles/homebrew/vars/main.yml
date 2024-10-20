@@ -5,22 +5,18 @@ brew_packages:
   - fzf
   - git
   - git-delta # git diff を良い感じに出力する
-  - go
   - grpcurl
   - htop
   - jq
-  - kubectl
-  - minikube
-  - node
-  - protobuf
-  - pyenv
-  - python
-  - rust
   - starship
   - tmux
   - tree
   - vim
-  - yarn
 
-brew_packages_not_development:
+brew_job_packages:
+  - kubectl
+  - minikube
+  - protobuf
+
+brew_extra_packages:
   - youtube-dl
