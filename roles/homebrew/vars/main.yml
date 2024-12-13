@@ -19,4 +19,4 @@ brew_job_packages:
   - protobuf
 
 brew_extra_packages:
-  - youtube-dl
+  - yt-dlp

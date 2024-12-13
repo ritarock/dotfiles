@@ -1,8 +1,11 @@
 [font.normal]
 family = "Monaspace Neon"
 
+[font]
+size = 12.5
+
 [window]
-opacity = 0.8
+opacity = 0.95
 
 dimensions = { columns = 150, lines = 40 }
 
@@ -14,36 +17,41 @@ position = { x = 500, y = 300 }
 history = 10000
 
 # https://github.com/alacritty/alacritty-theme
-# https://github.com/alacritty/alacritty-theme/blob/master/themes/seashells.toml
+# https://github.com/alacritty/alacritty-theme/blob/master/themes/github_dark.toml
+# github Alacritty Colors
+
+# Default colors
 [colors.primary]
-background = '#061923'
-foreground = '#e5c49e'
+background = '#24292e'
+foreground = '#d1d5da'
 
-[colors.cursor]
-text = '#061822'
-cursor = '#feaf3c'
-
-[colors.selection]
-text = '#ffe9d7'
-background = '#265b75'
-
+# Normal colors
 [colors.normal]
-black = '#1d485f'
-red = '#db662d'
-green = '#008eab'
-yellow = '#feaf3c'
-blue = '#255a62'
-magenta = '#77dbf4'
-cyan = '#5fb1c2'
-white = '#e5c49e'
+black   = '#586069'
+red     = '#ea4a5a'
+green   = '#34d058'
+yellow  = '#ffea7f'
+blue    = '#2188ff'
+magenta = '#b392f0'
+cyan    = '#39c5cf'
+white   = '#d1d5da'
 
+# Bright colors
 [colors.bright]
-black = '#545d65'
-red = '#dd998a'
-green = '#739da8'
-yellow = '#fedaae'
-blue = '#0bc7e3'
-magenta = '#c6e8f1'
-cyan = '#97b9c0'
-white = '#ffe9d7'
+black   = '#959da5'
+red     = '#f97583'
+green   = '#85e89d'
+yellow  = '#ffea7f'
+blue    = '#79b8ff'
+magenta = '#b392f0'
+cyan    = '#56d4dd'
+white   = '#fafbfc'
+
+[[colors.indexed_colors]]
+index = 16
+color = '#d18616'
+
+[[colors.indexed_colors]]
+index = 17
+color = '#f97583'
 
