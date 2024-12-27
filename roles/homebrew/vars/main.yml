@@ -3,6 +3,7 @@ brew_packages:
   - fish
   - font-monaspace
   - fzf
+  - ghostty
   - git
   - git-delta # git diff を良い感じに出力する
   - grpcurl

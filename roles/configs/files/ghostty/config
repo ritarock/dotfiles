@@ -1,0 +1,19 @@
+font-family = "Monaspace Neon"
+
+font-size = "12.5"
+
+theme = "GitHub Dark"
+
+background-opacity = "0.95"
+
+shell-integration = "fish"
+
+title = " "
+
+shell-integration-features = "no-cursor"
+
+cursor-style-blink = "false"
+
+window-height = "40"
+
+window-width = "150"

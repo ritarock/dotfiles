@@ -34,3 +34,7 @@
       src: ../files/vim/.vimrc
       dest: ~/
 
+  - name: setting ghostty
+    copy:
+      src: ../files/ghostty/config
+      dest: ~/.config/ghostty/
