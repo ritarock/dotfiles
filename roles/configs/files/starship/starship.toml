@@ -22,6 +22,9 @@ untracked = "U"
 modified  = "M"
 deleted   = "D"
 staged    = '[++\($count\)](green)'
+ahead     = '⇡ ${count}'
+diverged  = '⇕⇡ ${ahead_count}⇣ ${behind_count}'
+behind    = '⇣ ${count}'
 
 [golang]
 disabled = true
