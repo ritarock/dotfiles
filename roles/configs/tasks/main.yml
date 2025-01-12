@@ -38,3 +38,33 @@
     copy:
       src: ../files/ghostty/config
       dest: ~/.config/ghostty/
+
+  - name: setting sheldon
+    copy:
+      src: ../files/sheldon/plugins.toml
+      dest: ~/.config/sheldon/
+
+  - name: setting zsh
+    copy:
+      src: ../files/zsh/.zshrc
+      dest: ~/
+
+  - name: setting zsh-alias
+    copy:
+      src: ../files/zsh/aliases.zsh
+      dest: ~/.config/zsh/
+
+  - name: setting zsh-env
+    copy:
+      src: ../files/zsh/env.zsh
+      dest: ~/.config/zsh/
+
+  - name: setting zsh-function
+    copy:
+      src: ../files/zsh/function.zsh
+      dest: ~/.config/zsh/
+
+  - name: setting zsh-git-aliases
+    copy:
+      src: ../files/zsh/git_aliases.zsh
+      dest: ~/.config/zsh/

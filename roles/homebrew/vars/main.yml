@@ -9,6 +9,7 @@ brew_packages:
   - grpcurl
   - htop
   - jq
+  - sheldon # zsh のプラグインマネージャー
   - starship
   - tmux
   - tree
