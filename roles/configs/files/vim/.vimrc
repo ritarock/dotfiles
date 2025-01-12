@@ -27,7 +27,7 @@ set showcmd
 set background=dark
 set t_Co=256
 syntax on
-colorscheme desert
+colorscheme elflord
 
 " not beep
 set visualbell
