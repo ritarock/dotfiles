@@ -1,4 +1,5 @@
 brew_packages:
+  - eza # ls の代替コマンド
   - fd # find の代替コマンド
   - fish
   - font-monaspace
