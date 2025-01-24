@@ -55,5 +55,10 @@ function current_branch() {
 # pull PR
 function grw() {
   pr="$1"
-  [ -n "$1" ] && git fetch upstream "pull/$pr/head:$pr" && git switch "$pr"
+  branch_name="${2:-$pr}"
+  if [ -n "$pr" ]; then
+    git fetch upstream "pull/$pr/head:$branch_name" && git switch "$branch_name"
+  else
+    echo "Usage: grw <pr-number> [branch-name]"
+  fi
 }
