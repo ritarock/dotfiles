@@ -1,4 +1,4 @@
-alias ltr='eza -lr'
+alias ltr='eza -l --sort newest'
 alias ll='eza -l'
 alias ls='eza'
 
