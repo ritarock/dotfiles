@@ -24,10 +24,13 @@ set backspace=indent,eol,start
 set showcmd
 
 " colorscheme configuration
-set background=dark
-set t_Co=256
 syntax on
-colorscheme elflord
+set background=dark
+try
+  colorscheme molokai
+catch
+  colorscheme elflord
+endtry
 
 " not beep
 set visualbell

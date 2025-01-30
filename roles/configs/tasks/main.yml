@@ -34,6 +34,11 @@
       src: ../files/vim/.vimrc
       dest: ~/
 
+  - name: setting vim colors
+    copy:
+      src: ../files/vim/colors/molokai.vim
+      dest: ~/.vim/colors/
+
   - name: setting ghostty
     copy:
       src: ../files/ghostty/config
