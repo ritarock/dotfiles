@@ -4,7 +4,7 @@ theme = "GitHub Dark"
 
 background-opacity = "0.95"
 
-shell-integration = "fish"
+shell-integration = "zsh"
 
 title = " "
 
@@ -15,3 +15,7 @@ cursor-style-blink = "false"
 window-height = "40"
 
 window-width = "150"
+
+font-feature = "-dlig"
+
+confirm-close-surface = "false"
