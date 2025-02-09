@@ -6,8 +6,6 @@ background-opacity = "0.95"
 
 shell-integration = "zsh"
 
-title = " "
-
 shell-integration-features = "no-cursor"
 
 cursor-style-blink = "false"
