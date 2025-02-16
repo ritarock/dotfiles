@@ -5,6 +5,7 @@ brew_cask_packages:
   - fuwari # スクリーンショットを付箋にする
   - google-chrome
   - google-japanese-ime
+  - notion
   - obsidian
   - postman
   - raycast
