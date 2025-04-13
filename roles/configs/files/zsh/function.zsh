@@ -14,7 +14,7 @@ function cd() {
 }
 
 function select-history() {
-  BUFFER=$(history -n -r 1 | fzf --query "$LBUFFER")
+  BUFFER=$(fc -l 1 | awk '{$1=""; print substr($0,2)}' | awk '!seen[$0]++' | grep -i "$BUFFER" | tail -r | fzf --height 40% --reverse --border --query="$BUFFER")
   CURSOR=$#BUFFER
   zle reset-prompt
 }

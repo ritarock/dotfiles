@@ -39,6 +39,7 @@ alias gcmsg='git commit --message'
 
 # git reset
 alias grs='git reset --soft'
+alias grm='git reset --mixed'
 alias grh='git reset --hard'
 
 # git stash
