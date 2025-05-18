@@ -17,3 +17,6 @@ window-width = "150"
 font-feature = "-dlig"
 
 confirm-close-surface = "false"
+
+keybind = global:ctrl+grave_accent=toggle_quick_terminal
+
