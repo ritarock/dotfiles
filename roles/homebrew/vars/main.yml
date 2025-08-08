@@ -10,6 +10,7 @@ brew_packages:
   - grpcurl
   - htop
   - jq
+  - ripgrep
   - sheldon # zsh のプラグインマネージャー
   - starship
   - tmux
