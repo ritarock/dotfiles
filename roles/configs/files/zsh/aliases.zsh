@@ -1,8 +1,7 @@
 alias ltr='eza -l --sort newest'
 alias ll='eza -l'
 alias ls='eza'
-
-alias tree='tree -NC'
+alias tree='eza -T'
 
 alias ..='cd ./..'
 alias ~='cd ~'

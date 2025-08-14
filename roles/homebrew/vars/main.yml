@@ -14,7 +14,6 @@ brew_packages:
   - sheldon # zsh のプラグインマネージャー
   - starship
   - tmux
-  - tree
   - vim
 
 brew_job_packages:
