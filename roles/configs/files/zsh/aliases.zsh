@@ -12,3 +12,5 @@ alias k='kubectl'
 
 alias v='vim'
 alias c='code'
+
+alias reload="exec $SHELL -l"
