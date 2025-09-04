@@ -73,3 +73,8 @@
     copy:
       src: ../files/zsh/git_aliases.zsh
       dest: ~/.config/zsh/
+
+  - name: setting git-config
+    copy:
+      src: ../files/git/config
+      dest: ~/.config/git/
