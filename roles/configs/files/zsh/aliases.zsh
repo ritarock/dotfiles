@@ -8,9 +8,10 @@ alias ~='cd ~'
 
 alias gmt='go mod tidy'
 
+alias rmrf 'rm -rf'
+
 alias k='kubectl'
 alias v='vim'
 alias c='code'
 
 alias reload="exec $SHELL -l"
-
