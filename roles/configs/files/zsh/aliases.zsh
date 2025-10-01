@@ -15,3 +15,5 @@ alias v='vim'
 alias c='code'
 
 alias reload="exec $SHELL -l"
+
+alias cl="claude"
