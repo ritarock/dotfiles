@@ -1,6 +1,6 @@
-alias ltr='eza -l --sort newest --icons=auto'
-alias ll='eza -l --icons=auto'
-alias ls='eza --icons=auto'
+alias ls='eza'
+alias ll='eza -l'
+alias ltr='eza -l --sort newest'
 alias tree='eza -T'
 
 alias ..='cd ./..'
