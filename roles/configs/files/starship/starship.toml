@@ -16,15 +16,15 @@ truncate_to_repo  = false
 [git_branch]
 symbol = ''
 
-
 [git_status]
-untracked = "U"
-modified  = "M"
-deleted   = "D"
-staged    = '[++\($count\)](green)'
-ahead     = '⇡ ${count}'
-diverged  = '⇕⇡ ${ahead_count}⇣ ${behind_count}'
-behind    = '⇣ ${count}'
+use_git_executable = true
+untracked          = "U"
+modified           = "M"
+deleted            = "D"
+staged             = '[++\($count\)](green)'
+ahead              = '⇡ ${count}'
+diverged           = '⇕⇡ ${ahead_count}⇣ ${behind_count}'
+behind             = '⇣ ${count}'
 
 [golang]
 disabled = true
