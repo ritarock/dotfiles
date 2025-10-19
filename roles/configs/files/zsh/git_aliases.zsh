@@ -1,4 +1,6 @@
 alias g='git'
+alias lg='lazygit'
+
 alias gsw='git switch'
 alias gco='git checkout'
 alias gst='git status'
