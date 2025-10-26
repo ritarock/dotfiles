@@ -10,6 +10,7 @@ brew_packages:
   - grpcurl
   - htop
   - jq
+  - oven-sh/bun/bun
   - ripgrep
   - sheldon # zsh のプラグインマネージャー
   - starship
