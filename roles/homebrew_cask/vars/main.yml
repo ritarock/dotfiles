@@ -1,5 +1,6 @@
 brew_cask_packages:
   - alacritty
+  - claude-code
   - docker
   - font-jetbrains-mono
   - fuwari # スクリーンショットを付箋にする
