@@ -4,6 +4,7 @@ alias lg='lazygit'
 alias gsw='git switch'
 alias gco='git checkout'
 alias gst='git status'
+alias gsh='git stash'
 
 # move root directory
 alias grt='cd "$(git rev-parse --show-toplevel 2>/dev/null || echo .)"'
@@ -43,12 +44,6 @@ alias gcmsg='git commit --message'
 alias grs='git reset --soft'
 alias grm='git reset --mixed'
 alias grh='git reset --hard'
-
-# git stash
-alias gstl='git stash list'
-alias gsta='git stash push'
-alias gstp='git stash pop'
-alias gstd='git stash drop'
 
 # get current branch
 function current_branch() {

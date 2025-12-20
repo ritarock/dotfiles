@@ -14,6 +14,10 @@ alias k='kubectl'
 alias v='vim'
 alias c='code'
 
+alias tma='tmux attach'
+alias tml='tmux ls'
+alias tmk='tmux kill-session -t'
+
 alias reload="exec $SHELL -l"
 
 alias cl="claude"
