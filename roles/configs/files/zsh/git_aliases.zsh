@@ -53,10 +53,24 @@ function current_branch() {
 # pull PR
 function grw() {
   pr="$1"
-  branch_name="${2:-$pr}"
+  branch="${2:-$pr}"
   if [ -n "$pr" ]; then
-    git fetch upstream "pull/$pr/head:$branch_name" && git switch "$branch_name"
+    git fetch upstream "pull/$pr/head:$branch" && git switch "$branch"
   else
     echo "Usage: grw <pr-number> [branch-name]"
   fi
 }
+
+# git worktree
+function gwa() {
+  worktree="$1"
+  repo="$(basename $(git rev-parse --show-toplevel))"
+  git worktree add -b "$worktree" "../worktrees/$repo/$worktree" main
+}
+
+function gwr() {
+  worktree="$1"
+  repo="$(basename $(git rev-parse --show-toplevel))"
+  git worktree remove "../worktrees/$repo/$worktree"
+}
+
