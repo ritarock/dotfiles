@@ -1,6 +1,0 @@
----
-  - hosts: localhost
-    roles:
-      - homebrew
-      - homebrew_cask
-      - configs
