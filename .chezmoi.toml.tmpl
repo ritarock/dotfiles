@@ -1,0 +1,9 @@
+{{- $pcType := "" -}}
+{{- if stdinIsATTY -}}
+{{-   $pcType = promptChoice "PC type" (list "private" "job") -}}
+{{- else -}}
+{{-   $pcType = "private" -}}
+{{- end -}}
+
+[data]
+    pcType = {{ $pcType | quote }}

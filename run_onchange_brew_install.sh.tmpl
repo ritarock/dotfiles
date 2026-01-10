@@ -1,0 +1,27 @@
+#!/bin/bash
+
+brew install --cask \
+    claude-code \
+    ghostty \
+    google-chrome \
+    google-japanese-ime \
+    mapture \
+    obsidian \
+    postman \
+    raycast \
+    shotcut \
+    visual-studio-code
+
+{{ if eq .pcType "private" -}}
+brew install --cask \
+    brave-browser \
+    discord \
+    godot \
+    notion \
+    renpy
+{{ end -}}
+
+{{ if eq .pcType "job" -}}
+brew install --cask \
+    zoom
+{{ end -}}
