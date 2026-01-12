@@ -1,27 +1,28 @@
 #!/bin/bash
 
-brew install --cask \
-    claude-code \
-    ghostty \
-    google-chrome \
-    google-japanese-ime \
-    mapture \
-    obsidian \
-    postman \
-    raycast \
-    shotcut \
+casks=(
+    claude-code
+    ghostty
+    google-chrome
+    google-japanese-ime
+    mapture
+    obsidian
+    postman
+    raycast
     visual-studio-code
-
 {{ if eq .pcType "private" -}}
-brew install --cask \
-    brave-browser \
-    discord \
-    godot \
-    notion \
+    brave-browser
+    discord
+    godot
+    notion
     renpy
+    shotcut
 {{ end -}}
-
 {{ if eq .pcType "job" -}}
-brew install --cask \
     zoom
 {{ end -}}
+)
+
+for cask in "${casks[@]}"; do
+    brew install --cask "$cask"
+done
