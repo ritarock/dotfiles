@@ -62,3 +62,7 @@ disabled = true
 
 [lua]
 disabled = true
+
+[nix_shell]
+disabled = true
+
