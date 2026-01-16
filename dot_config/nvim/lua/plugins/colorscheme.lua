@@ -1,4 +1,5 @@
 return {
+  { "ritarock/shinonome" },
   {
     "LazyVim/LazyVim",
     opts = {
