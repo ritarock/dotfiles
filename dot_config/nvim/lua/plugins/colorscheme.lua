@@ -11,7 +11,7 @@ return {
           vim.api.nvim_set_hl(0, "SnacksPickerPath", { fg = fg })
           vim.api.nvim_set_hl(0, "SnacksPickerFile", { fg = fg })
           vim.api.nvim_set_hl(0, "SnacksPickerDir", { fg = "#61afef" })
-          vim.api.nvim_set_hl(0, "NonText", { fg = "#6a6a6a" }) -- 全体に影響するので注意
+          vim.api.nvim_set_hl(0, "NonText", { fg = "#6a6a6a" })
         end,
       })
     end,
