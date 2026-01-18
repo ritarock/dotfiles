@@ -12,10 +12,16 @@ map("n", "n", "nzz")
 map("n", "N", "Nzz")
 
 map("n", "x", '"_x')
+map("n", "s", '"_s')
 map("n", "Y", "y$")
 
 map("n", "+", "<C-a>")
 map("n", "-", "<C-x>")
+
+map({ "x", "o" }, "s", "s")
+map("n", "gl", function()
+  require("flash").jump()
+end, { desc = "Flash jump" })
 
 -- insert
 map("i", "<C-h>", "<Left>")
