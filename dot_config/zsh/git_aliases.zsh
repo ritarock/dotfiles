@@ -1,31 +1,23 @@
-alias g='git'
 alias lg='lazygit'
+
+alias g='git'
 
 alias gsw='git switch'
 alias gco='git checkout'
 alias gst='git status'
-alias gsh='git stash'
 
 # move root directory
 alias grt='cd "$(git rev-parse --show-toplevel 2>/dev/null || echo .)"'
 
 # git branch
 alias gb='git branch'
-alias gbd='git branch -D'
-alias gbda='git branch --merged | egrep -v "\*|develop|dev|master|main" | xargs git branch -d && git remote prune'
 
 # git diff
-alias gd='git diff'
-alias gdw='git diff --word-diff'
-alias gdc='git diff --cached'
-alias gdcw='git diff --cached --word-diff'
-alias gds='git diff --staged'
+alias gdiff='git diff'
 
 # git log
-alias gl='git log'
-alias glo='git log --oneline --decorate'
-alias glog='git log --oneline --decorate --graph'
-alias gloga='git log --oneline --decorate --graph --all'
+alias glog='git log'
+alias glogo='git log --oneline --decorate'
 
 # git pull
 alias gp='git pull'
@@ -38,12 +30,6 @@ alias gaa='git add --all'
 
 # git commit
 alias gc='git commit'
-alias gcmsg='git commit --message'
-
-# git reset
-alias grs='git reset --soft'
-alias grm='git reset --mixed'
-alias grh='git reset --hard'
 
 # get current branch
 function current_branch() {
@@ -59,18 +45,5 @@ function grw() {
   else
     echo "Usage: grw <pr-number> [branch-name]"
   fi
-}
-
-# git worktree
-function gwa() {
-  worktree="$1"
-  repo="$(basename $(git rev-parse --show-toplevel))"
-  git worktree add -b "$worktree" "../worktrees/$repo/$worktree" main
-}
-
-function gwr() {
-  worktree="$1"
-  repo="$(basename $(git rev-parse --show-toplevel))"
-  git worktree remove "../worktrees/$repo/$worktree"
 }
 

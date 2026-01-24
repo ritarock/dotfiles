@@ -8,10 +8,9 @@ alias ~='cd ~'
 
 alias gmt='go mod tidy'
 
-alias rmrf 'rm -rf'
-
 alias k='kubectl'
 alias v='vim'
+alias n="nvim"
 alias c='code'
 
 alias tma='tmux attach'
@@ -27,4 +26,3 @@ alias moi="chezmoi"
 alias cdmoi="cd ~/.local/share/chezmoi"
 alias dbx="devbox"
 
-alias n="nvim"
