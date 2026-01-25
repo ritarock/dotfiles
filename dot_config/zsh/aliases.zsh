@@ -22,7 +22,6 @@ alias reload="exec $SHELL -l"
 alias cl="claude"
 alias clcost="npx ccusage@latest"
 
-alias moi="chezmoi"
-alias cdmoi="cd ~/.local/share/chezmoi"
-alias dbx="devbox"
+alias dotfile="cd ~/.local/share/chezmoi"
+alias box="devbox"
 
