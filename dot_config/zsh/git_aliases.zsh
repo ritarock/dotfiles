@@ -46,4 +46,3 @@ function grw() {
     echo "Usage: grw <pr-number> [branch-name]"
   fi
 }
-
