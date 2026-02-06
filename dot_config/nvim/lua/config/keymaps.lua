@@ -32,3 +32,8 @@ map("i", "jj", "<ESC>", { silent = true })
 -- visual
 map("v", "y", "y`]", { silent = true })
 map("v", "p", "p`]", { silent = true })
+
+-- dashboard
+map("n", "<leader>;", function()
+  Snacks.dashboard()
+end, { desc = "Dashboard" })
