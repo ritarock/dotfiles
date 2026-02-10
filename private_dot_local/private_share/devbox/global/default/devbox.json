@@ -15,7 +15,8 @@
     "sheldon@latest",
     "starship@latest",
     "tmux@latest",
-    "lazygit@latest"
+    "lazygit@latest",
+    "zellij@latest"
   ],
   "shell": {
     "init_hook": [
