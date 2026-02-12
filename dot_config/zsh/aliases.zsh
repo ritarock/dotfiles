@@ -24,3 +24,5 @@ alias clcost="npx ccusage@latest"
 
 alias dotfile="cd ~/.local/share/chezmoi"
 alias box="devbox"
+
+alias z="zellij"

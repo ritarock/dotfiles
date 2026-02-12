@@ -46,3 +46,15 @@ function grw() {
     echo "Usage: grw <pr-number> [branch-name]"
   fi
 }
+
+function og() {
+  local repo_dir=$(git rev-parse --show-toplevel)
+  cd $repo_dir
+  if [ -d .git ]; then
+    local repo_url=$(git config --get remote.origin.url)
+    if [ -n "$repo_url" ];then
+      repo_url=$(echo $repo_url | sed 's|git@github.com:|https://github.com/|' | sed 's|\.git$||')
+      open "$repo_url"
+    fi
+  fi
+}
