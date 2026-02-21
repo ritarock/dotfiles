@@ -22,7 +22,6 @@ opt.listchars = {
 -- file
 opt.swapfile = false
 opt.undofile = false
-opt.backspace = { "indent", "eol", "start" }
 
 -- indent
 opt.autoindent = true
