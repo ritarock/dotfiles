@@ -1,17 +1,15 @@
 background-opacity = 0.95
-confirm-close-surface = "false"
-cursor-style-blink = "false"
+confirm-close-surface = false
+cursor-style-blink = false
 font-family = JetBrains Mono
-font-feature = "-calt"
-font-feature = "-dlig"
-font-feature = "-liga"
+font-feature = -calt
+font-feature = -dlig
+font-feature = -liga
 font-size = 12
 keybind = global:ctrl+grave_accent=toggle_quick_terminal
 keybind = shift+enter=text:\x1b\r
-shell-integration = "zsh"
-shell-integration-features = "no-cursor"
-window-height = "40"
-window-width = "150"
-
-theme = "Solarized Dark Higher Contrast"
-
+shell-integration = zsh
+shell-integration-features = no-cursor
+theme = GitHub Dark Dimmed
+window-height = 40
+window-width = 150
