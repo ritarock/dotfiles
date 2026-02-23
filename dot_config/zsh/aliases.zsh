@@ -13,7 +13,7 @@ alias k='kubectl'
 alias v='vim'
 alias n="nvim"
 alias c='code'
-alias n.="nvim ."
+alias nn="nvim ."
 
 alias t='tmux'
 alias ta='tmux attach'
