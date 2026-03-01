@@ -26,4 +26,6 @@ alias cl="claude"
 alias clcost="npx ccusage@latest"
 
 alias dotfile="cd ~/.local/share/chezmoi"
+
 alias box="devbox"
+alias boxs="devbox shell"
