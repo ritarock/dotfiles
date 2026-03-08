@@ -15,10 +15,10 @@ alias n="nvim"
 alias c='code'
 alias nn="nvim ."
 
-alias t='tmux'
-alias ta='tmux attach'
-alias tl='tmux ls'
-alias tk='tmux kill-session -t'
+alias tm='tmux'
+alias tma='tmux attach'
+alias tml='tmux ls'
+alias tmk='tmux kill-session -t'
 
 alias reload="exec $SHELL -l"
 
