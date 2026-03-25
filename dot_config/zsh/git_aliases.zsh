@@ -11,9 +11,11 @@ alias grt='cd "$(git rev-parse --show-toplevel 2>/dev/null || echo .)"'
 
 # git branch
 alias gb='git branch'
+alias gbd='git branch -D'
 
 # git diff
 alias gdiff='git diff'
+alias gdiffo='git --no-pager diff'
 
 # git log
 alias glog='git log'
@@ -37,7 +39,7 @@ function current_branch() {
 }
 
 # pull PR
-function grw() {
+function gpr() {
   pr="$1"
   branch="${2:-$pr}"
   if [ -n "$pr" ]; then
@@ -47,6 +49,7 @@ function grw() {
   fi
 }
 
+# open github
 function og() {
   local repo_dir=$(git rev-parse --show-toplevel)
   cd $repo_dir
@@ -59,6 +62,7 @@ function og() {
   fi
 }
 
+# open github PR
 function ogp() {
   local pr="$1"
   local repo_dir=$(git rev-parse --show-toplevel)
@@ -70,4 +74,20 @@ function ogp() {
       open "${repo_url}/pull/${pr}"
     fi
   fi
+}
+
+# git worktree
+alias gwt='git worktree'
+alias gwtl='git worktree list'
+
+function gwta() {
+  local branch="$1"
+  local repo_name="${PWD##*/}"
+  git worktree add -b "$branch" "../worktrees/$repo_name/$branch" main
+}
+
+function gwtr() {
+  local branch="$1"
+  local repo_name="${PWD##*/}"
+  git worktree remove --force "../worktrees/$repo_name/$branch"
 }
