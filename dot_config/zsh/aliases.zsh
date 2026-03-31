@@ -7,13 +7,11 @@ alias tree='eza -T'
 alias ..='cd ./..'
 alias ~='cd ~'
 
-alias gmt='go mod tidy'
-
-alias k='kubectl'
 alias v='vim'
 alias n="nvim"
 alias c='code'
-alias nn="nvim ."
+
+alias k='kubectl'
 
 alias tm='tmux'
 alias tma='tmux attach'
