@@ -50,7 +50,7 @@ function gpr() {
 }
 
 # open github
-function go() {
+function gop() {
   local repo_dir=$(git rev-parse --show-toplevel)
   cd $repo_dir
   if [ -d .git ]; then
@@ -63,7 +63,7 @@ function go() {
 }
 
 # open github PR
-function gopr() {
+function goppr() {
   local pr="$1"
   local repo_dir=$(git rev-parse --show-toplevel)
   cd $repo_dir
