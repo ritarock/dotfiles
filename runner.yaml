@@ -1,0 +1,29 @@
+tasks:
+  - name: brew
+    run: |
+      brew install \
+      eza \
+      fd \
+      fzf \
+      git \
+      git-delta \
+      jq \
+      lazygit \
+      neovim \
+      ripgrep \
+      sheldon \
+      starship \
+      tmux
+  - name: brew-cask
+    run: |
+      brew install --cask \
+      claude-code@latest \
+      discord \
+      ghostty \
+      google-chrome \
+      google-japanese-ime \
+      kindle-previewer \
+      mapture \
+      obsidian \
+      raycast \
+      visual-studio-code
